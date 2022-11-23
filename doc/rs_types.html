@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>rs_types</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.16.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<ul><li><a href="AllUnits.html">Units</a></li><li><a href="ClassHierarchy.html">Class Hierarchy</a></li><li><a href="AllClasses.html">Classes, Interfaces, Objects and Records</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constants</a></li><li><a href="AllFunctions.html">Functions and Procedures</a></li><li><a href="AllIdentifiers.html">Identifiers</a></li><li><form class="search-form" action="tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></div></form>
+<div style="clear: both"></div>
+</li></ul></div><div class="content">
+<h1 class="unit">Unit rs_types</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section">Uses</div><div class="one_section"><a class="section" href="#PasDoc-Classes">Classes, Interfaces, Objects and Records</a></div><div class="one_section"><a class="section" href="#PasDoc-FuncsProcs">Functions and Procedures</a></div><div class="one_section"><a class="section" href="#PasDoc-Types">Types</a></div><div class="one_section"><a class="section" href="#PasDoc-Constants">Constants</a></div><div class="one_section">Variables</div></div>
+<span id="PasDoc-Description"></span><h2 class="description">Description</h2>
+<p>
+Exposes RealSense structs</p>
+<span id="PasDoc-Uses"></span><h2 class="overview">Overview</h2>
+<span id="PasDoc-Classes"></span><h3 class="cio">Classes, Interfaces, Objects and Records</h3>
+<table class="classestable wide_list">
+<tr class="listheader">
+<th class="itemname">Name</th>
+<th class="itemdesc">Description</th>
+</tr>
+<tr class="list">
+<td class="itemname">Record&nbsp;<a class="bold" href="rs_types.Trs2_context.html"><code>Trs2_context</code></a></td>
+<td class="itemdesc">&nbsp;</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Record&nbsp;<a class="bold" href="rs_types.Trs2_device_list.html"><code>Trs2_device_list</code></a></td>
+<td class="itemdesc">&nbsp;</td>
+</tr>
+<tr class="list">
+<td class="itemname">Record&nbsp;<a class="bold" href="rs_types.Trs2_device_info.html"><code>Trs2_device_info</code></a></td>
+<td class="itemdesc">&nbsp;</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Record&nbsp;<a class="bold" href="rs_types.Trs2_device.html"><code>Trs2_device</code></a></td>
+<td class="itemdesc">&nbsp;</td>
+</tr>
+<tr class="list">
+<td class="itemname">Record&nbsp;<a class="bold" href="rs_types.TUser.html"><code>TUser</code></a></td>
+<td class="itemdesc">&nbsp;</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Record&nbsp;<a class="bold" href="rs_types.Trs2_device_hub.html"><code>Trs2_device_hub</code></a></td>
+<td class="itemdesc">&nbsp;</td>
+</tr>
+</table>
+<span id="PasDoc-FuncsProcs"></span><h3 class="summary">Functions and Procedures</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code>function <strong><a href="rs_types.html#rs2_get_error_message">rs2_get_error_message</a></strong>(var error: <a href="rs_types.html#pRS2_error">prs2_error</a>): PChar; cdecl; external REALSENSE_DLL Name 'rs2_get_error_message';</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>procedure <strong><a href="rs_types.html#rs2_free_error">rs2_free_error</a></strong>(var error: <a href="rs_types.html#pRS2_error">prs2_error</a>); cdecl; external REALSENSE_DLL Name 'rs2_free_error';</code></td>
+</tr>
+</table>
+<span id="PasDoc-Types"></span><h3 class="summary">Types</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><strong><a href="rs_types.html#Trs2_error">Trs2_error</a></strong> = integer;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="rs_types.html#pRS2_error">pRS2_error</a></strong> = &circ;<a href="rs_types.html#Trs2_error">Trs2_error</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="rs_types.html#pRS2_context">pRS2_context</a></strong> = &circ;<a href="rs_types.Trs2_context.html">Trs2_context</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="rs_types.html#pRS2_device_list">pRS2_device_list</a></strong> = &circ;<a href="rs_types.Trs2_device_list.html">Trs2_device_list</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="rs_types.html#pRS2_device_info">pRS2_device_info</a></strong> = &circ;<a href="rs_types.Trs2_device_info.html">Trs2_device_info</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="rs_types.html#pRS2_device">pRS2_device</a></strong> = &circ;<a href="rs_types.Trs2_device.html">Trs2_device</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="rs_types.html#pRS2_devices_changed_callback">pRS2_devices_changed_callback</a></strong> = &circ;<a href="rs_types.html#RS2_devices_changed_callback">RS2_devices_changed_callback</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_devices_changed_callback">RS2_devices_changed_callback</a></strong> = procedure(DeviceList1: <a href="rs_types.html#pRS2_device_list">pRS2_Device_List</a>; DeviceList2: <a href="rs_types.html#pRS2_device_list">pRS2_Device_List</a>); cdecl;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="rs_types.html#pUser">pUser</a></strong> = &circ;<a href="rs_types.TUser.html">TUser</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="rs_types.html#pRs2_device_hub">pRs2_device_hub</a></strong> = &circ;<a href="rs_types.Trs2_device_hub.html">Trs2_device_hub</a>;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Constants"></span><h3 class="summary">Constants</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_UNKNOWN">RS2_EXTENSION_UNKNOWN</a></strong> = 0;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_DEBUG">RS2_EXTENSION_DEBUG</a></strong> = 1;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_INFO">RS2_EXTENSION_INFO</a></strong> = 2;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_MOTION">RS2_EXTENSION_MOTION</a></strong> = 3;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_OPTIONS">RS2_EXTENSION_OPTIONS</a></strong> = 4;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_VIDEO">RS2_EXTENSION_VIDEO</a></strong> = 5;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_ROI">RS2_EXTENSION_ROI</a></strong> = 6;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_DEPTH_SENSOR">RS2_EXTENSION_DEPTH_SENSOR</a></strong> = 7;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_VIDEO_FRAME">RS2_EXTENSION_VIDEO_FRAME</a></strong> = 8;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_MOTION_FRAME">RS2_EXTENSION_MOTION_FRAME</a></strong> = 9;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_COMPOSITE_FRAME">RS2_EXTENSION_COMPOSITE_FRAME</a></strong> = 10;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_POINTS">RS2_EXTENSION_POINTS</a></strong> = 11;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_DEPTH_FRAME">RS2_EXTENSION_DEPTH_FRAME</a></strong> = 12;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_ADVANCED_MODE">RS2_EXTENSION_ADVANCED_MODE</a></strong> = 13;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_RECORD">RS2_EXTENSION_RECORD</a></strong> = 14;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_VIDEO_PROFILE">RS2_EXTENSION_VIDEO_PROFILE</a></strong> = 15;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_PLAYBACK">RS2_EXTENSION_PLAYBACK</a></strong> = 16;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_DEPTH_STEREO_SENSOR">RS2_EXTENSION_DEPTH_STEREO_SENSOR</a></strong> = 17;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_DISPARITY_FRAME">RS2_EXTENSION_DISPARITY_FRAME</a></strong> = 18;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_MOTION_PROFILE">RS2_EXTENSION_MOTION_PROFILE</a></strong> = 19;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_POSE_FRAME">RS2_EXTENSION_POSE_FRAME</a></strong> = 20;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_POSE_PROFILE">RS2_EXTENSION_POSE_PROFILE</a></strong> = 21;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_TM2">RS2_EXTENSION_TM2</a></strong> = 22;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_SOFTWARE_DEVICE">RS2_EXTENSION_SOFTWARE_DEVICE</a></strong> = 23;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_SOFTWARE_SENSOR">RS2_EXTENSION_SOFTWARE_SENSOR</a></strong> = 24;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_DECIMATION_FILTER">RS2_EXTENSION_DECIMATION_FILTER</a></strong> = 25;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_THRESHOLD_FILTER">RS2_EXTENSION_THRESHOLD_FILTER</a></strong> = 26;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_DISPARITY_FILTER">RS2_EXTENSION_DISPARITY_FILTER</a></strong> = 27;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_SPATIAL_FILTER">RS2_EXTENSION_SPATIAL_FILTER</a></strong> = 28;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_TEMPORAL_FILTER">RS2_EXTENSION_TEMPORAL_FILTER</a></strong> = 29;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_HOLE_FILLING_FILTER">RS2_EXTENSION_HOLE_FILLING_FILTER</a></strong> = 30;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_ZERO_ORDER_FILTER">RS2_EXTENSION_ZERO_ORDER_FILTER</a></strong> = 31;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_RECOMMENDED_FILTERS">RS2_EXTENSION_RECOMMENDED_FILTERS</a></strong> = 32;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_POSE">RS2_EXTENSION_POSE</a></strong> = 33;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_POSE_SENSOR">RS2_EXTENSION_POSE_SENSOR</a></strong> = 34;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_WHEEL_ODOMETER">RS2_EXTENSION_WHEEL_ODOMETER</a></strong> = 35;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_GLOBAL_TIMER">RS2_EXTENSION_GLOBAL_TIMER</a></strong> = 36;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_UPDATABLE">RS2_EXTENSION_UPDATABLE</a></strong> = 37;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_UPDATE_DEVICE">RS2_EXTENSION_UPDATE_DEVICE</a></strong> = 38;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_L500_DEPTH_SENSOR">RS2_EXTENSION_L500_DEPTH_SENSOR</a></strong> = 39;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_TM2_SENSOR">RS2_EXTENSION_TM2_SENSOR</a></strong> = 40;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_AUTO_CALIBRATED_DEVICE">RS2_EXTENSION_AUTO_CALIBRATED_DEVICE</a></strong> = 41;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_COLOR_SENSOR">RS2_EXTENSION_COLOR_SENSOR</a></strong> = 42;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_MOTION_SENSOR">RS2_EXTENSION_MOTION_SENSOR</a></strong> = 43;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_FISHEYE_SENSOR">RS2_EXTENSION_FISHEYE_SENSOR</a></strong> = 44;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_DEPTH_HUFFMAN_DECODER">RS2_EXTENSION_DEPTH_HUFFMAN_DECODER</a></strong> = 45;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_SERIALIZABLE">RS2_EXTENSION_SERIALIZABLE</a></strong> = 46;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_FW_LOGGER">RS2_EXTENSION_FW_LOGGER</a></strong> = 47;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_AUTO_CALIBRATION_FILTER">RS2_EXTENSION_AUTO_CALIBRATION_FILTER</a></strong> = 48;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_DEVICE_CALIBRATION">RS2_EXTENSION_DEVICE_CALIBRATION</a></strong> = 49;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_CALIBRATED_SENSOR">RS2_EXTENSION_CALIBRATED_SENSOR</a></strong> = 50;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_HDR_MERGE">RS2_EXTENSION_HDR_MERGE</a></strong> = 51;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_SEQUENCE_ID_FILTER">RS2_EXTENSION_SEQUENCE_ID_FILTER</a></strong> = 52;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_MAX_USABLE_RANGE_SENSOR">RS2_EXTENSION_MAX_USABLE_RANGE_SENSOR</a></strong> = 53;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_DEBUG_STREAM_SENSOR">RS2_EXTENSION_DEBUG_STREAM_SENSOR</a></strong> = 54;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_CALIBRATION_CHANGE_DEVICE">RS2_EXTENSION_CALIBRATION_CHANGE_DEVICE</a></strong> = 55;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="rs_types.html#RS2_EXTENSION_COUNT">RS2_EXTENSION_COUNT</a></strong> = 56;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Functions and Procedures</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="rs2_get_error_message"></span><code>function <strong>rs2_get_error_message</strong>(var error: <a href="rs_types.html#pRS2_error">prs2_error</a>): PChar; cdecl; external REALSENSE_DLL Name 'rs2_get_error_message';</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="rs2_free_error"></span><code>procedure <strong>rs2_free_error</strong>(var error: <a href="rs_types.html#pRS2_error">prs2_error</a>); cdecl; external REALSENSE_DLL Name 'rs2_free_error';</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<h3 class="detail">Types</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Trs2_error"></span><code><strong>Trs2_error</strong> = integer;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="pRS2_error"></span><code><strong>pRS2_error</strong> = &circ;<a href="rs_types.html#Trs2_error">Trs2_error</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="pRS2_context"></span><code><strong>pRS2_context</strong> = &circ;<a href="rs_types.Trs2_context.html">Trs2_context</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="pRS2_device_list"></span><code><strong>pRS2_device_list</strong> = &circ;<a href="rs_types.Trs2_device_list.html">Trs2_device_list</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Trs2_device_list = integer;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="pRS2_device_info"></span><code><strong>pRS2_device_info</strong> = &circ;<a href="rs_types.Trs2_device_info.html">Trs2_device_info</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="pRS2_device"></span><code><strong>pRS2_device</strong> = &circ;<a href="rs_types.Trs2_device.html">Trs2_device</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="pRS2_devices_changed_callback"></span><code><strong>pRS2_devices_changed_callback</strong> = &circ;<a href="rs_types.html#RS2_devices_changed_callback">RS2_devices_changed_callback</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+typedef void (*rs2_devices_changed_callback_ptr)(rs2_device_list*, rs2_device_list*, void*);</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_devices_changed_callback"></span><code><strong>RS2_devices_changed_callback</strong> = procedure(DeviceList1: <a href="rs_types.html#pRS2_device_list">pRS2_Device_List</a>; DeviceList2: <a href="rs_types.html#pRS2_device_list">pRS2_Device_List</a>); cdecl;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="pUser"></span><code><strong>pUser</strong> = &circ;<a href="rs_types.TUser.html">TUser</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="pRs2_device_hub"></span><code><strong>pRs2_device_hub</strong> = &circ;<a href="rs_types.Trs2_device_hub.html">Trs2_device_hub</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<h3 class="detail">Constants</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_UNKNOWN"></span><code><strong>RS2_EXTENSION_UNKNOWN</strong> = 0;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_DEBUG"></span><code><strong>RS2_EXTENSION_DEBUG</strong> = 1;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_INFO"></span><code><strong>RS2_EXTENSION_INFO</strong> = 2;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_MOTION"></span><code><strong>RS2_EXTENSION_MOTION</strong> = 3;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_OPTIONS"></span><code><strong>RS2_EXTENSION_OPTIONS</strong> = 4;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_VIDEO"></span><code><strong>RS2_EXTENSION_VIDEO</strong> = 5;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_ROI"></span><code><strong>RS2_EXTENSION_ROI</strong> = 6;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_DEPTH_SENSOR"></span><code><strong>RS2_EXTENSION_DEPTH_SENSOR</strong> = 7;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_VIDEO_FRAME"></span><code><strong>RS2_EXTENSION_VIDEO_FRAME</strong> = 8;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_MOTION_FRAME"></span><code><strong>RS2_EXTENSION_MOTION_FRAME</strong> = 9;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_COMPOSITE_FRAME"></span><code><strong>RS2_EXTENSION_COMPOSITE_FRAME</strong> = 10;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_POINTS"></span><code><strong>RS2_EXTENSION_POINTS</strong> = 11;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_DEPTH_FRAME"></span><code><strong>RS2_EXTENSION_DEPTH_FRAME</strong> = 12;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_ADVANCED_MODE"></span><code><strong>RS2_EXTENSION_ADVANCED_MODE</strong> = 13;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_RECORD"></span><code><strong>RS2_EXTENSION_RECORD</strong> = 14;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_VIDEO_PROFILE"></span><code><strong>RS2_EXTENSION_VIDEO_PROFILE</strong> = 15;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_PLAYBACK"></span><code><strong>RS2_EXTENSION_PLAYBACK</strong> = 16;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_DEPTH_STEREO_SENSOR"></span><code><strong>RS2_EXTENSION_DEPTH_STEREO_SENSOR</strong> = 17;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_DISPARITY_FRAME"></span><code><strong>RS2_EXTENSION_DISPARITY_FRAME</strong> = 18;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_MOTION_PROFILE"></span><code><strong>RS2_EXTENSION_MOTION_PROFILE</strong> = 19;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_POSE_FRAME"></span><code><strong>RS2_EXTENSION_POSE_FRAME</strong> = 20;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_POSE_PROFILE"></span><code><strong>RS2_EXTENSION_POSE_PROFILE</strong> = 21;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_TM2"></span><code><strong>RS2_EXTENSION_TM2</strong> = 22;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_SOFTWARE_DEVICE"></span><code><strong>RS2_EXTENSION_SOFTWARE_DEVICE</strong> = 23;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_SOFTWARE_SENSOR"></span><code><strong>RS2_EXTENSION_SOFTWARE_SENSOR</strong> = 24;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_DECIMATION_FILTER"></span><code><strong>RS2_EXTENSION_DECIMATION_FILTER</strong> = 25;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_THRESHOLD_FILTER"></span><code><strong>RS2_EXTENSION_THRESHOLD_FILTER</strong> = 26;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_DISPARITY_FILTER"></span><code><strong>RS2_EXTENSION_DISPARITY_FILTER</strong> = 27;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_SPATIAL_FILTER"></span><code><strong>RS2_EXTENSION_SPATIAL_FILTER</strong> = 28;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_TEMPORAL_FILTER"></span><code><strong>RS2_EXTENSION_TEMPORAL_FILTER</strong> = 29;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_HOLE_FILLING_FILTER"></span><code><strong>RS2_EXTENSION_HOLE_FILLING_FILTER</strong> = 30;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_ZERO_ORDER_FILTER"></span><code><strong>RS2_EXTENSION_ZERO_ORDER_FILTER</strong> = 31;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_RECOMMENDED_FILTERS"></span><code><strong>RS2_EXTENSION_RECOMMENDED_FILTERS</strong> = 32;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_POSE"></span><code><strong>RS2_EXTENSION_POSE</strong> = 33;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_POSE_SENSOR"></span><code><strong>RS2_EXTENSION_POSE_SENSOR</strong> = 34;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_WHEEL_ODOMETER"></span><code><strong>RS2_EXTENSION_WHEEL_ODOMETER</strong> = 35;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_GLOBAL_TIMER"></span><code><strong>RS2_EXTENSION_GLOBAL_TIMER</strong> = 36;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_UPDATABLE"></span><code><strong>RS2_EXTENSION_UPDATABLE</strong> = 37;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_UPDATE_DEVICE"></span><code><strong>RS2_EXTENSION_UPDATE_DEVICE</strong> = 38;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_L500_DEPTH_SENSOR"></span><code><strong>RS2_EXTENSION_L500_DEPTH_SENSOR</strong> = 39;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_TM2_SENSOR"></span><code><strong>RS2_EXTENSION_TM2_SENSOR</strong> = 40;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_AUTO_CALIBRATED_DEVICE"></span><code><strong>RS2_EXTENSION_AUTO_CALIBRATED_DEVICE</strong> = 41;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_COLOR_SENSOR"></span><code><strong>RS2_EXTENSION_COLOR_SENSOR</strong> = 42;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_MOTION_SENSOR"></span><code><strong>RS2_EXTENSION_MOTION_SENSOR</strong> = 43;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_FISHEYE_SENSOR"></span><code><strong>RS2_EXTENSION_FISHEYE_SENSOR</strong> = 44;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_DEPTH_HUFFMAN_DECODER"></span><code><strong>RS2_EXTENSION_DEPTH_HUFFMAN_DECODER</strong> = 45;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_SERIALIZABLE"></span><code><strong>RS2_EXTENSION_SERIALIZABLE</strong> = 46;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_FW_LOGGER"></span><code><strong>RS2_EXTENSION_FW_LOGGER</strong> = 47;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_AUTO_CALIBRATION_FILTER"></span><code><strong>RS2_EXTENSION_AUTO_CALIBRATION_FILTER</strong> = 48;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_DEVICE_CALIBRATION"></span><code><strong>RS2_EXTENSION_DEVICE_CALIBRATION</strong> = 49;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_CALIBRATED_SENSOR"></span><code><strong>RS2_EXTENSION_CALIBRATED_SENSOR</strong> = 50;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_HDR_MERGE"></span><code><strong>RS2_EXTENSION_HDR_MERGE</strong> = 51;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_SEQUENCE_ID_FILTER"></span><code><strong>RS2_EXTENSION_SEQUENCE_ID_FILTER</strong> = 52;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_MAX_USABLE_RANGE_SENSOR"></span><code><strong>RS2_EXTENSION_MAX_USABLE_RANGE_SENSOR</strong> = 53;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_DEBUG_STREAM_SENSOR"></span><code><strong>RS2_EXTENSION_DEBUG_STREAM_SENSOR</strong> = 54;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_CALIBRATION_CHANGE_DEVICE"></span><code><strong>RS2_EXTENSION_CALIBRATION_CHANGE_DEVICE</strong> = 55;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_EXTENSION_COUNT"></span><code><strong>RS2_EXTENSION_COUNT</strong> = 56;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<hr><span class="appinfo"><em>Generated by <a href="https://pasdoc.github.io/">PasDoc 0.16.0</a>. </em>
+</span>
+</div></div></body></html>

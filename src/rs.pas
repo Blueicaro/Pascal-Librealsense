@@ -1,3 +1,7 @@
+{
+
+ Exposes librealsense functionality
+}
 unit rs;
 
 {$mode ObjFPC}{$H+}

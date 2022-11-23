@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>All Functions and Procedures</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.16.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<ul><li><a href="AllUnits.html">Units</a></li><li><a href="ClassHierarchy.html">Class Hierarchy</a></li><li><a href="AllClasses.html">Classes, Interfaces, Objects and Records</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constants</a></li><li><a href="AllFunctions.html">Functions and Procedures</a></li><li><a href="AllIdentifiers.html">Identifiers</a></li><li><form class="search-form" action="tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></div></form>
+<div style="clear: both"></div>
+</li></ul></div><div class="content">
+<h1 class="allitems">All Functions and Procedures</h1>
+<table class="itemstable wide_list">
+<tr class="listheader">
+<th class="itemname">Name</th>
+<th class="itemunit">Unit</th>
+<th class="itemdesc">Description</th>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="rs.html#RS2_API_FULL_VERSION_STR">RS2_API_FULL_VERSION_STR</a></td>
+<td class="itemunit"><a class="bold" href="rs.html">rs</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="rs.html#RS2_API_VERSION_STR">RS2_API_VERSION_STR</a></td>
+<td class="itemunit"><a class="bold" href="rs.html">rs</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="rs_context.html#RS2_context_add_device">RS2_context_add_device</a></td>
+<td class="itemunit"><a class="bold" href="rs_context.html">rs_context</a></td>
+<td class="itemdesc"><p>Create a new device and add it to the context \param ctx The context to which the new device will be added \param file The file from which the device should be created \param[out] error If non-null, receives any error that occurs during this call, otherwise, errors are ignored </p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="rs_context.html#RS2_context_add_software_device">RS2_context_add_software_device</a></td>
+<td class="itemunit"><a class="bold" href="rs_context.html">rs_context</a></td>
+<td class="itemdesc"><p>Add an instance of software device to the context param ctx The context to which the new device will be added param dev Instance of software device to register into the context param[out] error If non-null, receives any error that occurs during this call, otherwise, errors are ignored</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="rs_context.html#RS2_context_remove_device">RS2_context_remove_device</a></td>
+<td class="itemunit"><a class="bold" href="rs_context.html">rs_context</a></td>
+<td class="itemdesc"><p>Removes a playback device from the context, if exists \param[in] ctx The context from which the device should be removed \param[in] file The file name that was used to add the device \param[out] error If non-null, receives any error that occurs during this call, otherwise, errors are ignored</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="rs_context.html#RS2_context_unload_tracking_module">RS2_context_unload_tracking_module</a></td>
+<td class="itemunit"><a class="bold" href="rs_context.html">rs_context</a></td>
+<td class="itemdesc"><p>Removes tracking module. function query_devices() locks the tracking module in the tm_context object. If the tracking module device is not used it should be removed using this function, so that other applications could find it. This function can be used both before the call to query_device() to prevent enabling tracking modules or afterwards to release them.</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="rs_context.html#RS2_create_context">RS2_create_context</a></td>
+<td class="itemunit"><a class="bold" href="rs_context.html">rs_context</a></td>
+<td class="itemdesc"><p>brief Creates RealSense context that is required for the rest of the API. param[in] api_version Users are expected to pass their version of \c RS2_API_VERSION to make sure they are running the correct librealsense version. param[out] error If non-null, receives any error that occurs during this call, otherwise, errors are ignored. return Context object</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="rs_device.html#RS2_create_device">RS2_create_device</a></td>
+<td class="itemunit"><a class="bold" href="rs_device.html">rs_device</a></td>
+<td class="itemdesc"><p>Creates a device by index. The device object represents a physical camera and provides the means to manipulate it. param[in] info_list the list containing the device to retrieve param[in] index The zero based index of device to retrieve param[out] error If non-null, receives any error that occurs during this call, otherwise, errors are ignored return The requested device, should be released by RS2_delete_device</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="rs_context.html#RS2_create_device_hub">RS2_create_device_hub</a></td>
+<td class="itemunit"><a class="bold" href="rs_context.html">rs_context</a></td>
+<td class="itemdesc"><p>brief Creates RealSense device_hub . \param[in] context The context for the device hub \param[out] error If non-null, receives any error that occurs during this call, otherwise, errors are ignored. \return Device hub object</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="rs_context.html#RS2_delete_context">RS2_delete_context</a></td>
+<td class="itemunit"><a class="bold" href="rs_context.html">rs_context</a></td>
+<td class="itemdesc"><p>brief Frees the relevant context object. param[in] context Object that is no longer needed</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="rs_device.html#RS2_delete_device">RS2_delete_device</a></td>
+<td class="itemunit"><a class="bold" href="rs_device.html">rs_device</a></td>
+<td class="itemdesc"><p>Delete RealSense device param[in] device Realsense device to delete</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="rs_device.html#RS2_delete_device_list">RS2_delete_device_list</a></td>
+<td class="itemunit"><a class="bold" href="rs_device.html">rs_device</a></td>
+<td class="itemdesc"><p>Deletes device list, any devices created using this list will remain unaffected. param[in] info_list List to delete</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="rs_context.html#rs2_device_hub_is_device_connected">rs2_device_hub_is_device_connected</a></td>
+<td class="itemunit"><a class="bold" href="rs_context.html">rs_context</a></td>
+<td class="itemdesc"><p>Checks if device is still connected \param[in] hub The device hub object \param[in] device The device \param[out] error If non-null, receives any error that occurs during this call, otherwise, errors are ignored. \return 1 if the device is connected, 0 otherwise</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="rs_context.html#RS2_device_hub_wait_for_device">RS2_device_hub_wait_for_device</a></td>
+<td class="itemunit"><a class="bold" href="rs_context.html">rs_context</a></td>
+<td class="itemdesc"><p>If any device is connected return it, otherwise wait until next RealSense device connects. Calling this method multiple times will cycle through connected devices \param[in] ctx The context to creat the device \param[in] hub The device hub object \param[out] error If non-null, receives any error that occurs during this call, otherwise, errors are ignored. \return device object</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="rs_types.html#rs2_free_error">rs2_free_error</a></td>
+<td class="itemunit"><a class="bold" href="rs_types.html">rs_types</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="rs_device.html#RS2_get_device_count">RS2_get_device_count</a></td>
+<td class="itemunit"><a class="bold" href="rs_device.html">rs_device</a></td>
+<td class="itemdesc"><p>Determines number of devices in a list. param[in] info_list The list of connected devices captured using RS2_query_devices param[out] error If non-null, receives any error that occurs during this call, otherwise, errors are ignored return Device count</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="rs_device.html#RS2_get_device_info">RS2_get_device_info</a></td>
+<td class="itemunit"><a class="bold" href="rs_device.html">rs_device</a></td>
+<td class="itemdesc"><p>Retrieve camera specific information, like versions of various internal components. param[in] device The RealSense device param[in] info Camera info type to retrieve param[out] error If non-null, receives any error that occurs during this call, otherwise, errors are ignored return The requested camera info string, in a format specific to the device model</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="rs_types.html#rs2_get_error_message">rs2_get_error_message</a></td>
+<td class="itemunit"><a class="bold" href="rs_types.html">rs_types</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="rs_context.html#RS2_query_devices">RS2_query_devices</a></td>
+<td class="itemunit"><a class="bold" href="rs_context.html">rs_context</a></td>
+<td class="itemdesc"><p>create a static snapshot of all connected devices at the time of the call \param context Object representing librealsense session \param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored \return the list of devices, should be released by RS2_delete_device_list</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="rs_context.html#RS2_query_devices_ex">RS2_query_devices_ex</a></td>
+<td class="itemunit"><a class="bold" href="rs_context.html">rs_context</a></td>
+<td class="itemdesc"><p>create a static snapshot of all connected devices at the time of the call \param context Object representing librealsense session \param product_mask Controls what kind of devices will be returned \param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored \return the list of devices, should be released by rs2_delete_device_list</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="rs_context.html#RS2_set_devices_changed_callback">RS2_set_devices_changed_callback</a></td>
+<td class="itemunit"><a class="bold" href="rs_context.html">rs_context</a></td>
+<td class="itemdesc"><p>/** * set callback to get devices changed events * these events will be raised by the context whenever new RealSense device is connected or existing device gets disconnected * \param context Object representing librealsense session * \param[in] callback function pointer to register as per-notifications callback * \param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored */</p></td>
+</tr>
+</table>
+<hr><span class="appinfo"><em>Generated by <a href="https://pasdoc.github.io/">PasDoc 0.16.0</a>. </em>
+</span>
+</div></div></body></html>
