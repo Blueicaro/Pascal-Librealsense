@@ -11,19 +11,19 @@ uses rs_sensor, rs_types;
 
 {
 Determines number of devices in a list.
-param[in]  info_list The list of connected devices captured using RS2_query_devices
+param[in]  info_list The list of connected devices captured using rs2_query_devices
 param[out] error     If non-null, receives any error that occurs during this call, otherwise, errors are ignored
 return               Device count
 }
-function RS2_get_device_count(Info_List: PRS2_device_list;
-  var Error: pRS2_error): integer;
+function rs2_get_device_count(Info_List: Prs2_device_list;
+  var Error: prs2_error): integer;
   cdecl; external REALSENSE_DLL;
 {
 Deletes device list, any devices created using this list will remain unaffected.
 param[in]  info_list List to delete
 }
 
-procedure RS2_delete_device_list(info_list: pRS2_device_list); cdecl;
+procedure rs2_delete_device_list(info_list: prs2_device_list); cdecl;
   external REALSENSE_DLL;
 
 {
@@ -31,18 +31,18 @@ procedure RS2_delete_device_list(info_list: pRS2_device_list); cdecl;
 param[in]  info_list the list containing the device to retrieve
 param[in]  index     The zero based index of device to retrieve
 param[out] error     If non-null, receives any error that occurs during this call, otherwise, errors are ignored
-return               The requested device, should be released by RS2_delete_device
+return               The requested device, should be released by rs2_delete_device
 }
 
-function RS2_create_device(Info_List: PRS2_device_list; Index: integer;
-  var Error: pRS2_error): pRS2_device; cdecl; external REALSENSE_DLL;
+function rs2_create_device(Info_List: Prs2_device_list; Index: integer;
+  var Error: prs2_error): prs2_device; cdecl; external REALSENSE_DLL;
 
 {
 Delete RealSense device
 param[in]  device  Realsense device to delete
 }
 
-procedure RS2_delete_device(Device: pRS2_device); cdecl; external REALSENSE_DLL;
+procedure rs2_delete_device(Device: prs2_device); cdecl; external REALSENSE_DLL;
 
 {
  Retrieve camera specific information, like versions of various internal components.
@@ -52,8 +52,8 @@ param[out] error     If non-null, receives any error that occurs during this cal
 return               The requested camera info string, in a format specific to the device model
 }
 
-function RS2_get_device_info(Device: pRS2_device; Info: TRS2_camera_info;
-  var Error: pRS2_error): PChar; cdecl; external REALSENSE_DLL;
+function rs2_get_device_info(Device: prs2_device; Info: Trs2_camera_info;
+  var Error: prs2_error): PChar; cdecl; external REALSENSE_DLL;
 
 
 implementation

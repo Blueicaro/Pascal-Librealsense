@@ -32,14 +32,14 @@ param[out] error  If non-null, receives any error that occurs during this call, 
 return            Context object
 
 }
-function RS2_create_context(api_version: integer; var Error: PRS2_error): pRS2_context;
+function rs2_create_context(api_version: integer; var Error: PRS2_error): pRS2_context;
   cdecl; external REALSENSE_DLL;
 
 {
 brief Frees the relevant context object.
 param[in] context Object that is no longer needed
  }
-procedure RS2_delete_context(Ctx: pRS2_context); cdecl; external REALSENSE_DLL;
+procedure rs2_delete_context(Ctx: prs2_context); cdecl; external REALSENSE_DLL;
 
 
 {/**
@@ -50,9 +50,9 @@ procedure RS2_delete_context(Ctx: pRS2_context); cdecl; external REALSENSE_DLL;
 * \param[out] error  if non-null, receives any error that occurs during this call, otherwise, errors are ignored
 */
 }
-procedure RS2_set_devices_changed_callback(Context: pRS2_context;
-  Devices_Changed_Callback: RS2_devices_changed_callback; User: pUser;
-  Error: pRS2_error); cdecl; external REALSENSE_DLL;
+procedure rs2_set_devices_changed_callback(Context: prs2_context;
+  Devices_Changed_Callback: rs2_devices_changed_callback; User: pUser;
+  Error: prs2_error); cdecl; external REALSENSE_DLL;
 {
   Create a new device and add it to the context
  \param ctx   The context to which the new device will be added
@@ -61,8 +61,8 @@ procedure RS2_set_devices_changed_callback(Context: pRS2_context;
   @return  A pointer to a device that plays data from the file, or null in case of failure
 }
 
-function RS2_context_add_device(Ctx: pRS2_context; FileName: PChar;
-  Error: pRS2_error): pRS2_device; cdecl; external REALSENSE_DLL;
+function rs2_context_add_device(Ctx: prs2_context; FileName: PChar;
+  Error: prs2_error): prs2_device; cdecl; external REALSENSE_DLL;
 
 {
  Add an instance of software device to the context
@@ -70,8 +70,8 @@ function RS2_context_add_device(Ctx: pRS2_context; FileName: PChar;
  param dev   Instance of software device to register into the context
  param[out] error     If non-null, receives any error that occurs during this call, otherwise, errors are ignored
  }
-procedure RS2_context_add_software_device(Ctx: pRS2_context; Dev: pRS2_device;
-  Error: pRS2_error); cdecl; external REALSENSE_DLL;
+procedure rs2_context_add_software_device(Ctx: prs2_context; Dev: prs2_device;
+  Error: prs2_error); cdecl; external REALSENSE_DLL;
 
 {
  Removes a playback device from the context, if exists
@@ -79,8 +79,8 @@ procedure RS2_context_add_software_device(Ctx: pRS2_context; Dev: pRS2_device;
  \param[in]  file      The file name that was used to add the device
  \param[out] error     If non-null, receives any error that occurs during this call, otherwise, errors are ignored
 }
-procedure RS2_context_remove_device(Ctx: pRS2_context; FileName: PChar;
-  Error: pRS2_error);
+procedure rs2_context_remove_device(Ctx: prs2_context; FileName: PChar;
+  Error: prs2_error); cdecl; external REALSENSE_DLL;
 
 {
 Removes tracking module.
@@ -89,16 +89,17 @@ Removes tracking module.
  This function can be used both before the call to query_device() to prevent enabling tracking modules or afterwards to
  release them.
 }
-procedure RS2_context_unload_tracking_module(Ctx: pRS2_context; Error: pRS2_error);
+procedure rs2_context_unload_tracking_module(Ctx: prs2_context;
+  Error: prs2_error); cdecl; external REALSENSE_DLL;
 
 {
  create a static snapshot of all connected devices at the time of the call
  \param context     Object representing librealsense session
  \param[out] error  if non-null, receives any error that occurs during this call, otherwise, errors are ignored
- \return            the list of devices, should be released by RS2_delete_device_list
+ \return            the list of devices, should be released by rs2_delete_device_list
 }
-function RS2_query_devices(context: pRS2_context;
-  var Error: pRS2_error): pRS2_device_list; cdecl; external REALSENSE_DLL;
+function rs2_query_devices(context: prs2_context;
+  var Error: prs2_error): prs2_device_list; cdecl; external REALSENSE_DLL;
 
 {
  create a static snapshot of all connected devices at the time of the call
@@ -107,8 +108,8 @@ function RS2_query_devices(context: pRS2_context;
  \param[out] error  if non-null, receives any error that occurs during this call, otherwise, errors are ignored
  \return            the list of devices, should be released by rs2_delete_device_list
 }
-function RS2_query_devices_ex(Context: pRS2_context; Product_Mask: integer;
-  Error: pRS2_error): pRS2_device_list; cdecl; external REALSENSE_DLL;
+function rs2_query_devices_ex(Context: prs2_context; Product_Mask: integer;
+  Error: prs2_error): prs2_device_list; cdecl; external REALSENSE_DLL;
 
 
 {
@@ -117,8 +118,8 @@ brief Creates RealSense device_hub .
 \param[out] error  If non-null, receives any error that occurs during this call, otherwise, errors are ignored.
 \return            Device hub object
 }
-function RS2_create_device_hub(Context: pRS2_context;
-  Error: pRS2_error): pRs2_device_hub; cdecl; external REALSENSE_DLL;
+function rs2_create_device_hub(Context: prs2_context;
+  Error: prs2_error): prs2_device_hub; cdecl; external REALSENSE_DLL;
 
 {
  If any device is connected return it, otherwise wait until next RealSense device connects.
@@ -130,8 +131,8 @@ function RS2_create_device_hub(Context: pRS2_context;
 
 }
 
-function RS2_device_hub_wait_for_device(Hub: pRs2_device_hub;
-  Error: pRS2_error): pRS2_device; cdecl; external REALSENSE_DLL;
+function rs2_device_hub_wait_for_device(Hub: prs2_device_hub;
+  Error: prs2_error): prs2_device; cdecl; external REALSENSE_DLL;
 
 {
  Checks if device is still connected
@@ -140,8 +141,8 @@ function RS2_device_hub_wait_for_device(Hub: pRs2_device_hub;
  \param[out] error  If non-null, receives any error that occurs during this call, otherwise, errors are ignored.
  \return            1 if the device is connected, 0 otherwise
 }
-function rs2_device_hub_is_device_connected(Hub: pRs2_device_hub;
-  Device: pRS2_device; Error: pRS2_error): integer; cdecl; external REALSENSE_DLL;
+function rs2_device_hub_is_device_connected(Hub: prs2_device_hub;
+  Device: prs2_device; Error: prs2_error): integer; cdecl; external REALSENSE_DLL;
 
 implementation
 
