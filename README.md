@@ -8,3 +8,12 @@ No sé hasta que punto es posible.
 Todo el código aquí publicado es experimental, incluido el código fallido.
 
 Saludos
+
+## Actualización 24/11/2020
+
+Se añade una carpeta, dónde se va generando la documentación. 
+
+Saludos
+
+
+

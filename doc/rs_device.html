@@ -24,35 +24,35 @@ Exposes RealSense device functionality</p>
 <span id="PasDoc-FuncsProcs"></span><h3 class="summary">Functions and Procedures</h3>
 <table class="summary wide_list">
 <tr class="list">
-<td class="itemcode"><code>function <strong><a href="rs_device.html#RS2_get_device_count">RS2_get_device_count</a></strong>(Info_List: <a href="rs_types.html#pRS2_device_list">PRS2_device_list</a>; var Error: <a href="rs_types.html#pRS2_error">pRS2_error</a>): integer; cdecl; external REALSENSE_DLL;</code></td>
+<td class="itemcode"><code>function <strong><a href="rs_device.html#rs2_get_device_count">rs2_get_device_count</a></strong>(Info_List: <a href="rs_types.html#pRS2_device_list">Prs2_device_list</a>; var Error: <a href="rs_types.html#pRS2_error">prs2_error</a>): integer; cdecl; external REALSENSE_DLL;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code>procedure <strong><a href="rs_device.html#RS2_delete_device_list">RS2_delete_device_list</a></strong>(info_list: <a href="rs_types.html#pRS2_device_list">pRS2_device_list</a>); cdecl; external REALSENSE_DLL;</code></td>
+<td class="itemcode"><code>procedure <strong><a href="rs_device.html#rs2_delete_device_list">rs2_delete_device_list</a></strong>(info_list: <a href="rs_types.html#pRS2_device_list">prs2_device_list</a>); cdecl; external REALSENSE_DLL;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code>function <strong><a href="rs_device.html#RS2_create_device">RS2_create_device</a></strong>(Info_List: <a href="rs_types.html#pRS2_device_list">PRS2_device_list</a>; Index: integer; var Error: <a href="rs_types.html#pRS2_error">pRS2_error</a>): <a href="rs_types.html#pRS2_device">pRS2_device</a>; cdecl; external REALSENSE_DLL;</code></td>
+<td class="itemcode"><code>function <strong><a href="rs_device.html#rs2_create_device">rs2_create_device</a></strong>(Info_List: <a href="rs_types.html#pRS2_device_list">Prs2_device_list</a>; Index: integer; var Error: <a href="rs_types.html#pRS2_error">prs2_error</a>): <a href="rs_types.html#pRS2_device">prs2_device</a>; cdecl; external REALSENSE_DLL;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code>procedure <strong><a href="rs_device.html#RS2_delete_device">RS2_delete_device</a></strong>(Device: <a href="rs_types.html#pRS2_device">pRS2_device</a>); cdecl; external REALSENSE_DLL;</code></td>
+<td class="itemcode"><code>procedure <strong><a href="rs_device.html#rs2_delete_device">rs2_delete_device</a></strong>(Device: <a href="rs_types.html#pRS2_device">prs2_device</a>); cdecl; external REALSENSE_DLL;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code>function <strong><a href="rs_device.html#RS2_get_device_info">RS2_get_device_info</a></strong>(Device: <a href="rs_types.html#pRS2_device">pRS2_device</a>; Info: <a href="rs_sensor.html#Trs2_camera_info">TRS2_camera_info</a>; var Error: <a href="rs_types.html#pRS2_error">pRS2_error</a>): PChar; cdecl; external REALSENSE_DLL;</code></td>
+<td class="itemcode"><code>function <strong><a href="rs_device.html#rs2_get_device_info">rs2_get_device_info</a></strong>(Device: <a href="rs_types.html#pRS2_device">prs2_device</a>; Info: <a href="rs_sensor.html#Trs2_camera_info">Trs2_camera_info</a>; var Error: <a href="rs_types.html#pRS2_error">prs2_error</a>): PChar; cdecl; external REALSENSE_DLL;</code></td>
 </tr>
 </table>
 <h2 class="description">Description</h2>
 <h3 class="detail">Functions and Procedures</h3>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="RS2_get_device_count"></span><code>function <strong>RS2_get_device_count</strong>(Info_List: <a href="rs_types.html#pRS2_device_list">PRS2_device_list</a>; var Error: <a href="rs_types.html#pRS2_error">pRS2_error</a>): integer; cdecl; external REALSENSE_DLL;</code></td>
+<td class="itemcode"><span id="rs2_get_device_count"></span><code>function <strong>rs2_get_device_count</strong>(Info_List: <a href="rs_types.html#pRS2_device_list">Prs2_device_list</a>; var Error: <a href="rs_types.html#pRS2_error">prs2_error</a>): integer; cdecl; external REALSENSE_DLL;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
-Determines number of devices in a list. param[in] info_list The list of connected devices captured using RS2_query_devices param[out] error If non-null, receives any error that occurs during this call, otherwise, errors are ignored return Device count</p>
+Determines number of devices in a list. param[in] info_list The list of connected devices captured using rs2_query_devices param[out] error If non-null, receives any error that occurs during this call, otherwise, errors are ignored return Device count</p>
 </td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="RS2_delete_device_list"></span><code>procedure <strong>RS2_delete_device_list</strong>(info_list: <a href="rs_types.html#pRS2_device_list">pRS2_device_list</a>); cdecl; external REALSENSE_DLL;</code></td>
+<td class="itemcode"><span id="rs2_delete_device_list"></span><code>procedure <strong>rs2_delete_device_list</strong>(info_list: <a href="rs_types.html#pRS2_device_list">prs2_device_list</a>); cdecl; external REALSENSE_DLL;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -61,16 +61,16 @@ Deletes device list, any devices created using this list will remain unaffected.
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="RS2_create_device"></span><code>function <strong>RS2_create_device</strong>(Info_List: <a href="rs_types.html#pRS2_device_list">PRS2_device_list</a>; Index: integer; var Error: <a href="rs_types.html#pRS2_error">pRS2_error</a>): <a href="rs_types.html#pRS2_device">pRS2_device</a>; cdecl; external REALSENSE_DLL;</code></td>
+<td class="itemcode"><span id="rs2_create_device"></span><code>function <strong>rs2_create_device</strong>(Info_List: <a href="rs_types.html#pRS2_device_list">Prs2_device_list</a>; Index: integer; var Error: <a href="rs_types.html#pRS2_error">prs2_error</a>): <a href="rs_types.html#pRS2_device">prs2_device</a>; cdecl; external REALSENSE_DLL;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
-Creates a device by index. The device object represents a physical camera and provides the means to manipulate it. param[in] info_list the list containing the device to retrieve param[in] index The zero based index of device to retrieve param[out] error If non-null, receives any error that occurs during this call, otherwise, errors are ignored return The requested device, should be released by RS2_delete_device</p>
+Creates a device by index. The device object represents a physical camera and provides the means to manipulate it. param[in] info_list the list containing the device to retrieve param[in] index The zero based index of device to retrieve param[out] error If non-null, receives any error that occurs during this call, otherwise, errors are ignored return The requested device, should be released by rs2_delete_device</p>
 </td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="RS2_delete_device"></span><code>procedure <strong>RS2_delete_device</strong>(Device: <a href="rs_types.html#pRS2_device">pRS2_device</a>); cdecl; external REALSENSE_DLL;</code></td>
+<td class="itemcode"><span id="rs2_delete_device"></span><code>procedure <strong>rs2_delete_device</strong>(Device: <a href="rs_types.html#pRS2_device">prs2_device</a>); cdecl; external REALSENSE_DLL;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -79,7 +79,7 @@ Delete RealSense device param[in] device Realsense device to delete</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="RS2_get_device_info"></span><code>function <strong>RS2_get_device_info</strong>(Device: <a href="rs_types.html#pRS2_device">pRS2_device</a>; Info: <a href="rs_sensor.html#Trs2_camera_info">TRS2_camera_info</a>; var Error: <a href="rs_types.html#pRS2_error">pRS2_error</a>): PChar; cdecl; external REALSENSE_DLL;</code></td>
+<td class="itemcode"><span id="rs2_get_device_info"></span><code>function <strong>rs2_get_device_info</strong>(Device: <a href="rs_types.html#pRS2_device">prs2_device</a>; Info: <a href="rs_sensor.html#Trs2_camera_info">Trs2_camera_info</a>; var Error: <a href="rs_types.html#pRS2_error">prs2_error</a>): PChar; cdecl; external REALSENSE_DLL;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>

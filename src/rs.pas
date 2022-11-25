@@ -8,7 +8,7 @@ unit rs;
 
 interface
 
-uses rs_types, SysUtils;
+uses  SysUtils;
 {typedef double      rs2_time_t;     /**< Timestamp format. units are milliseconds */
 typedef long long   rs2_metadata_type; /**< Metadata attribute type is defined as 64 bit signed integer*/}
 

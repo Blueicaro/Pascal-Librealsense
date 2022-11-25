@@ -55,7 +55,12 @@ Se declaran así:
     end;
     prs2_context = ^rs2_context; 
 
-Más información es la ayuda de Free Pascal:
+Otra opción es usar un punto opaco. 
+    
+    Type
+     prs2_context=POpaqueData;
+
+Más información en la ayuda de Free Pascal:
 * https://www.freepascal.org/docs-html/rtl/system/popaquedata.html
 * https://www.freepascal.org/docs-html/rtl/system/topaquedata.html
 

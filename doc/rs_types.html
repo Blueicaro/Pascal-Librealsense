@@ -16,70 +16,72 @@
 </li></ul></div><div class="content">
 <h1 class="unit">Unit rs_types</h1>
 <div class="sections">
-<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section">Uses</div><div class="one_section"><a class="section" href="#PasDoc-Classes">Classes, Interfaces, Objects and Records</a></div><div class="one_section"><a class="section" href="#PasDoc-FuncsProcs">Functions and Procedures</a></div><div class="one_section"><a class="section" href="#PasDoc-Types">Types</a></div><div class="one_section"><a class="section" href="#PasDoc-Constants">Constants</a></div><div class="one_section">Variables</div></div>
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section">Uses</div><div class="one_section">Classes, Interfaces, Objects and Records</div><div class="one_section"><a class="section" href="#PasDoc-FuncsProcs">Functions and Procedures</a></div><div class="one_section"><a class="section" href="#PasDoc-Types">Types</a></div><div class="one_section"><a class="section" href="#PasDoc-Constants">Constants</a></div><div class="one_section">Variables</div></div>
 <span id="PasDoc-Description"></span><h2 class="description">Description</h2>
 <p>
 Exposes RealSense structs</p>
 <span id="PasDoc-Uses"></span><h2 class="overview">Overview</h2>
-<span id="PasDoc-Classes"></span><h3 class="cio">Classes, Interfaces, Objects and Records</h3>
-<table class="classestable wide_list">
-<tr class="listheader">
-<th class="itemname">Name</th>
-<th class="itemdesc">Description</th>
-</tr>
-<tr class="list">
-<td class="itemname">Record&nbsp;<a class="bold" href="rs_types.Trs2_context.html"><code>Trs2_context</code></a></td>
-<td class="itemdesc">&nbsp;</td>
-</tr>
-<tr class="list2">
-<td class="itemname">Record&nbsp;<a class="bold" href="rs_types.Trs2_device_list.html"><code>Trs2_device_list</code></a></td>
-<td class="itemdesc">&nbsp;</td>
-</tr>
-<tr class="list">
-<td class="itemname">Record&nbsp;<a class="bold" href="rs_types.Trs2_device_info.html"><code>Trs2_device_info</code></a></td>
-<td class="itemdesc">&nbsp;</td>
-</tr>
-<tr class="list2">
-<td class="itemname">Record&nbsp;<a class="bold" href="rs_types.Trs2_device.html"><code>Trs2_device</code></a></td>
-<td class="itemdesc">&nbsp;</td>
-</tr>
-<tr class="list">
-<td class="itemname">Record&nbsp;<a class="bold" href="rs_types.TUser.html"><code>TUser</code></a></td>
-<td class="itemdesc">&nbsp;</td>
-</tr>
-<tr class="list2">
-<td class="itemname">Record&nbsp;<a class="bold" href="rs_types.Trs2_device_hub.html"><code>Trs2_device_hub</code></a></td>
-<td class="itemdesc">&nbsp;</td>
-</tr>
-</table>
 <span id="PasDoc-FuncsProcs"></span><h3 class="summary">Functions and Procedures</h3>
 <table class="summary wide_list">
 <tr class="list">
-<td class="itemcode"><code>function <strong><a href="rs_types.html#rs2_get_error_message">rs2_get_error_message</a></strong>(var error: <a href="rs_types.html#pRS2_error">prs2_error</a>): PChar; cdecl; external REALSENSE_DLL Name 'rs2_get_error_message';</code></td>
+<td class="itemcode"><code>function <strong><a href="rs_types.html#rs2_get_error_message">rs2_get_error_message</a></strong>(error: <a href="rs_types.html#pRS2_error">prs2_error</a>): PChar; cdecl; external REALSENSE_DLL;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code>procedure <strong><a href="rs_types.html#rs2_free_error">rs2_free_error</a></strong>(var error: <a href="rs_types.html#pRS2_error">prs2_error</a>); cdecl; external REALSENSE_DLL Name 'rs2_free_error';</code></td>
+<td class="itemcode"><code>function <strong><a href="rs_types.html#rs2_get_failed_function">rs2_get_failed_function</a></strong>(Error: <a href="rs_types.html#pRS2_error">pRS2_error</a>): PChar; cdecl; external REALSENSE_DLL;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <strong><a href="rs_types.html#rs2_get_failed_args">rs2_get_failed_args</a></strong>(Error: <a href="rs_types.html#pRS2_error">pRS2_error</a>): PChar; cdecl  external REALSENSE_DLL;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>procedure <strong><a href="rs_types.html#rs2_free_error">rs2_free_error</a></strong>(error: <a href="rs_types.html#pRS2_error">prs2_error</a>); cdecl; external REALSENSE_DLL;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <strong><a href="rs_types.html#rs2_exception_type_to_string">rs2_exception_type_to_string</a></strong>(TypeException: <a href="rs_types.html#pRS2_exception_type">prs2_exception_type</a>): PChar; cdecl; external REALSENSE_DLL;</code></td>
 </tr>
 </table>
 <span id="PasDoc-Types"></span><h3 class="summary">Types</h3>
 <table class="summary wide_list">
 <tr class="list">
-<td class="itemcode"><code><strong><a href="rs_types.html#Trs2_error">Trs2_error</a></strong> = integer;</code></td>
+<td class="itemcode"><code><strong><a href="rs_types.html#pRS2_error">pRS2_error</a></strong> = POpaqueData;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><strong><a href="rs_types.html#pRS2_error">pRS2_error</a></strong> = &circ;<a href="rs_types.html#Trs2_error">Trs2_error</a>;</code></td>
+<td class="itemcode"><code><strong><a href="rs_types.html#pRS2_context">pRS2_context</a></strong> = POpaqueData;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><strong><a href="rs_types.html#pRS2_context">pRS2_context</a></strong> = &circ;<a href="rs_types.Trs2_context.html">Trs2_context</a>;</code></td>
+<td class="itemcode"><code><strong><a href="rs_types.html#pRS2_device_list">pRS2_device_list</a></strong> = POpaqueData;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><strong><a href="rs_types.html#pRS2_device_list">pRS2_device_list</a></strong> = &circ;<a href="rs_types.Trs2_device_list.html">Trs2_device_list</a>;</code></td>
+<td class="itemcode"><code><strong><a href="rs_types.html#pRS2_device_info">pRS2_device_info</a></strong> = POpaqueData;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><strong><a href="rs_types.html#pRS2_device_info">pRS2_device_info</a></strong> = &circ;<a href="rs_types.Trs2_device_info.html">Trs2_device_info</a>;</code></td>
+<td class="itemcode"><code><strong><a href="rs_types.html#pRS2_device">pRS2_device</a></strong> = POpaqueData;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><strong><a href="rs_types.html#pRS2_device">pRS2_device</a></strong> = &circ;<a href="rs_types.Trs2_device.html">Trs2_device</a>;</code></td>
+<td class="itemcode"><code><strong><a href="rs_types.html#pUser">pUser</a></strong> = POpaqueData;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="rs_types.html#pRS2_device_hub">pRS2_device_hub</a></strong> = POpaqueData;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="rs_types.html#pRS2_pipeline">pRS2_pipeline</a></strong> = POpaqueData;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="rs_types.html#pRS2_exception_type">pRS2_exception_type</a></strong> = POpaqueData;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="rs_types.html#pRS2_config">pRS2_config</a></strong> = POpaqueData;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="rs_types.html#pRS2_pipeline_profile">pRS2_pipeline_profile</a></strong> = POpaqueData;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="rs_types.html#pRS2_frame">pRS2_frame</a></strong> = POpaqueData;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="rs_types.html#Rs2_time_t">Rs2_time_t</a></strong> = double;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="rs_types.html#Rs2_metadata_type">Rs2_metadata_type</a></strong>= UInt64;</code></td>
 </tr>
 <tr class="list">
 <td class="itemcode"><code><strong><a href="rs_types.html#pRS2_devices_changed_callback">pRS2_devices_changed_callback</a></strong> = &circ;<a href="rs_types.html#RS2_devices_changed_callback">RS2_devices_changed_callback</a>;</code></td>
@@ -88,10 +90,7 @@ Exposes RealSense structs</p>
 <td class="itemcode"><code><strong><a href="rs_types.html#RS2_devices_changed_callback">RS2_devices_changed_callback</a></strong> = procedure(DeviceList1: <a href="rs_types.html#pRS2_device_list">pRS2_Device_List</a>; DeviceList2: <a href="rs_types.html#pRS2_device_list">pRS2_Device_List</a>); cdecl;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><strong><a href="rs_types.html#pUser">pUser</a></strong> = &circ;<a href="rs_types.TUser.html">TUser</a>;</code></td>
-</tr>
-<tr class="list2">
-<td class="itemcode"><code><strong><a href="rs_types.html#pRs2_device_hub">pRs2_device_hub</a></strong> = &circ;<a href="rs_types.Trs2_device_hub.html">Trs2_device_hub</a>;</code></td>
+<td class="itemcode"><code><strong><a href="rs_types.html#rs2_exception_type">rs2_exception_type</a></strong> = (...);</code></td>
 </tr>
 </table>
 <span id="PasDoc-Constants"></span><h3 class="summary">Constants</h3>
@@ -272,14 +271,35 @@ Exposes RealSense structs</p>
 <h3 class="detail">Functions and Procedures</h3>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="rs2_get_error_message"></span><code>function <strong>rs2_get_error_message</strong>(var error: <a href="rs_types.html#pRS2_error">prs2_error</a>): PChar; cdecl; external REALSENSE_DLL Name 'rs2_get_error_message';</code></td>
+<td class="itemcode"><span id="rs2_get_error_message"></span><code>function <strong>rs2_get_error_message</strong>(error: <a href="rs_types.html#pRS2_error">prs2_error</a>): PChar; cdecl; external REALSENSE_DLL;</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="rs2_free_error"></span><code>procedure <strong>rs2_free_error</strong>(var error: <a href="rs_types.html#pRS2_error">prs2_error</a>); cdecl; external REALSENSE_DLL Name 'rs2_free_error';</code></td>
+<td class="itemcode"><span id="rs2_get_failed_function"></span><code>function <strong>rs2_get_failed_function</strong>(Error: <a href="rs_types.html#pRS2_error">pRS2_error</a>): PChar; cdecl; external REALSENSE_DLL;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="rs2_get_failed_args"></span><code>function <strong>rs2_get_failed_args</strong>(Error: <a href="rs_types.html#pRS2_error">pRS2_error</a>): PChar; cdecl  external REALSENSE_DLL;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="rs2_free_error"></span><code>procedure <strong>rs2_free_error</strong>(error: <a href="rs_types.html#pRS2_error">prs2_error</a>); cdecl; external REALSENSE_DLL;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="rs2_exception_type_to_string"></span><code>function <strong>rs2_exception_type_to_string</strong>(TypeException: <a href="rs_types.html#pRS2_exception_type">prs2_exception_type</a>): PChar; cdecl; external REALSENSE_DLL;</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
@@ -287,56 +307,114 @@ Exposes RealSense structs</p>
 <h3 class="detail">Types</h3>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="Trs2_error"></span><code><strong>Trs2_error</strong> = integer;</code></td>
+<td class="itemcode"><span id="pRS2_error"></span><code><strong>pRS2_error</strong> = POpaqueData;</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="pRS2_error"></span><code><strong>pRS2_error</strong> = &circ;<a href="rs_types.html#Trs2_error">Trs2_error</a>;</code></td>
+<td class="itemcode"><span id="pRS2_context"></span><code><strong>pRS2_context</strong> = POpaqueData;</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="pRS2_context"></span><code><strong>pRS2_context</strong> = &circ;<a href="rs_types.Trs2_context.html">Trs2_context</a>;</code></td>
+<td class="itemcode"><span id="pRS2_device_list"></span><code><strong>pRS2_device_list</strong> = POpaqueData;</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="pRS2_device_list"></span><code><strong>pRS2_device_list</strong> = &circ;<a href="rs_types.Trs2_device_list.html">Trs2_device_list</a>;</code></td>
+<td class="itemcode"><span id="pRS2_device_info"></span><code><strong>pRS2_device_info</strong> = POpaqueData;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="pRS2_device"></span><code><strong>pRS2_device</strong> = POpaqueData;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="pUser"></span><code><strong>pUser</strong> = POpaqueData;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="pRS2_device_hub"></span><code><strong>pRS2_device_hub</strong> = POpaqueData;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
-Trs2_device_list = integer;</p>
+??</p>
 </td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="pRS2_device_info"></span><code><strong>pRS2_device_info</strong> = &circ;<a href="rs_types.Trs2_device_info.html">Trs2_device_info</a>;</code></td>
+<td class="itemcode"><span id="pRS2_pipeline"></span><code><strong>pRS2_pipeline</strong> = POpaqueData;</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="pRS2_device"></span><code><strong>pRS2_device</strong> = &circ;<a href="rs_types.Trs2_device.html">Trs2_device</a>;</code></td>
+<td class="itemcode"><span id="pRS2_exception_type"></span><code><strong>pRS2_exception_type</strong> = POpaqueData;</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="pRS2_config"></span><code><strong>pRS2_config</strong> = POpaqueData;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="pRS2_pipeline_profile"></span><code><strong>pRS2_pipeline_profile</strong> = POpaqueData;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="pRS2_frame"></span><code><strong>pRS2_frame</strong> = POpaqueData;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Rs2_time_t"></span><code><strong>Rs2_time_t</strong> = double;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Timestamp format. units are milliseconds</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Rs2_metadata_type"></span><code><strong>Rs2_metadata_type</strong>= UInt64;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Metadata attribute type is defined as 64 bit signed integer</p>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
 <td class="itemcode"><span id="pRS2_devices_changed_callback"></span><code><strong>pRS2_devices_changed_callback</strong> = &circ;<a href="rs_types.html#RS2_devices_changed_callback">RS2_devices_changed_callback</a>;</code></td>
 </tr>
 <tr><td colspan="1">
-<p>
-typedef void (*rs2_devices_changed_callback_ptr)(rs2_device_list*, rs2_device_list*, void*);</p>
-</td></tr>
+&nbsp;</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
@@ -347,17 +425,33 @@ typedef void (*rs2_devices_changed_callback_ptr)(rs2_device_list*, rs2_device_li
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="pUser"></span><code><strong>pUser</strong> = &circ;<a href="rs_types.TUser.html">TUser</a>;</code></td>
+<td class="itemcode"><span id="rs2_exception_type"></span><code><strong>rs2_exception_type</strong> = (...);</code></td>
 </tr>
 <tr><td colspan="1">
-&nbsp;</td></tr>
-</table>
-<table class="detail wide_list">
-<tr class="list">
-<td class="itemcode"><span id="pRs2_device_hub"></span><code><strong>pRs2_device_hub</strong> = &circ;<a href="rs_types.Trs2_device_hub.html">Trs2_device_hub</a>;</code></td>
-</tr>
-<tr><td colspan="1">
-&nbsp;</td></tr>
+<p>
+Exception types are the different categories of errors that RealSense API might return. */</p>
+<h6 class="description_section">Values</h6>
+<ul>
+<li>
+<span id="RS2_EXCEPTION_TYPE_UNKNOWN">RS2_EXCEPTION_TYPE_UNKNOWN</span></li>
+<li>
+<span id="RS2_EXCEPTION_TYPE_CAMERA_DISCONNECTED">RS2_EXCEPTION_TYPE_CAMERA_DISCONNECTED</span>: Device was disconnected, this can be caused by outside intervention, by internal firmware error or due to insufficient power</li>
+<li>
+<span id="RS2_EXCEPTION_TYPE_BACKEND">RS2_EXCEPTION_TYPE_BACKEND</span>: Error was returned from the underlying OS-specific layer</li>
+<li>
+<span id="RS2_EXCEPTION_TYPE_INVALID_VALUE">RS2_EXCEPTION_TYPE_INVALID_VALUE</span>: Invalid value was passed to the API</li>
+<li>
+<span id="RS2_EXCEPTION_TYPE_WRONG_API_CALL_SEQUENCE">RS2_EXCEPTION_TYPE_WRONG_API_CALL_SEQUENCE</span>: Function precondition was violated</li>
+<li>
+<span id="RS2_EXCEPTION_TYPE_NOT_IMPLEMENTED">RS2_EXCEPTION_TYPE_NOT_IMPLEMENTED</span>: The method is not implemented at this point</li>
+<li>
+<span id="RS2_EXCEPTION_TYPE_DEVICE_IN_RECOVERY_MODE">RS2_EXCEPTION_TYPE_DEVICE_IN_RECOVERY_MODE</span>: Device is in recovery mode and might require firmware update</li>
+<li>
+<span id="RS2_EXCEPTION_TYPE_IO">RS2_EXCEPTION_TYPE_IO</span>: IO Device failure</li>
+<li>
+<span id="RS2_EXCEPTION_TYPE_COUNT">RS2_EXCEPTION_TYPE_COUNT</span>: Number of enumeration values. Not a valid input: intended to be used in for-loops.</li>
+</ul>
+</td></tr>
 </table>
 <h3 class="detail">Constants</h3>
 <table class="detail wide_list">

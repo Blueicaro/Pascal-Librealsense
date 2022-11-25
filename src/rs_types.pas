@@ -18,52 +18,50 @@ const
 
 
 type
+  pRS2_error = POpaqueData;
+  pRS2_context = POpaqueData;
+  pRS2_device_list = POpaqueData;
+  pRS2_device_info = POpaqueData;
+  pRS2_device = POpaqueData;
+  pUser = POpaqueData; //??
+  pRS2_device_hub = POpaqueData;
+  pRS2_pipeline = POpaqueData;
+  pRS2_exception_type = POpaqueData;
+  pRS2_config = POpaqueData;
+  pRS2_pipeline_profile = POpaqueData;
+  pRS2_frame = POpaqueData;
 
-  Trs2_error = integer;
-  pRS2_error = ^Trs2_error;
-
-type
-  Trs2_context = record
-  end;
-  pRS2_context = ^Trs2_context;
-
-{typedef struct rs2_device_list rs2_device_list;}
-type
-  Trs2_device_list = record
-  end;
-  //Trs2_device_list = integer;
-  pRS2_device_list = ^Trs2_device_list;
-
-{typedef struct rs2_device_info rs2_device_info;}
-type
-  Trs2_device_info = record
-  end;
-  pRS2_device_info = ^Trs2_device_info;
-
-{typedef struct rs2_device rs2_device;}
-type
-  Trs2_device = record
-  end;
-  pRS2_device = ^Trs2_device;
+ Type
+  Rs2_time_t = double;     //< Timestamp format. units are milliseconds
+  Rs2_metadata_type= UInt64; //< Metadata attribute type is defined as 64 bit signed integer
 
 
-{typedef void (*rs2_devices_changed_callback_ptr)(rs2_device_list*, rs2_device_list*, void*);}
 type
   pRS2_devices_changed_callback = ^RS2_devices_changed_callback;
 
   RS2_devices_changed_callback = procedure(DeviceList1: pRS2_Device_List;
     DeviceList2: pRS2_Device_List); cdecl;
+ {
+  Exception types are the different categories of errors that RealSense API might return. */
+}
 
 type
-  TUser = record
-  end;
-  pUser = ^TUser;
-
-{typedef struct rs2_device_hub rs2_device_hub;}
-type
-  Trs2_device_hub = record
-  end;
-  pRs2_device_hub = ^Trs2_device_hub;
+  rs2_exception_type = (
+    RS2_EXCEPTION_TYPE_UNKNOWN,
+    RS2_EXCEPTION_TYPE_CAMERA_DISCONNECTED,
+    //< Device was disconnected, this can be caused by outside intervention, by internal firmware error or due to insufficient power
+    RS2_EXCEPTION_TYPE_BACKEND,
+    //< Error was returned from the underlying OS-specific layer
+    RS2_EXCEPTION_TYPE_INVALID_VALUE,            //< Invalid value was passed to the API
+    RS2_EXCEPTION_TYPE_WRONG_API_CALL_SEQUENCE,  //< Function precondition was violated
+    RS2_EXCEPTION_TYPE_NOT_IMPLEMENTED,
+    //< The method is not implemented at this point
+    RS2_EXCEPTION_TYPE_DEVICE_IN_RECOVERY_MODE,
+    //< Device is in recovery mode and might require firmware update
+    RS2_EXCEPTION_TYPE_IO,                       //< IO Device failure
+    RS2_EXCEPTION_TYPE_COUNT
+    //< Number of enumeration values. Not a valid input: intended to be used in for-loops.
+    );
 
 const
   RS2_EXTENSION_UNKNOWN = 0;
@@ -124,12 +122,17 @@ const
   RS2_EXTENSION_CALIBRATION_CHANGE_DEVICE = 55;
   RS2_EXTENSION_COUNT = 56;
 
+function rs2_get_error_message(error: prs2_error): PChar;
+  cdecl; external REALSENSE_DLL;
+function rs2_get_failed_function(Error: pRS2_error): PChar;
+  cdecl; external REALSENSE_DLL;
+function rs2_get_failed_args(Error: pRS2_error): PChar; cdecl
+  external REALSENSE_DLL;
+procedure rs2_free_error(error: prs2_error); cdecl;
+  external REALSENSE_DLL;
 
-function rs2_get_error_message(var error: prs2_error): PChar;
-  cdecl; external REALSENSE_DLL Name 'rs2_get_error_message';
-
-procedure rs2_free_error(var error: prs2_error); cdecl;
-  external REALSENSE_DLL Name 'rs2_free_error';
+function rs2_exception_type_to_string(TypeException: prs2_exception_type): PChar;
+  cdecl; external REALSENSE_DLL;
 
 
 

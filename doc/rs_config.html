@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>rs_config</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.16.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<ul><li><a href="AllUnits.html">Units</a></li><li><a href="ClassHierarchy.html">Class Hierarchy</a></li><li><a href="AllClasses.html">Classes, Interfaces, Objects and Records</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constants</a></li><li><a href="AllFunctions.html">Functions and Procedures</a></li><li><a href="AllIdentifiers.html">Identifiers</a></li><li><form class="search-form" action="tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></div></form>
+<div style="clear: both"></div>
+</li></ul></div><div class="content">
+<h1 class="unit">Unit rs_config</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section">Uses</div><div class="one_section">Classes, Interfaces, Objects and Records</div><div class="one_section"><a class="section" href="#PasDoc-FuncsProcs">Functions and Procedures</a></div><div class="one_section">Types</div><div class="one_section"><a class="section" href="#PasDoc-Constants">Constants</a></div><div class="one_section">Variables</div></div>
+<span id="PasDoc-Description"></span><h2 class="description">Description</h2>
+<p>
+Exposes RealSense processing-block functionality</p>
+<span id="PasDoc-Uses"></span><h2 class="overview">Overview</h2>
+<span id="PasDoc-FuncsProcs"></span><h3 class="summary">Functions and Procedures</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code>function <strong><a href="rs_config.html#rs2_create_config">rs2_create_config</a></strong>(error: <a href="rs_types.html#pRS2_error">pRS2_error</a>): <a href="rs_types.html#pRS2_config">prs2_config</a>; cdecl; external REALSENSE_DLL;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>procedure <strong><a href="rs_config.html#rs2_delete_config">rs2_delete_config</a></strong>(config: <a href="rs_types.html#pRS2_config">prs2_config</a>); cdecl; external REALSENSE_DLL;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>procedure <strong><a href="rs_config.html#rs2_config_enable_stream">rs2_config_enable_stream</a></strong>(config: <a href="rs_types.html#pRS2_config">pRs2_config</a>; stream: <a href="rs_sensor.html#rs2_stream">rs2_stream</a>; index: integer; Width: integer; Height: integer; format: <a href="rs_sensor.html#rs2_format">rs2_format</a>; framerate: integer; error: <a href="rs_types.html#pRS2_error">pRS2_error</a>); cdecl; external REALSENSE_DLL;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Constants"></span><h3 class="summary">Constants</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><strong><a href="rs_config.html#RS2_DEFAULT_TIMEOUT">RS2_DEFAULT_TIMEOUT</a></strong> = 15000;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Functions and Procedures</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="rs2_create_config"></span><code>function <strong>rs2_create_config</strong>(error: <a href="rs_types.html#pRS2_error">pRS2_error</a>): <a href="rs_types.html#pRS2_config">prs2_config</a>; cdecl; external REALSENSE_DLL;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Create a config instance The config allows pipeline users to request filters for the pipeline streams and device selection and configuration. This is an optional step in pipeline creation, as the pipeline resolves its streaming device internally. Config provides its users a way to set the filters and test if there is no conflict with the pipeline requirements from the device. It also allows the user to find a matching device for the config filters and the pipeline, in order to select a device explicitly, and modify its controls before streaming starts.
+
+<p>param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored return rs2_config* A pointer to a new config instance</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="rs2_delete_config"></span><code>procedure <strong>rs2_delete_config</strong>(config: <a href="rs_types.html#pRS2_config">prs2_config</a>); cdecl; external REALSENSE_DLL;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Deletes an instance of a config param[in] config A pointer to an instance of a config</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="rs2_config_enable_stream"></span><code>procedure <strong>rs2_config_enable_stream</strong>(config: <a href="rs_types.html#pRS2_config">pRs2_config</a>; stream: <a href="rs_sensor.html#rs2_stream">rs2_stream</a>; index: integer; Width: integer; Height: integer; format: <a href="rs_sensor.html#rs2_format">rs2_format</a>; framerate: integer; error: <a href="rs_types.html#pRS2_error">pRS2_error</a>); cdecl; external REALSENSE_DLL;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Enable a device stream explicitly, with selected stream parameters. The method allows the application to request a stream with specific configuration. If no stream is explicitly enabled, the pipeline configures the device and its streams according to the attached computer vision modules and processing blocks requirements, or default configuration for the first available device. The application can configure any of the input stream parameters according to its requirement, or set to 0 for don't care value. The config accumulates the application calls for enable configuration methods, until the configuration is applied. Multiple enable stream calls for the same stream with conflicting parameters override each other, and the last call is maintained. Upon calling \c resolve(), the config checks for conflicts between the application configuration requests and the attached computer vision modules and processing blocks requirements, and fails if conflicts are found. Before \c resolve() is called, no conflict check is done.
+
+<p>param[in] config A pointer to an instance of a config param[in] stream Stream type to be enabled param[in] index Stream index, used for multiple streams of the same type. -1 indicates any. param[in] width Stream image width - for images streams. 0 indicates any. param[in] height Stream image height - for images streams. 0 indicates any. param[in] format Stream data format - pixel format for images streams, of data type for other streams. RS2_FORMAT_ANY indicates any. param[in] framerate Stream frames per second. 0 indicates any. param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored</p>
+</td></tr>
+</table>
+<h3 class="detail">Constants</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RS2_DEFAULT_TIMEOUT"></span><code><strong>RS2_DEFAULT_TIMEOUT</strong> = 15000;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<hr><span class="appinfo"><em>Generated by <a href="https://pasdoc.github.io/">PasDoc 0.16.0</a>. </em>
+</span>
+</div></div></body></html>
