@@ -165,7 +165,7 @@ function rs2_get_frame_data_size(const frame: pRS2_frame; error: pRS2_error): in
 
  }
 
-function rs2_get_frame_data(const frame: pRS2_frame; error: pRS2_error): puser; cdecl;
+function rs2_get_frame_data(const frame: pRS2_frame; error: pRS2_error): pVoid; cdecl;
   external REALSENSE_DLL;
 
 {

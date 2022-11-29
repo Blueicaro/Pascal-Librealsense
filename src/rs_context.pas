@@ -51,7 +51,7 @@ procedure rs2_delete_context(Ctx: prs2_context); cdecl; external REALSENSE_DLL;
 */
 }
 procedure rs2_set_devices_changed_callback(Context: prs2_context;
-  Devices_Changed_Callback: rs2_devices_changed_callback; User: pUser;
+  Devices_Changed_Callback: rs2_devices_changed_callback; User: pVoid;
   Error: prs2_error); cdecl; external REALSENSE_DLL;
 {
   Create a new device and add it to the context

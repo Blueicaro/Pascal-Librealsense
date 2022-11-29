@@ -38,7 +38,7 @@ var
   config: prs2_config;
   PipeLineProfile: pRS2_pipeline_profile;
   frames, frame: pRS2_frame;
-  p: pUser;
+  p: pVoid;
   rgb_frame_data: uint8;
   FrameTimeStampDomain: rs2_timestamp_domain;
   FrameTimeStampDomainStr: PChar;
