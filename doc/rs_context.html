@@ -30,7 +30,7 @@ Exposes RealSense context functionality</p>
 <td class="itemcode"><code>procedure <strong><a href="rs_context.html#rs2_delete_context">rs2_delete_context</a></strong>(Ctx: <a href="rs_types.html#pRS2_context">prs2_context</a>); cdecl; external REALSENSE_DLL;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code>procedure <strong><a href="rs_context.html#rs2_set_devices_changed_callback">rs2_set_devices_changed_callback</a></strong>(Context: <a href="rs_types.html#pRS2_context">prs2_context</a>; Devices_Changed_Callback: <a href="rs_types.html#RS2_devices_changed_callback">rs2_devices_changed_callback</a>; User: <a href="rs_types.html#pUser">pUser</a>; Error: <a href="rs_types.html#pRS2_error">prs2_error</a>); cdecl; external REALSENSE_DLL;</code></td>
+<td class="itemcode"><code>procedure <strong><a href="rs_context.html#rs2_set_devices_changed_callback">rs2_set_devices_changed_callback</a></strong>(Context: <a href="rs_types.html#pRS2_context">prs2_context</a>; Devices_Changed_Callback: <a href="rs_types.html#RS2_devices_changed_callback">rs2_devices_changed_callback</a>; User: <a href="rs_types.html#pvoid">pVoid</a>; Error: <a href="rs_types.html#pRS2_error">prs2_error</a>); cdecl; external REALSENSE_DLL;</code></td>
 </tr>
 <tr class="list2">
 <td class="itemcode"><code>function <strong><a href="rs_context.html#rs2_context_add_device">rs2_context_add_device</a></strong>(Ctx: <a href="rs_types.html#pRS2_context">prs2_context</a>; FileName: PChar; Error: <a href="rs_types.html#pRS2_error">prs2_error</a>): <a href="rs_types.html#pRS2_device">prs2_device</a>; cdecl; external REALSENSE_DLL;</code></td>
@@ -114,7 +114,7 @@ brief Frees the relevant context object. param[in] context Object that is no lon
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="rs2_set_devices_changed_callback"></span><code>procedure <strong>rs2_set_devices_changed_callback</strong>(Context: <a href="rs_types.html#pRS2_context">prs2_context</a>; Devices_Changed_Callback: <a href="rs_types.html#RS2_devices_changed_callback">rs2_devices_changed_callback</a>; User: <a href="rs_types.html#pUser">pUser</a>; Error: <a href="rs_types.html#pRS2_error">prs2_error</a>); cdecl; external REALSENSE_DLL;</code></td>
+<td class="itemcode"><span id="rs2_set_devices_changed_callback"></span><code>procedure <strong>rs2_set_devices_changed_callback</strong>(Context: <a href="rs_types.html#pRS2_context">prs2_context</a>; Devices_Changed_Callback: <a href="rs_types.html#RS2_devices_changed_callback">rs2_devices_changed_callback</a>; User: <a href="rs_types.html#pvoid">pVoid</a>; Error: <a href="rs_types.html#pRS2_error">prs2_error</a>); cdecl; external REALSENSE_DLL;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
