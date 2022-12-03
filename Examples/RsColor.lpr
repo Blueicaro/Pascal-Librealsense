@@ -9,16 +9,16 @@ uses
   rs_sensor,
   rs_pipeline,
   rs_config,
-  rs_frame;
+  rs_frame, rs_processing, rs_option;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //                                     These parameters are reconfigurable                                        //
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 const
   STREAM = RS2_STREAM_COLOR;
-  // rs2_stream is a types of data provided by RealSense device
+  // Trs2_stream is a types of data provided by RealSense device
   STFORMAT = RS2_FORMAT_RGB8;
-  // rs2_format identifies how binary data is encoded within a frame
+  // Trs2_format identifies how binary data is encoded within a frame
   Width = 640;
   // Defines the number of columns for each frame
   Height = 480;
@@ -40,11 +40,11 @@ var
   frames, frame: pRS2_frame;
   p: pVoid;
   rgb_frame_data: uint8;
-  FrameTimeStampDomain: rs2_timestamp_domain;
+  FrameTimeStampDomain: Trs2_timestamp_domain;
   FrameTimeStampDomainStr: PChar;
-  frameMetadataTimeOfArrival: Rs2_metadata_type;
+  frameMetadataTimeOfArrival: Trs2_metadata_type;
   prgb_frame_data: ^uint8;
-  FrameTimeStamp: Rs2_time_t;
+  FrameTimeStamp: Trs2_time_t;
 
   procedure CheckError(var aError: pRS2_error);
   var
@@ -165,7 +165,7 @@ begin
       end;
       writeln('');
       writeln('Frame No' + IntToStr(FrameNumber));
-      WriteLn('Timestamp: '+FloatToStr(FrameTimeStamp));
+     // WriteLn('Timestamp: '+FloatToStr(FrameTimeStamp));
       writeln ( 'Timestamp domain: '+FrameTimeStampDomainstr);
       WriteLn('Time of arrival: '+FloatToStr(double(frameMetadataTimeOfArrival)));
       rs2_release_frame(frame);

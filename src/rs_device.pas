@@ -143,7 +143,7 @@ function rs2_send_and_receive_raw_data(device: pRS2_device;
  return               Non-zero value iff the device can be extended to the given extension
 }
 function rs2_is_device_extendable_to(const device: pRS2_device;
-  extension: rs2_extension; error: pRS2_error): integer; cdecl; external REALSENSE_DLL;
+  extension: Trs2_extension; error: pRS2_error): integer; cdecl; external REALSENSE_DLL;
 {
 
  Create a static snapshot of all connected sensors within a specific device.
@@ -330,7 +330,7 @@ return                       New calibration table
 
 }
 function rs2_run_on_chip_calibration(device: pRS2_device; json_content: pvoid;
-  content_size: integer; healt: PDouble; callback: prs2_update_progress_callback_ptr;
+  content_size: integer; healt: PSingle; callback: prs2_update_progress_callback_ptr;
   client_data: pvoid; timeout_ms: integer; error: pRS2_error): prs2_raw_data_buffer;
   cdecl; external REALSENSE_DLL;
 
@@ -353,7 +353,7 @@ function rs2_calibration_type_to_string(aType: rs2_calibration_type): PChar;
 { Anything >= 0 is not an issue }
 type
   rs2_calibration_status = (
-  RS2_CALIBRATION_STATUS_FIRST = -5,
+    RS2_CALIBRATION_STATUS_FIRST = -5,
     RS2_CALIBRATION_BAD_CONDITIONS = -5,
     //< Trigger was attempted but conditions (temp/APD) were invalid (still inactive)
     RS2_CALIBRATION_BAD_RESULT = -4,
@@ -438,7 +438,7 @@ return                        New calibration table
 
 
 }
-function rs2_run_tare_calibration(device: pRS2_device; ground_truth_mm: double;
+function rs2_run_tare_calibration(device: pRS2_device; ground_truth_mm: single;
   json_content: pvoid; content_size: integer;
   callback: prs2_update_progress_callback_ptr; client_data: pvoid;
   timeout_ms: integer; error: pRS2_error): prs2_raw_data_buffer;
@@ -473,8 +473,69 @@ procedure rs2_load_json(dev: pRS2_device; json_content: pvoid;
   content_size: nativeuint; error: pRS2_error); cdecl; external REALSENSE_DLL;
 
 {
-e
+  Run target-based focal length calibration
+param[in]    device: device to calibrate
+param[in]    left_queue: container for left IR frames with resoluton of  1280x720 and the target in the center of 320x240 pixels ROI.
+param[in]    right_queue: container for right IR frames with resoluton of  1280x720 and the target in the center of 320x240 pixels ROI
+param[in]    target_width: the rectangle width in mm on the target
+param[in]    target_height: the rectangle height in mm on the target
+param[in]    adjust_both_sides: 1 for adjusting both left and right camera calibration tables, and 0 for adjusting right camera calibraion table only
+param[out]   ratio: the corrected ratio from the calibration
+param[out]   angle: the target's tilt angle
+param[in]    callback: Optional callback for update progress notifications, the progress value is normailzed to 1
+param[in]    client_data: Optional client data for the callback
+return       New calibration table
+
 }
+function rs2_run_focal_length_calibration(device: pRS2_device;
+  left_queue: prs2_frame_queue; right_queue: prs2_frame_queue;
+  target_width: single; target_height: single; adjust_both_sides: integer;
+  ration: single; angle: Psingle; callback: rs2_update_progress_callback_ptr;
+  client_data: pvoid; error: pRS2_error): prs2_raw_data_buffer; cdecl;
+  external REALSENSE_DLL;
+ {
+
+  Depth-RGB UV-Map calibration. Applicable for D400 cameras
+param[in]    device: device to calibrate
+param[in]    left_queue: the frame queue for left IR frames with resoluton of 1280x720 and the target captured in the center of 320x240 pixels ROI.
+param[in]    color_queue: the frame queue for RGB frames with resoluton of 1280x720 and the target in the center of 320x240 pixels ROI
+param[in]    depth_queue: the frame queue for Depth frames with resoluton of 1280x720
+param[in]    py_px_only: 1 for calibrating color camera py and px only, 1 for calibrating color camera py, px, fy, and fx.
+param[out]   health: The four health check numbers in order of px, py, fx, fy for the calibration
+param[in]    health_size: number of health check numbers, which is 4 by default
+param[in]    callback: Optional callback for update progress notifications, the progress value is normailzed to 1
+param[in]    client_data: Optional client data for the callback
+return       New calibration table
+
+ }
+
+function rs2_run_uv_map_calibration(device: pRS2_device;
+  left_queue: prs2_frame_queue; color_queue: prs2_frame_queue;
+  depth_queue: prs2_frame_queue; py_py_only: integer; health: Psingle;
+  health_size: integer; callback: prs2_update_progress_callback_ptr;
+  cliente_data: pvoid; error: pRS2_error): prs2_raw_data_buffer;
+  cdecl; external REALSENSE_DLL;
+{
+
+/**
+* Calculate Z for calibration target - distance to the target's plane
+* \param[in]    queue1-3: A frame queue of raw images used to calculate and extract the distance to a predefined target pattern.
+* For D400 the indexes 1-3 correspond to Left IR, Right IR and Depth with only the Left IR being used
+* \param[in]    target_width: Expected target's horizontal dimension in mm
+* \param[in]    target_height: Expected target's vertical dimension in mm
+* \param[in]    callback: Optional callback for reporting progress status
+* \param[in]    client_data: Optional client data for the callback
+* \return       Calculated distance (Z) to target in millimeter, or negative number if failed
+*/
+float rs2_calculate_target_z(rs2_device* device, rs2_frame_queue* queue1, rs2_frame_queue* queue2, rs2_frame_queue* queue3,
+    float target_width, float target_height, rs2_update_progress_callback_ptr progress_callback, void* client_data, rs2_error** error);
+}
+function rs2_calculate_target_z(device: pRS2_device;
+  queue1: prs2_frame_queue; queue2: prs2_frame_queue; queue3: prs2_frame_queue;
+  target_width: integer; target_height: integer;
+  callback: prs2_update_progress_callback_ptr; client_data: pvoid; error: pRS2_error): single;
+  cdecl; external REALSENSE_DLL;
+
 implementation
 
 end.

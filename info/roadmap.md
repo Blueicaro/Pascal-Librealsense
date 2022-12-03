@@ -1,21 +1,48 @@
 # RoadMap
 
-| Include                     | Notes
-|-----------------------------|---------------|
-| rs.h                        | on progress    
-| rsutil.h                    |              
-| rs_advanced_mode.h          |              
-| rs_advanced_mode_command.h  |
-| rs_config.h                 | on progress 
-| rs_context.h                | finished 
-| rs_device.h                 | on progress 
-| rs_frame.h                  |
-| rs_internal.h               |
-| rs_option.h                 |
-| rs_pipeline.h               | on progress 
-| rs_processing.h             |
-| rs_record_playback.h        |
-| rs_sensor.h                 | on progress 
-| rs_types.h                  | on progress 
+## Table of translations
+
+| Include                     |Pascal unit                    | Notes
+|-----------------------------|-------------------------------|--------------|
+| rs.h                        | rs.pas                        |on progress    
+| rsutil.h                    | rsutil.pas                    |             
+| rs_advanced_mode.h          | rs_advanced_mode.pas          |             
+| rs_advanced_mode_command.h  | rs_advanced_mode_command.pas  |
+| rs_config.h                 | rs_config.pas                 |finished 
+| rs_context.h                | rs_context.pas                |finished 
+| rs_device.h                 | rs_device.pas                 |finished 
+| rs_frame.h                  | rs_frame.pas                  |finished
+| rs_internal.h               | rs_internal.pas               |
+| rs_option.h                 | rs_option.pas                 |
+| rs_pipeline.h               | rs_pipeline.pas               |finished 
+| rs_processing.h             | rs_processing.pas             |
+| rs_record_playback.h        | rs_record_playback.pas        |
+| rs_sensor.h                 | rs_sensor.pas                 |finished 
+| rs_types.h                  | rs_types.pas                  |on progress 
+| rs_option.h                 | rs_option.pas                 |on progress
 
 
+***
+
+
+## rs.pas
+
+| Function/procedure          | Tested
+|-----------------------------|--------|
+| RS2_API_VERSION_STR         |   OK   |
+| RS2_API_FULL_VERSION_STR    |   OK   |
+
+***
+
+## rs_advanced_mode.pas
+
+| Function/procedure          | Tested
+|-----------------------------|--------|
+|                    |        |
+
+***
+
+## rs_advanced_mode_command
+
+| Function/procedure          | Tested
+|-----------------------------|--------|
