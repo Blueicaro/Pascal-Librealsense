@@ -19,6 +19,8 @@ Saludos/B.R.
 Se añade una carpeta, dónde se va generando la documentación. 
 In doc Folder you can find the documentation.
 
+Add the folder doc, where you can documentation
+
 Saludos/B.R.
 
 
