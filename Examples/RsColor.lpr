@@ -9,7 +9,8 @@ uses
   rs_sensor,
   rs_pipeline,
   rs_config,
-  rs_frame, rs_processing, rs_option;
+  rs_frame, rs_processing, rs_option, rs_internal, rs_record_playback, 
+rs_advanced_mode_command, rs_advanced_mode;
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //                                     These parameters are reconfigurable                                        //

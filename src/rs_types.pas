@@ -42,8 +42,9 @@ type
   pRS2_processing_block = POpaqueData;
   pRS2_frame_processor_callback = POpaqueData;
   pRS2_frame_processor_callback_ptr = POpaqueData;
-
-
+  pRS2_options_list = POpaqueData;
+  pRS2_options = POpaqueData;
+  pRS2_log_message = POpaqueData;
 
 type
   Trs2_time_t = QWord;     //< Timestamp format. units are milliseconds
@@ -51,7 +52,7 @@ type
 //< Metadata attribute type is defined as 64 bit signed integer
 
 {
-Category of the librealsense notification.
+  Category of the librealsense notification.
 }
 type
   Trs2_notification_category = (
@@ -78,7 +79,7 @@ function rs2_notification_category_to_string(category:
   Trs2_notification_category): PChar;
   cdecl; external REALSENSE_DLL;
 {
-Specifies advanced interfaces (capabilities) objects may implement.
+  Specifies advanced interfaces (capabilities) objects may implement.
 }
 type
   Trs2_extension = (
@@ -146,11 +147,10 @@ function rs2_extension_type_to_string(atype: Trs2_extension): PChar;
 
 function rs2_extension_to_string(aType: Trs2_extension): PChar;
   cdecl; external REALSENSE_DLL;
- {
- 
- A stream's format identifies how binary data is encoded within a frame. */
 
- }
+{
+ A stream's format identifies how binary data is encoded within a frame. */
+}
 type
   Trs2_format = (
     RS2_FORMAT_ANY,
@@ -213,7 +213,7 @@ function rs2_format_to_string(format: Trs2_format): PChar;
   cdecl; external REALSENSE_DLL;
 
 {
-Distortion model: defines how pixel coordinates should be mapped to sensor coordinates. */
+  Distortion model: defines how pixel coordinates should be mapped to sensor coordinates. */
 }
 type
   Trs2_distortion = (
@@ -235,8 +235,8 @@ type
 
 function rs2_distortion_to_string(distortion: Trs2_distortion): PChar;
   cdecl; external REALSENSE_DLL;
- {
-Video stream intrinsics.
+{
+  Video stream intrinsics.
 }
 type
   Trs2_intrinsics = record
@@ -276,7 +276,7 @@ type
   pRS2_notification_callback_ptr = ^rs2_notification_callback_ptr;
   rs2_notification_callback_ptr = procedure(rs2_notification: pRS2_notification;
     Data: pvoid);
- {
+{
   Exception types are the different categories of errors that RealSense API might return. */
 }
 
@@ -297,16 +297,8 @@ type
     RS2_EXCEPTION_TYPE_COUNT
     //< Number of enumeration values. Not a valid input: intended to be used in for-loops.
     );
-  {
- \brief Motion device intrinsics: scale, bias, and variances. */
-
-    /* \internal
-    * Scale X       cross axis  cross axis  Bias X \n
-    * cross axis    Scale Y     cross axis  Bias Y \n
-    * cross axis    cross axis  Scale Z     Bias Z */
-    float data[3][4];          /**< Interpret data array values */
-    float noise_variances[3];  /**< Variance of noise for X, Y, and Z axis */
-    float bias_variances[3];   /**< Variance of bias for X, Y, and Z axis */
+{
+ Motion device intrinsics: scale, bias, and variances. */
 }
 
 type
@@ -317,16 +309,16 @@ type
   end;
   pRS2_motion_device_intrinsic = ^Trs2_motion_device_intrinsic;
 
-  {
-    Video DSM (Digital Sync Module) parameters for calibration (same layout as in FW ac_depth_params)
-    This is the block in MC that converts angles to dimensionless integers reported to MA (using "DSM coefficients")
-  }
+{
+  Video DSM (Digital Sync Module) parameters for calibration (same layout as in FW ac_depth_params)
+  This is the block in MC that converts angles to dimensionless integers reported to MA (using "DSM coefficients")
+}
 type
   Trs2_dsm_params = packed record
     timestamp: QWord;
     //< system_clock::time_point::time_since_epoch().count()
     version: word;                     //< MAJOR<<12 | MINOR<<4 | PATCH
-    model: byte;                        //*< rs2_dsm_correction_model
+    model: byte;                        //< rs2_dsm_correction_model
     flags: array [0..4] of byte;   //< TBD, now 0s
     h_scale: single;
     //< the scale factor to horizontal DSM scale thermal results
@@ -461,10 +453,9 @@ type
 
 function rs2_log_severity_to_string(info: Trs2_log_severity): PChar; cdecl; external;
 
-    {
-
-     3D coordinates with origin at topmost left corner of the lense,
-     with positive Z pointing away from the camera, positive X pointing camera right and positive Y pointing camera down
+{
+  3D coordinates with origin at topmost left corner of the lense,
+  with positive Z pointing away from the camera, positive X pointing camera right and positive Y pointing camera down
 }
 type
   Trs2_vertex = record
@@ -473,13 +464,23 @@ type
   pRS2_vertex = ^Trs2_vertex;
 
 {
-Pixel location within 2D image. (0,0) is the topmost, left corner. Positive X is right, positive Y is down *
+  Pixel location within 2D image. (0,0) is the topmost, left corner. Positive X is right, positive Y is down *
 }
 type
   Trs2_pixel = record
     ij: array [0..1] of integer;
   end;
   pRS2_pixel = ^Trs2_pixel;
+
+{
+typedef void (*rs2_log_callback_ptr)(rs2_log_severity, rs2_log_message const *, void * arg);
+}
+type
+  pRS2_log_callback_ptr = ^rs2_log_callback_ptr;
+
+  rs2_log_callback_ptr = procedure(log_severity: Trs2_log_severity;
+    const log_message: PChar; arg: pvoid);
+
 
 function rs2_get_error_message(error: prs2_error): PChar;
   cdecl; external REALSENSE_DLL;

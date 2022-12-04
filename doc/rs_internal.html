@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Intel RealSense SDK 2.0: rs_internal</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.16.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2><a href="index.html">Intel RealSense SDK 2.0</a></h2><ul><li><a href="AllUnits.html">Units</a></li><li><a href="ClassHierarchy.html">Class Hierarchy</a></li><li><a href="AllClasses.html">Classes, Interfaces, Objects and Records</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constants</a></li><li><a href="AllFunctions.html">Functions and Procedures</a></li><li><a href="AllIdentifiers.html">Identifiers</a></li><li><form class="search-form" action="tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></div></form>
+<div style="clear: both"></div>
+</li></ul></div><div class="content">
+<h1 class="unit">Unit rs_internal</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section">Uses</div><div class="one_section"><a class="section" href="#PasDoc-Classes">Classes, Interfaces, Objects and Records</a></div><div class="one_section"><a class="section" href="#PasDoc-FuncsProcs">Functions and Procedures</a></div><div class="one_section"><a class="section" href="#PasDoc-Types">Types</a></div><div class="one_section"><a class="section" href="#PasDoc-Constants">Constants</a></div><div class="one_section">Variables</div></div>
+<span id="PasDoc-Description"></span><h2 class="description">Description</h2>
+<p>
+Exposes RealSense internal functionality</p>
+<span id="PasDoc-Uses"></span><h2 class="overview">Overview</h2>
+<span id="PasDoc-Classes"></span><h3 class="cio">Classes, Interfaces, Objects and Records</h3>
+<table class="classestable wide_list">
+<tr class="listheader">
+<th class="itemname">Name</th>
+<th class="itemdesc">Description</th>
+</tr>
+<tr class="list">
+<td class="itemname">Record&nbsp;<a class="bold" href="rs_internal.Trs2_video_stream.html"><code>Trs2_video_stream</code></a></td>
+<td class="itemdesc">&nbsp;</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Record&nbsp;<a class="bold" href="rs_internal.Trs2_motion_stream.html"><code>Trs2_motion_stream</code></a></td>
+<td class="itemdesc">&nbsp;</td>
+</tr>
+<tr class="list">
+<td class="itemname">Record&nbsp;<a class="bold" href="rs_internal.Trs2_pose_stream.html"><code>Trs2_pose_stream</code></a></td>
+<td class="itemdesc">&nbsp;</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Record&nbsp;<a class="bold" href="rs_internal.Trs2_software_video_frame.html"><code>Trs2_software_video_frame</code></a></td>
+<td class="itemdesc">&nbsp;</td>
+</tr>
+<tr class="list">
+<td class="itemname">Record&nbsp;<a class="bold" href="rs_internal.Trs2_software_motion_frame.html"><code>Trs2_software_motion_frame</code></a></td>
+<td class="itemdesc">&nbsp;</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Record&nbsp;<a class="bold" href="rs_internal.Tpose_frame_info.html"><code>Tpose_frame_info</code></a></td>
+<td class="itemdesc">&nbsp;</td>
+</tr>
+<tr class="list">
+<td class="itemname">Record&nbsp;<a class="bold" href="rs_internal.Trs2_software_pose_frame.html"><code>Trs2_software_pose_frame</code></a></td>
+<td class="itemdesc">&nbsp;</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Record&nbsp;<a class="bold" href="rs_internal.Trs2_software_notification.html"><code>Trs2_software_notification</code></a></td>
+<td class="itemdesc">&nbsp;</td>
+</tr>
+<tr class="list">
+<td class="itemname">Record&nbsp;<a class="bold" href="rs_internal.Trs2_software_device_destruction_callback.html"><code>Trs2_software_device_destruction_callback</code></a></td>
+<td class="itemdesc">&nbsp;</td>
+</tr>
+</table>
+<span id="PasDoc-FuncsProcs"></span><h3 class="summary">Functions and Procedures</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code>function <strong><a href="rs_internal.html#rs2_create_recording_context">rs2_create_recording_context</a></strong>(api_version: integer; const filename: PChar; const seccion: PChar; mode: <a href="rs_internal.html#Trs2_recording_mode">Trs2_recording_mode</a>; error: <a href="rs_types.html#pRS2_error">pRS2_error</a>): <a href="rs_types.html#pRS2_context">pRS2_context</a>; cdecl; external REALSENSE_DLL;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <strong><a href="rs_internal.html#rs2_create_mock_context">rs2_create_mock_context</a></strong>(api_version: integer; filename: PChar; section: PChar; error: <a href="rs_types.html#pRS2_error">pRS2_error</a>): <a href="rs_types.html#pRS2_context">pRS2_context</a>; cdecl; external REALSENSE_DLL;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <strong><a href="rs_internal.html#rs2_create_mock_context_versioned">rs2_create_mock_context_versioned</a></strong>(api_version: integer; filename: PChar; secction: PChar; min_api_version: PChar; error: <a href="rs_types.html#pRS2_error">pRS2_error</a>): <a href="rs_types.html#pRS2_context">pRS2_context</a>; cdecl; external REALSENSE_DLL;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Types"></span><h3 class="summary">Types</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><strong><a href="rs_internal.html#Trs2_recording_mode">Trs2_recording_mode</a></strong> = (...);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="rs_internal.html#TDeleterProc">TDeleterProc</a></strong> = procedure(arg: Pointer); cdecl;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Constants"></span><h3 class="summary">Constants</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><strong><a href="rs_internal.html#signed_fw_size">signed_fw_size</a></strong>: integer = $18031C;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="rs_internal.html#signed_sr300_size">signed_sr300_size</a></strong>: integer = $0C025C;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="rs_internal.html#unsigned_fw_size">unsigned_fw_size</a></strong>: integer = $200000;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="rs_internal.html#unsigned_sr300_size">unsigned_sr300_size</a></strong>: integer = $100000;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Functions and Procedures</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="rs2_create_recording_context"></span><code>function <strong>rs2_create_recording_context</strong>(api_version: integer; const filename: PChar; const seccion: PChar; mode: <a href="rs_internal.html#Trs2_recording_mode">Trs2_recording_mode</a>; error: <a href="rs_types.html#pRS2_error">pRS2_error</a>): <a href="rs_types.html#pRS2_context">pRS2_context</a>; cdecl; external REALSENSE_DLL;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Create librealsense context that will try to record all operations over librealsense into a file param[in] api_version realsense API version as provided by RS2_API_VERSION macro param[in] filename string representing the name of the file to record param[in] section string representing the name of the section within existing recording param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored return context object, should be released by rs2_delete_context</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="rs2_create_mock_context"></span><code>function <strong>rs2_create_mock_context</strong>(api_version: integer; filename: PChar; section: PChar; error: <a href="rs_types.html#pRS2_error">pRS2_error</a>): <a href="rs_types.html#pRS2_context">pRS2_context</a>; cdecl; external REALSENSE_DLL;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Create librealsense context that given a file will respond to calls exactly as the recording did if the user calls a method that was either not called during recording or violates causality of the recording error will be thrown param[in] api_version realsense API version as provided by RS2_API_VERSION macro param[in] filename string representing the name of the file to play back from param[in] section string representing the name of the section within existing recording param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored return context object, should be released by rs2_delete_context</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="rs2_create_mock_context_versioned"></span><code>function <strong>rs2_create_mock_context_versioned</strong>(api_version: integer; filename: PChar; secction: PChar; min_api_version: PChar; error: <a href="rs_types.html#pRS2_error">pRS2_error</a>): <a href="rs_types.html#pRS2_context">pRS2_context</a>; cdecl; external REALSENSE_DLL;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Create librealsense context that given a file will respond to calls exactly as the recording did if the user calls a method that was either not called during recording or violates causality of the recording error will be thrown param[in] api_version realsense API version as provided by RS2_API_VERSION macro param[in] filename string representing the name of the file to play back from param[in] section string representing the name of the section within existing recording param[in] min_api_version reject any file that was recorded before this version param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored return context object, should be released by rs2_delete_context</p>
+</td></tr>
+</table>
+<h3 class="detail">Types</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Trs2_recording_mode"></span><code><strong>Trs2_recording_mode</strong> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+librealsense Recorder is intended for effective unit-testing Currently supports three modes of operation:</p>
+<h6 class="description_section">Values</h6>
+<ul>
+<li>
+<span id="RS2_RECORDING_MODE_BLANK_FRAMES">RS2_RECORDING_MODE_BLANK_FRAMES</span>: frame metadata will be recorded, but pixel data will be replaced with zeros to save space</li>
+<li>
+<span id="RS2_RECORDING_MODE_COMPRESSED">RS2_RECORDING_MODE_COMPRESSED</span>: frames will be encoded using a proprietary lossy encoding, aiming at x5 compression at some CPU expense</li>
+<li>
+<span id="RS2_RECORDING_MODE_BEST_QUALITY">RS2_RECORDING_MODE_BEST_QUALITY</span>: frames will not be compressed, but rather stored as-is. This gives best quality and low CPU overhead, but you might run out of memory</li>
+<li>
+<span id="RS2_RECORDING_MODE_COUNT">RS2_RECORDING_MODE_COUNT</span></li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TDeleterProc"></span><code><strong>TDeleterProc</strong> = procedure(arg: Pointer); cdecl;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<h3 class="detail">Constants</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="signed_fw_size"></span><code><strong>signed_fw_size</strong>: integer = $18031C;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Firmware size constants</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="signed_sr300_size"></span><code><strong>signed_sr300_size</strong>: integer = $0C025C;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="unsigned_fw_size"></span><code><strong>unsigned_fw_size</strong>: integer = $200000;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="unsigned_sr300_size"></span><code><strong>unsigned_sr300_size</strong>: integer = $100000;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<hr><span class="appinfo"><em>Generated by <a href="https://pasdoc.github.io/">PasDoc 0.16.0</a>. </em>
+</span>
+</div></div></body></html>

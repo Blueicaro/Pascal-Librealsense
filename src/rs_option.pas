@@ -161,8 +161,228 @@ type
     RS2_OPTION_AUTO_GAIN_LIMIT_TOGGLE, //< Enable / disable color image auto-gain*/
     RS2_OPTION_COUNT
     //< Number of enumeration values. Not a valid input: intended to be used in for-loops. */
-
     );
+  pRS2_option = ^Trs2_option;
+
+{  This function is being deprecated. For existing options it will return option name,
+   but for future API additions the user should call rs2_get_option_name instead.
+}
+function rs2_option_to_string(option: Trs2_option): PChar;
+  cdecl; external REALSENSE_DLL; deprecated;
+
+type
+  Trs2_sr300_visual_preset = (
+    RS2_SR300_VISUAL_PRESET_SHORT_RANGE, //< Preset for short range
+    RS2_SR300_VISUAL_PRESET_LONG_RANGE, //< Preset for long range
+    RS2_SR300_VISUAL_PRESET_BACKGROUND_SEGMENTATION,
+    //< Preset for background segmentation
+    RS2_SR300_VISUAL_PRESET_GESTURE_RECOGNITION, //< Preset for gesture recognition
+    RS2_SR300_VISUAL_PRESET_OBJECT_SCANNING, //< Preset for object scanning
+    RS2_SR300_VISUAL_PRESET_FACE_ANALYTICS, //< Preset for face analytics
+    RS2_SR300_VISUAL_PRESET_FACE_LOGIN, //< Preset for face login
+    RS2_SR300_VISUAL_PRESET_GR_CURSOR, //< Preset for GR cursor
+    RS2_SR300_VISUAL_PRESET_DEFAULT, //< Camera default settings
+    RS2_SR300_VISUAL_PRESET_MID_RANGE, //< Preset for mid-range
+    RS2_SR300_VISUAL_PRESET_IR_ONLY, //< Preset for IR only
+    RS2_SR300_VISUAL_PRESET_COUNT
+    //< Number of enumeration values. Not a valid input: intended to be used in for-loops.
+    );
+
+function rs2_sr300_visual_preset_to_string(preset: Trs2_sr300_visual_preset): PChar;
+  cdecl; external REALSENSE_DLL;
+{
+  For RS400 devices: provides optimized settings (presets) for specific types of usage. */
+}
+
+type
+  Trs2_rs400_visual_preset = (
+    RS2_RS400_VISUAL_PRESET_CUSTOM,
+    RS2_RS400_VISUAL_PRESET_DEFAULT,
+    RS2_RS400_VISUAL_PRESET_HAND,
+    RS2_RS400_VISUAL_PRESET_HIGH_ACCURACY,
+    RS2_RS400_VISUAL_PRESET_HIGH_DENSITY,
+    RS2_RS400_VISUAL_PRESET_MEDIUM_DENSITY,
+    RS2_RS400_VISUAL_PRESET_REMOVE_IR_PATTERN,
+    RS2_RS400_VISUAL_PRESET_COUNT
+    //*< Number of enumeration values. Not a valid input: intended to be used in for-loops. */
+    );
+
+function rs2_rs400_visual_preset_to_string(preset: Trs2_rs400_visual_preset): PChar;
+  cdecl; external REALSENSE_DLL;
+{
+  For L500 devices: provides optimized settings (presets) for specific types of usage.
+}
+type
+  Trs2_l500_visual_preset = (
+    RS2_L500_VISUAL_PRESET_CUSTOM,
+    RS2_L500_VISUAL_PRESET_DEFAULT,
+    RS2_L500_VISUAL_PRESET_NO_AMBIENT,
+    RS2_L500_VISUAL_PRESET_LOW_AMBIENT,
+    RS2_L500_VISUAL_PRESET_MAX_RANGE,
+    RS2_L500_VISUAL_PRESET_SHORT_RANGE,
+    RS2_L500_VISUAL_PRESET_AUTOMATIC,
+    RS2_L500_VISUAL_PRESET_COUNT
+    //< Number of enumeration values. Not a valid input: intended to be used in for-loops. */
+    );
+
+function rs2_l500_visual_preset_to_string(preset: Trs2_l500_visual_preset): PChar;
+  cdecl; external REALSENSE_DLL;
+{
+  For setting the camera_mode option
+}
+type
+  Trs2_sensor_mode = (
+
+    RS2_SENSOR_MODE_VGA,
+    RS2_SENSOR_MODE_XGA,
+    RS2_SENSOR_MODE_QVGA,
+    RS2_SENSOR_MODE_COUNT
+    //< Number of enumeration values. Not a valid input: intended to be used in for-loops. */
+    );
+
+function rs2_sensor_mode_to_string(preset: Trs2_sensor_mode): PChar;
+  cdecl; external REALSENSE_DLL;
+{
+   DEPRECATED! - Use RS2_OPTION_DIGITAL_GAIN instead. */
+}
+type
+  Trs2_ambient_light = (
+    RS2_AMBIENT_LIGHT_NO_AMBIENT = 1,
+    RS2_AMBIENT_LIGHT_LOW_AMBIENT = 2
+    );
+
+function rs2_ambient_light_to_string(preset: Trs2_ambient_light): PChar;
+  cdecl; external REALSENSE_DLL;
+{
+  digital gain for RS2_OPTION_DIGITAL_GAIN option. */
+}
+type
+  Trs2_digital_gain = (
+    RS2_DIGITAL_GAIN_AUTO = 0,
+    RS2_DIGITAL_GAIN_HIGH = 1,
+    RS2_DIGITAL_GAIN_LOW = 2);
+
+function rs2_digital_gain(preset: Trs2_digital_gain): PChar;
+  cdecl; external REALSENSE_DLL;
+
+type
+  Trs2_host_perf_mode = (
+    RS2_HOST_PERF_DEFAULT = 0,  //< no change in settings, use device defaults */
+    RS2_HOST_PERF_LOW = 1,
+    //< low performance host mode, if host cannot keep up with workload, this option may improve stability, for example, it sets larger USB transaction granularity, reduces number of transactions and improve performance and stability on relatively weak hosts as compared to the workload */
+    RS2_HOST_PERF_HIGH = 2,
+    //< high performance host mode, if host is strong as compared to the work and can handle workload without delay, this option sets smaller USB transactions granularity and as result larger number of transactions and workload on host, but reduces chance in device frame drops */
+    RS2_HOST_PERF_COUNT
+    //< Number of enumeration values. Not a valid input: intended to be used in for-loops. */
+    );
+
+function rs2_host_perf_mode_to_string(perf: Trs2_host_perf_mode): PChar;
+  cdecl; external REALSENSE_DLL;
+{
+  check if an option is read-only
+  param[in] options  the options container
+  param[in] option   option id to be checked
+  param[out] error   if non-null, receives any error that occurs during this call, otherwise, errors are ignored
+  return true if option is read-only
+}
+function rs2_is_option_read_only(options: pRS2_option; option: Trs2_option;
+  error: pRS2_error): integer; cdecl; external REALSENSE_DLL;
+{
+  read option value from the sensor
+  param[in] options  the options container
+  param[in] option   option id to be queried
+  param[out] error   if non-null, receives any error that occurs during this call, otherwise, errors are ignored
+  return value of the option
+}
+function rs2_get_option(const options: pRS2_option; option: Trs2_option;
+  error: pRS2_error): single; cdecl; external REALSENSE_DLL;
+{
+  write new value to sensor option
+  param[in] options    the options container
+  param[in] option     option id to be queried
+  param[in] value      new value for the option
+  param[out] error     if non-null, receives any error that occurs during this call, otherwise, errors are ignored
+}
+procedure rs2_set_option(const options: pRS2_option; option: Trs2_option;
+  Value: single; error: pRS2_error); cdecl; external REALSENSE_DLL;
+{
+  get the list of supported options of options container
+  param[in] options    the options container
+  param[out] error     if non-null, receives any error that occurs during this call, otherwise, errors are ignored
+}
+function rs2_options_list(const options: pRS2_option;
+  error: pRS2_error): pRS2_options_list; cdecl; external REALSENSE_DLL;
+{
+  get the size of options list
+  param[in] options    the option list
+  param[out] error     if non-null, receives any error that occurs during this call, otherwise, errors are ignored
+}
+function rs2_get_options_list_size(const options: pRS2_options_list;
+  error: pRS2_error): integer; cdecl; external REALSENSE_DLL;
+{
+  get option name
+  param[in] options    the options container
+  param[in] option     option id to be checked
+  param[out] error     if non-null, receives any error that occurs during this call, otherwise, errors are ignored
+  return human-readable option name
+}
+function rs2_get_option_name(const options: pRS2_options; option: Trs2_option;
+  error: pRS2_error): PChar; cdecl; external REALSENSE_DLL;
+{
+  get the specific option from options list
+  param[in] i    the index of the option
+  param[out] error     if non-null, receives any error that occurs during this call, otherwise, errors are ignored
+}
+function rs2_get_option_from_list(options: pRS2_options_list; i: integer;
+  error: pRS2_error): pRS2_option; cdecl; external REALSENSE_DLL;
+{
+  Deletes options list
+  param[in] list list to delete
+}
+procedure rs2_delete_options_list(list: pRS2_options_list); cdecl;
+  external REALSENSE_DLL;
+{
+  check if particular option is supported by a subdevice
+  param[in] options    the options container
+  param[in] option     option id to be checked
+  param[out] error     if non-null, receives any error that occurs during this call, otherwise, errors are ignored
+  return true if option is supported
+}
+function rs2_supports_option(options: pRS2_options; option: Trs2_option;
+  error: pRS2_error): integer; cdecl external REALSENSE_DLL;
+{
+retrieve the available range of values of a supported option
+param[in] sensor  the RealSense device
+param[in] option  the option whose range should be queried
+param[out] min    the minimum value which will be accepted for this option
+param[out] max    the maximum value which will be accepted for this option
+param[out] step   the granularity of options which accept discrete values, or zero if the option accepts continuous values
+param[out] def    the default value of the option
+param[out] error  if non-null, receives any error that occurs during this call, otherwise, errors are ignored
+}
+procedure rs2_get_option_range(const sensor: pRS2_options; option: Trs2_option;
+  min: single; max: single; step: single; def: PSingle; error: pRS2_error);
+  cdecl; external REALSENSE_DLL;
+{
+get option description
+param[in] options    the options container
+param[in] option     option id to be checked
+param[out] error     if non-null, receives any error that occurs during this call, otherwise, errors are ignored
+return human-readable option description
+}
+function rs2_get_option_description(const options: pRS2_options;
+  option: Trs2_option; error: pRS2_error): PChar; cdecl; external REALSENSE_DLL;
+{
+  get option value description (in case specific option value hold special meaning)
+  param[in] options    the options container
+  param[in] option     option id to be checked
+  param[in] value      value of the option
+  param[out] error     if non-null, receives any error that occurs during this call, otherwise, errors are ignored
+  return human-readable description of a specific value of an option or null if no special meaning
+}
+function rs2_get_option_value_description(const options: pRS2_options;
+  option: Trs2_option; Value: single; error: pRS2_error): PChar;
+  cdecl; external REALSENSE_DLL;
 
 implementation
 

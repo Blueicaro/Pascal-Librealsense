@@ -5,4 +5,4 @@ SETLOCAL
 SET CDir=%~dp0%
 SET PasDoc=d:\Lazarus\pasdoc\bin\
 SET Src=D:\github\LibreSensePascal\src
-CALL "%PasDoc%pasdoc.exe" "--use-tipue-search" "%Src%\rs_types.pas" "%Src%\rs_context.pas" "%Src%\rs.pas" "%Src%\rs_device.pas" "%Src%\rs_sensor.pas" "%Src%\rs_pipeline.pas" "%Src%\rs_frame.pas" "%Src%\rs_config.pas" || PAUSE
+CALL "%PasDoc%pasdoc.exe" "--use-tipue-search" "--title=Intel RealSense SDK 2.0" %Src%\*.pas

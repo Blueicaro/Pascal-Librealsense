@@ -1,25 +1,25 @@
 # RoadMap
 
-## Table of translations
+## Table of conversions
 
-| Include                     |Pascal unit                    | Notes
+| Include                     | Pascal unit                   | Notes
 |-----------------------------|-------------------------------|--------------|
-| rs.h                        | rs.pas                        |on progress    
-| rsutil.h                    | rsutil.pas                    |             
-| rs_advanced_mode.h          | rs_advanced_mode.pas          |             
-| rs_advanced_mode_command.h  | rs_advanced_mode_command.pas  |
+| rs.h                        | rs.pas                        |finished    
+| rsutil.h                    | rsutil.pas                    |finished            
+| rs_advanced_mode.h          | rs_advanced_mode.pas          |finished             
+| rs_advanced_mode_command.h  | rs_advanced_mode_command.pas  |finished
 | rs_config.h                 | rs_config.pas                 |finished 
 | rs_context.h                | rs_context.pas                |finished 
 | rs_device.h                 | rs_device.pas                 |finished 
 | rs_frame.h                  | rs_frame.pas                  |finished
-| rs_internal.h               | rs_internal.pas               |
-| rs_option.h                 | rs_option.pas                 |
+| rs_internal.h               | rs_internal.pas               |on progress
+| rs_option.h                 | rs_option.pas                 |finished
 | rs_pipeline.h               | rs_pipeline.pas               |finished 
-| rs_processing.h             | rs_processing.pas             |
-| rs_record_playback.h        | rs_record_playback.pas        |
+| rs_processing.h             | rs_processing.pas             |finished
+| rs_record_playback.h        | rs_record_playback.pas        |finished
 | rs_sensor.h                 | rs_sensor.pas                 |finished 
 | rs_types.h                  | rs_types.pas                  |on progress 
-| rs_option.h                 | rs_option.pas                 |on progress
+
 
 
 ***

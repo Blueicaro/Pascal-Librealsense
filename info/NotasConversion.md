@@ -79,6 +79,65 @@ En Pascal se debe definir de la siguiente manera:
 
       RS2_devices_changed_callback = procedure (DeviceList1: pRS2_Device_List; 
                                      DeviceList2: pRS2_Device_List);cdecl;
+                                     
+## Conversión de tipos de datos
+
+|             C              |Pascal                         |  Bits
+|----------------------------|-------------------------------|--------------|
+| char                       | char                          | 8 bits(ascci)
+| signed char                | shortint                      | 8 bits con signo
+| unsigned char              | byte                          | 8 bits sin signo
+| char                       | pchar                         | 32 bit (puntero a null-terminated string)
+| short int                  | smalint                       | 16 bits con signo
+| unsigned short int         | word                          | 16 sin signo
+| int                        | integer                       | 16 (o 32) bits (genérico) con signo
+| unsigned int               | cardinal                      | 16 (o 32) bits (genérico) sin signo
+| float                      | single                        | 32 bits con signo
+| long long int              | Int64                         | 64 bits con signo
+| unsigned long long int     | uInt64                        | 64 sin signo
+
+## Estructura con una rutina en la declaración
+
+Por ejemplo:
+
+    typedef struct rs2_software_video_frame
+    {
+    void* pixels;
+    void(*deleter)(void*);
+    int stride;
+    int bpp;
+    rs2_time_t timestamp;
+    rs2_timestamp_domain domain;
+    int frame_number;
+    const rs2_stream_profile* profile;
+    float depth_units;
+    } rs2_software_video_frame;
+
+La línea:
+
+    void(*deleter)(void*);
+
+type
+    
+    TDeleterProc = procedure(arg: Pointer); cdecl;
+
+    type
+      Trs2_software_video_frame = record
+      pixels: pvoid;
+      deleter: TDeleterProc;
+      stride: integer;
+      timestamp: Trs2_time_t;
+      domain: Trs2_timestamp_domain;
+      frame_number: integer;
+      profile: pRS2_stream_profile;
+      depth_units: single;
+    end; 
+
+ 
+Preguntado en el foro:
+https://forum.lazarus.freepascal.org/index.php/topic,61311.0.html?PHPSESSID=tajqr2m9bi89t347sl80bapj70 }
+
+                                                   
 
 
 

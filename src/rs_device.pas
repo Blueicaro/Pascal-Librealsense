@@ -4,7 +4,7 @@ Exposes RealSense device functionality
 unit rs_device;
 
 {$mode ObjFPC}{$H+}
-
+{$WARN 2005 off : Comment level $1 found}
 interface
 
 uses rs_sensor, rs_types;
@@ -296,14 +296,16 @@ procedure rs2_enter_update_state(const device: pRS2_device; error: pRS2_error);
 
 This will improve the depth noise.
 param[in] json_content       Json string to configure regular speed on chip calibration parameters:
-                                    {
+                                     (
+
                                       "calib type" : 0,
                                       "speed": 3,
                                       "scan parameter": 0,
                                       "adjust both sides": 0,
                                       "white wall mode": 0
-                                    }
-                                    calib_type - calibraton type: 0 = regular, 1 = focal length, 2 = both regular and focal length in order
+
+                                    )
+calib_type - calibraton type: 0 = regular, 1 = focal length, 2 = both regular and focal length in order
                                     speed - for regular calibration, value can be one of: Very fast = 0, Fast = 1, Medium = 2, Slow = 3, White wall = 4, default is Slow for type 0 and Fast for type 2
                                     scan_parameter - for regular calibration. value can be one of: Py scan (default) = 0, Rx scan = 1
                                     adjust_both_sides - for focal length calibration. value can be one of: 0 = adjust right only, 1 = adjust both sides
@@ -417,13 +419,13 @@ procedure rs2_trigger_device_calibration(device: pRS2_device;
  This will adjust camera absolute distance to flat target. User needs to enter the known ground truth.
 param[in] ground_truth_mm     Ground truth in mm must be between 60 and 10000
 param[in] json_content        Json string to configure tare calibration parameters:
-                                    {
+                                    (
                                       "average_step_count": 20,
                                       "step count": 20,
                                       "accuracy": 2,
                                       "scan parameter": 0,
                                       "data sampling": 0
-                                    }
+                                    )
                                     average step count - number of frames to average, must be between 1 - 30, default = 20
                                     step count - max iteration steps, must be between 5 - 30, default = 10
                                     accuracy - Subpixel accuracy level, value can be one of: Very high = 0 (0.025%), High = 1 (0.05%), Medium = 2 (0.1%), Low = 3 (0.2%), Default = Very high (0.025%), default is Medium
