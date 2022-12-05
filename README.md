@@ -1,16 +1,12 @@
 # Pascal-LibreSense
 
-Es una intento de hacer warpping para Free Pascal de la libreria LibreSense de intel. https://github.com/IntelRealSense/librealsense
+Es proyecto es warpping para Free Pascal de la libreria LibreSense de intel. https://github.com/IntelRealSense/librealsense
 
 This proyect is a warpping  for free pascal of https://github.com/IntelRealSense/librealsense
 
-No sé si todas las caracteristicas se podrán usar.
+Cualquier problema o duda, abre un issue.
 
-I'm don't if all features can be used
-
-Todo el código aquí publicado es experimental
-
-All code here is experimental.
+If you find any problem, or you have any dude, please open a issue.
 
 Saludos/B.R.
 
@@ -19,7 +15,7 @@ Saludos/B.R.
 Se añade una carpeta, dónde se va generando la documentación. 
 In doc Folder you can find the documentation.
 
-Add the folder doc, where you can documentation
+
 
 Saludos/B.R.
 
