@@ -85,21 +85,24 @@ Exposes RealSense structs</p>
 <td class="itemcode"><code>function <strong><a href="rs_types.html#rs2_stream_to_string">rs2_stream_to_string</a></strong>(stream: <a href="rs_types.html#Trs2_stream">Trs2_stream</a>): PChar; cdecl; external REALSENSE_DLL;</code></td>
 </tr>
 <tr class="list">
+<td class="itemcode"><code>function <strong><a href="rs_types.html#rs2_matchers_to_string">rs2_matchers_to_string</a></strong>(stram: <a href="rs_types.html#Trs2_matchers">Trs2_matchers</a>): PChar; cdecl; external REALSENSE_DLL;</code></td>
+</tr>
+<tr class="list2">
 <td class="itemcode"><code>function <strong><a href="rs_types.html#rs2_log_severity_to_string">rs2_log_severity_to_string</a></strong>(info: <a href="rs_types.html#Trs2_log_severity">Trs2_log_severity</a>): PChar; cdecl; external;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemcode"><code>function <strong><a href="rs_types.html#rs2_get_error_message">rs2_get_error_message</a></strong>(error: <a href="rs_types.html#pRS2_error">prs2_error</a>): PChar; cdecl; external REALSENSE_DLL;</code></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemcode"><code>function <strong><a href="rs_types.html#rs2_get_failed_function">rs2_get_failed_function</a></strong>(Error: <a href="rs_types.html#pRS2_error">pRS2_error</a>): PChar; cdecl; external REALSENSE_DLL;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemcode"><code>function <strong><a href="rs_types.html#rs2_get_failed_args">rs2_get_failed_args</a></strong>(Error: <a href="rs_types.html#pRS2_error">pRS2_error</a>): PChar; cdecl  external REALSENSE_DLL;</code></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemcode"><code>procedure <strong><a href="rs_types.html#rs2_free_error">rs2_free_error</a></strong>(error: <a href="rs_types.html#pRS2_error">prs2_error</a>); cdecl; external REALSENSE_DLL;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemcode"><code>function <strong><a href="rs_types.html#rs2_exception_type_to_string">rs2_exception_type_to_string</a></strong>(TypeException: <a href="rs_types.html#pRS2_exception_type">prs2_exception_type</a>): PChar; cdecl; external REALSENSE_DLL;</code></td>
 </tr>
 </table>
@@ -187,70 +190,82 @@ Exposes RealSense structs</p>
 <td class="itemcode"><code><strong><a href="rs_types.html#pRS2_log_message">pRS2_log_message</a></strong> = POpaqueData;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><strong><a href="rs_types.html#Trs2_time_t">Trs2_time_t</a></strong> = QWord;</code></td>
+<td class="itemcode"><code><strong><a href="rs_types.html#pRS2_firmware_log_message">pRS2_firmware_log_message</a></strong> = POpaqueData;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><strong><a href="rs_types.html#Trs2_metadata_type">Trs2_metadata_type</a></strong> = uint64;</code></td>
+<td class="itemcode"><code><strong><a href="rs_types.html#pRS2_firmware_log_parsed_message">pRS2_firmware_log_parsed_message</a></strong> = POpaqueData;</code></td>
 </tr>
 <tr class="list2">
+<td class="itemcode"><code><strong><a href="rs_types.html#pRS2_terminal_parser">pRS2_terminal_parser</a></strong> = POpaqueData;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="rs_types.html#Trs2_time_t">Trs2_time_t</a></strong> = double;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a href="rs_types.html#Trs2_metadata_type">Trs2_metadata_type</a></strong> = Int64;</code></td>
+</tr>
+<tr class="list">
 <td class="itemcode"><code><strong><a href="rs_types.html#Trs2_notification_category">Trs2_notification_category</a></strong> = (...);</code></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemcode"><code><strong><a href="rs_types.html#Trs2_extension">Trs2_extension</a></strong> = (...);</code></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemcode"><code><strong><a href="rs_types.html#Trs2_format">Trs2_format</a></strong> = (...);</code></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemcode"><code><strong><a href="rs_types.html#pRS2_format">pRS2_format</a></strong> = <a href="rs_types.html#Trs2_format">Trs2_format</a>;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemcode"><code><strong><a href="rs_types.html#Trs2_distortion">Trs2_distortion</a></strong> = (...);</code></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemcode"><code><strong><a href="rs_types.html#PRS2_distortion">PRS2_distortion</a></strong> = &circ;<a href="rs_types.html#Trs2_distortion">Trs2_distortion</a>;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemcode"><code><strong><a href="rs_types.html#pRS2_intrinsics">pRS2_intrinsics</a></strong> = &circ;<a href="rs_types.Trs2_intrinsics.html">Trs2_intrinsics</a>;</code></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemcode"><code><strong><a href="rs_types.html#pRS2_frame_callback_ptr">pRS2_frame_callback_ptr</a></strong> = &circ;<a href="rs_types.html#Trs2_frame_callback_ptr">Trs2_frame_callback_ptr</a>;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemcode"><code><strong><a href="rs_types.html#Trs2_frame_callback_ptr">Trs2_frame_callback_ptr</a></strong> = procedure(frame: <a href="rs_types.html#pRS2_frame">pRS2_frame</a>; void: <a href="rs_types.html#pvoid">pvoid</a>); cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemcode"><code><strong><a href="rs_types.html#pRS2_devices_changed_callback">pRS2_devices_changed_callback</a></strong> = &circ;<a href="rs_types.html#RS2_devices_changed_callback">RS2_devices_changed_callback</a>;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemcode"><code><strong><a href="rs_types.html#RS2_devices_changed_callback">RS2_devices_changed_callback</a></strong> = procedure(DeviceList1: <a href="rs_types.html#pRS2_device_list">pRS2_Device_List</a>; DeviceList2: <a href="rs_types.html#pRS2_device_list">pRS2_Device_List</a>); cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemcode"><code><strong><a href="rs_types.html#prs2_update_progress_callback_ptr">prs2_update_progress_callback_ptr</a></strong> = &circ;<a href="rs_types.html#rs2_update_progress_callback_ptr">rs2_update_progress_callback_ptr</a>;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemcode"><code><strong><a href="rs_types.html#rs2_update_progress_callback_ptr">rs2_update_progress_callback_ptr</a></strong> = procedure(const Value: single; aPointer: <a href="rs_types.html#pvoid">pVoid</a>); cdecl;</code></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemcode"><code><strong><a href="rs_types.html#pRS2_notification_callback_ptr">pRS2_notification_callback_ptr</a></strong> = &circ;<a href="rs_types.html#rs2_notification_callback_ptr">rs2_notification_callback_ptr</a>;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemcode"><code><strong><a href="rs_types.html#rs2_notification_callback_ptr">rs2_notification_callback_ptr</a></strong> = procedure(rs2_notification: <a href="rs_types.html#pRS2_notification">pRS2_notification</a>; Data: <a href="rs_types.html#pvoid">pvoid</a>);</code></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemcode"><code><strong><a href="rs_types.html#Trs2_exception_type">Trs2_exception_type</a></strong> = (...);</code></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemcode"><code><strong><a href="rs_types.html#pRS2_motion_device_intrinsic">pRS2_motion_device_intrinsic</a></strong> = &circ;<a href="rs_types.Trs2_motion_device_intrinsic.html">Trs2_motion_device_intrinsic</a>;</code></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemcode"><code><strong><a href="rs_types.html#pRS2_dsm_params">pRS2_dsm_params</a></strong> = &circ;<a href="rs_types.Trs2_dsm_params.html">Trs2_dsm_params</a>;</code></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemcode"><code><strong><a href="rs_types.html#Trs2_stream">Trs2_stream</a></strong> = (...);</code></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemcode"><code><strong><a href="rs_types.html#prs2_stream">prs2_stream</a></strong> = &circ;<a href="rs_types.html#Trs2_stream">Trs2_stream</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a href="rs_types.html#Trs2_matchers">Trs2_matchers</a></strong> = (...);</code></td>
 </tr>
 <tr class="list2">
 <td class="itemcode"><code><strong><a href="rs_types.html#pRS2_pose">pRS2_pose</a></strong> = &circ;<a href="rs_types.Trs2_pose.html">Trs2_pose</a>;</code></td>
@@ -311,6 +326,13 @@ Exposes RealSense structs</p>
 <table class="detail wide_list">
 <tr class="list">
 <td class="itemcode"><span id="rs2_stream_to_string"></span><code>function <strong>rs2_stream_to_string</strong>(stream: <a href="rs_types.html#Trs2_stream">Trs2_stream</a>): PChar; cdecl; external REALSENSE_DLL;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="rs2_matchers_to_string"></span><code>function <strong>rs2_matchers_to_string</strong>(stram: <a href="rs_types.html#Trs2_matchers">Trs2_matchers</a>): PChar; cdecl; external REALSENSE_DLL;</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
@@ -553,7 +575,28 @@ Exposes RealSense structs</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="Trs2_time_t"></span><code><strong>Trs2_time_t</strong> = QWord;</code></td>
+<td class="itemcode"><span id="pRS2_firmware_log_message"></span><code><strong>pRS2_firmware_log_message</strong> = POpaqueData;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="pRS2_firmware_log_parsed_message"></span><code><strong>pRS2_firmware_log_parsed_message</strong> = POpaqueData;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="pRS2_terminal_parser"></span><code><strong>pRS2_terminal_parser</strong> = POpaqueData;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Trs2_time_t"></span><code><strong>Trs2_time_t</strong> = double;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -562,7 +605,7 @@ Timestamp format. units are milliseconds</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="Trs2_metadata_type"></span><code><strong>Trs2_metadata_type</strong> = uint64;</code></td>
+<td class="itemcode"><span id="Trs2_metadata_type"></span><code><strong>Trs2_metadata_type</strong> = Int64;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -986,6 +1029,34 @@ Streams are different types of data provided by RealSense devices.</p>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Trs2_matchers"></span><code><strong>Trs2_matchers</strong> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Specifies types of different matchers</p>
+<h6 class="description_section">Values</h6>
+<ul>
+<li>
+<span id="RS2_MATCHER_DI">RS2_MATCHER_DI</span>: compare depth and ir based on frame number</li>
+<li>
+<span id="RS2_MATCHER_DI_C">RS2_MATCHER_DI_C</span>: compare depth and ir based on frame number,compare the pair of corresponding depth and ir with color based on closest timestamp,commonly used by SR300</li>
+<li>
+<span id="RS2_MATCHER_DLR_C">RS2_MATCHER_DLR_C</span></li>
+<li>
+<span id="RS2_MATCHER_DLR">RS2_MATCHER_DLR</span>: compare depth, left and right ir based on frame number,compare the set of corresponding depth, left and right with color based on closest timestamp,commonly used by RS415, RS435</li>
+<li>
+<span id="RS2_MATCHER_DIC">RS2_MATCHER_DIC</span>: compare depth, left and right ir based on frame number,commonly used by RS400, RS405, RS410, RS420, RS430</li>
+<li>
+<span id="RS2_MATCHER_DIC_C">RS2_MATCHER_DIC_C</span>: compare depth, ir and confidence based on frame number used by RS500</li>
+<li>
+<span id="RS2_MATCHER_DEFAULT">RS2_MATCHER_DEFAULT</span>: compare depth, ir and confidence based on frame number,compare the set of corresponding depth, ir and confidence with color based on closest timestamp,commonly used by RS515</li>
+<li>
+<span id="RS2_MATCHER_COUNT">RS2_MATCHER_COUNT</span>: the default matcher compare all the streams based on closest timestamp</li>
+</ul>
+</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">

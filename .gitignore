@@ -27,5 +27,8 @@ backup/
 lib/
 bin/
 
+# Ficheros bat para generación de documentacion y otros
+*.bat
+
 # Application bundle for Mac OS
 *.app/

@@ -45,10 +45,13 @@ type
   pRS2_options_list = POpaqueData;
   pRS2_options = POpaqueData;
   pRS2_log_message = POpaqueData;
+  pRS2_firmware_log_message = POpaqueData;
+  pRS2_firmware_log_parsed_message = POpaqueData;
+  pRS2_terminal_parser = POpaqueData;
 
 type
-  Trs2_time_t = QWord;     //< Timestamp format. units are milliseconds
-  Trs2_metadata_type = uint64;
+  Trs2_time_t = double;     //< Timestamp format. units are milliseconds
+  Trs2_metadata_type = Int64;
 //< Metadata attribute type is defined as 64 bit signed integer
 
 {
@@ -377,6 +380,36 @@ type
 
 function rs2_stream_to_string(stream: Trs2_stream): PChar; cdecl; external REALSENSE_DLL;
 
+
+{
+Specifies types of different matchers
+}
+type
+  Trs2_matchers = (
+    RS2_MATCHER_DI,      //<compare depth and ir based on frame number
+
+    RS2_MATCHER_DI_C,
+    //<compare depth and ir based on frame number,compare the pair of corresponding depth and ir with color based on closest timestamp,commonly used by SR300
+
+    RS2_MATCHER_DLR_C,
+    //compare depth, left and right ir based on frame number,compare the set of corresponding depth, left and right with color based on closest timestamp,commonly used by RS415, RS435
+
+    RS2_MATCHER_DLR,
+    //compare depth, left and right ir based on frame number,commonly used by RS400, RS405, RS410, RS420, RS430
+
+    RS2_MATCHER_DIC,     //compare depth, ir and confidence based on frame number used by RS500
+
+    RS2_MATCHER_DIC_C,
+    //compare depth, ir and confidence based on frame number,compare the set of corresponding depth, ir and confidence with color based on closest timestamp,commonly used by RS515
+
+    RS2_MATCHER_DEFAULT,
+    //the default matcher compare all the streams based on closest timestamp
+
+    RS2_MATCHER_COUNT
+    );
+
+function rs2_matchers_to_string(stram: Trs2_matchers): PChar; cdecl;
+  external REALSENSE_DLL;
 {
  3D vector in Euclidean coordinate space
 }

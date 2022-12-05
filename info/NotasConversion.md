@@ -94,6 +94,7 @@ En Pascal se debe definir de la siguiente manera:
 | unsigned int               | cardinal                      | 16 (o 32) bits (genérico) sin signo
 | float                      | single                        | 32 bits con signo
 | long long int              | Int64                         | 64 bits con signo
+| double                     | double                        | 64 bits con signo
 | unsigned long long int     | uInt64                        | 64 sin signo
 
 ## Estructura con una rutina en la declaración

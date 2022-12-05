@@ -166,7 +166,7 @@ begin
       end;
       writeln('');
       writeln('Frame No' + IntToStr(FrameNumber));
-     // WriteLn('Timestamp: '+FloatToStr(FrameTimeStamp));
+       WriteLn('Timestamp: '+FloatToStr(FrameTimeStamp));
       writeln ( 'Timestamp domain: '+FrameTimeStampDomainstr);
       WriteLn('Time of arrival: '+FloatToStr(double(frameMetadataTimeOfArrival)));
       rs2_release_frame(frame);
