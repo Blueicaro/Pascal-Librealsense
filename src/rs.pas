@@ -46,20 +46,6 @@ procedure rs2_delete_raw_data(const buffer: pRS2_raw_data_buffer);
 function rs2_get_raw_data(buffer: pRS2_raw_data_buffer; error: pRS2_error): byte;
   cdecl; external REALSENSE_DLL;
 
-implementation
-
-function RS2_API_VERSION_STR: string;
-begin
-  Result := Format('%d.%d.%d', [RS2_API_MAJOR_VERSION, RS2_API_MINOR_VERSION,
-    RS2_API_PATCH_VERSION]);
-end;
-
-function RS2_API_FULL_VERSION_STR: string;
-begin
-  Result := Format('%d.%d.%d.%d', [RS2_API_MAJOR_VERSION, RS2_API_MINOR_VERSION,
-    RS2_API_PATCH_VERSION, RS2_API_BUILD_VERSION]);
-end;
-
 {
 Retrieve the API version from the source code. Evaluate that the value is conformant to the established policies
 param[out] error  if non-null, receives any error that occurs during this call, otherwise, errors are ignored
@@ -125,5 +111,20 @@ function rs2_depth_frame_get_distance(const frame_ref: pRS2_frame;
   return            the time at specific time point, in live and record mode it will return the system time and in playback mode it will return the recorded time
 }
 function rs2_get_time(error: pRS2_error): Trs2_time_t; cdecl; external REALSENSE_DLL;
+
+implementation
+
+function RS2_API_VERSION_STR: string;
+begin
+  Result := Format('%d.%d.%d', [RS2_API_MAJOR_VERSION, RS2_API_MINOR_VERSION,
+    RS2_API_PATCH_VERSION]);
+end;
+
+function RS2_API_FULL_VERSION_STR: string;
+begin
+  Result := Format('%d.%d.%d.%d', [RS2_API_MAJOR_VERSION, RS2_API_MINOR_VERSION,
+    RS2_API_PATCH_VERSION, RS2_API_BUILD_VERSION]);
+end;
+
 
 end.

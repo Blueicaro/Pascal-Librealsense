@@ -29,13 +29,14 @@
 
 ## rs.pas
 
-| Function/procedure      | Tested |
-|-------------------------|--------|
-|RS2_API_VERSION_STR:     |   OK   |
-|RS2_API_FULL_VERSION_STR:|   OK   |
-|rs2_get_raw_data_size    |   NO   |
-|rs2_delete_raw_data      |   NO   |
-|rs2_get_raw_data         |   NO   |
+| Function/procedure         | Tested |
+|----------------------------|--------|
+|RS2_API_VERSION_STR:        |   OK   |
+|RS2_API_FULL_VERSION_STR:   |   OK   |
+|rs2_get_raw_data_size       |   NO   |
+|rs2_delete_raw_data         |   NO   |
+|rs2_get_raw_data            |   NO   |
+|rs2_depth_frame_get_distance|   Ok   |
 
 
 
@@ -78,9 +79,9 @@
 
 | Function/procedure                             | Tested |
 |------------------------------------------------|--------|
-|rs2_create_config                               |   NO   |
-|rs2_delete_config                               |   NO   |
-|rs2_config_enable_stream                        |   NO   |
+|rs2_create_config                               |   OK   |
+|rs2_delete_config                               |   OK   |
+|rs2_config_enable_stream                        |   OK   |
 |rs2_config_enable_all_stream                    |   NO   |
 |rs2_config_enable_device                        |   NO   |
 |rs2_config_enable_device_from_file              |   NO   |
@@ -119,10 +120,10 @@
 | Function/procedure                     | Tested |
 |----------------------------------------|--------|
 |rs2_get_device_count                    |   OK   |
-|rs2_delete_device_list                  |   NO   |
+|rs2_delete_device_list                  |   OK   |
 |rs2_device_list_contains                |   NO   |
-|rs2_create_device                       |   NO   |
-|rs2_delete_device                       |   NO   |
+|rs2_create_device                       |   OK   |
+|rs2_delete_device                       |   OK   |
 |rs2_get_device_info                     |   OK   |
 |rs2_supports_device_info                |   NO   |
 |rs2_hardware_reset                      |   NO   |
@@ -167,7 +168,7 @@
 |rs2_frame_metadata_to_string       |   NO   |
 |rs2_frame_metadata_value_to_string |   NO   |
 |rs2_extract_frame                  |   NO   |
-|rs2_embedded_frames_count          |   NO   |
+|rs2_embedded_frames_count          |   OK   |
 |rs2_release_frame                  |   NO   |
 |rs2_get_frame_data_size            |   NO   |
 |rs2_get_frame_data                 |   NO   |
@@ -189,7 +190,7 @@
 |rs2_get_frame_texture_coordinates  |   NO   |
 |rs2_get_frame_points_count         |   NO   |
 |rs2_get_frame_stream_profile       |   NO   |
-|rs2_is_frame_extendable_to         |   NO   |
+|rs2_is_frame_extendable_to         |   OK   |
 |rs2_allocate_synthetic_video_frame |   NO   |
 |rs2_allocate_synthetic_motion_frame|   NO   |
 |rs2_allocate_points                |   NO   |
@@ -285,11 +286,11 @@
 
 | Function/procedure                        | Tested |
 |-------------------------------------------|--------|
-|rs2_create_pipeline                        |   NO   |
+|rs2_create_pipeline                        |   OK   |
 |rs2_pipeline_stop                          |   NO   |
-|rs2_delete_pipeline                        |   NO   |
-|rs2_pipeline_start_with_config             |   NO   |
-|rs2_pipeline_wait_for_frames               |   NO   |
+|rs2_delete_pipeline                        |   OK   |
+|rs2_pipeline_start_with_config             |   OK   |
+|rs2_pipeline_wait_for_frames               |   OK   |
 |rs2_delete_pipeline_profile                |   NO   |
 |rs2_pipeline_poll_for_frames               |   NO   |
 |rs2_pipeline_try_wait_for_frames           |   NO   |
