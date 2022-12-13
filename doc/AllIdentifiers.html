@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Intel RealSense SDK 2.0: All Identifiers</title>
+<title>All Identifiers</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="generator" content="PasDoc 0.16.0">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -11,7 +11,7 @@
 </head>
 <body>
 <div class="container"><div class="navigation">
-<h2><a href="index.html">Intel RealSense SDK 2.0</a></h2><ul><li><a href="AllUnits.html">Units</a></li><li><a href="ClassHierarchy.html">Class Hierarchy</a></li><li><a href="AllClasses.html">Classes, Interfaces, Objects and Records</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constants</a></li><li><a href="AllFunctions.html">Functions and Procedures</a></li><li><a href="AllIdentifiers.html">Identifiers</a></li><li><form class="search-form" action="tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></div></form>
+<ul><li><a href="AllUnits.html">Units</a></li><li><a href="ClassHierarchy.html">Class Hierarchy</a></li><li><a href="AllClasses.html">Classes, Interfaces, Objects and Records</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constants</a></li><li><a href="AllFunctions.html">Functions and Procedures</a></li><li><a href="AllIdentifiers.html">Identifiers</a></li><li><form class="search-form" action="tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></div></form>
 <div style="clear: both"></div>
 </li></ul></div><div class="content">
 <h1 class="allitems">All Identifiers</h1>
@@ -864,54 +864,64 @@
 <td class="itemdesc"><p>Deletes RealSense terminal parser. param[in] terminal_parser terminal parser to be deleted</p></td>
 </tr>
 <tr class="list">
+<td class="itemname"><a class="bold" href="rs.html#rs2_depth_frame_get_distance">rs2_depth_frame_get_distance</a></td>
+<td class="itemunit"><a class="bold" href="rs.html">rs</a></td>
+<td class="itemdesc"><p>Given the 2D depth coordinate (x,y) provide the corresponding depth in metric units param[in] frame_ref 2D depth pixel coordinates (Left-Upper corner origin) param[in] x,y 2D depth pixel coordinates (Left-Upper corner origin) param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored</p></td>
+</tr>
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_frame.html#rs2_depth_frame_get_units">rs2_depth_frame_get_units</a></td>
 <td class="itemunit"><a class="bold" href="rs_frame.html">rs_frame</a></td>
 <td class="itemdesc"><p>retrieve the scaling factor to use when converting a depth frame's get_data() units to meters return single - depth, in meters, per 1 unit stored in the frame data</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_sensor.html#rs2_depth_stereo_frame_get_baseline">rs2_depth_stereo_frame_get_baseline</a></td>
 <td class="itemunit"><a class="bold" href="rs_sensor.html">rs_sensor</a></td>
 <td class="itemdesc"><p>Retrieve the stereoscopic baseline value from frame. Applicable to stereo-based depth modules param[out] float Stereoscopic baseline in millimeters param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_types.html#RS2_devices_changed_callback">RS2_devices_changed_callback</a></td>
 <td class="itemunit"><a class="bold" href="rs_types.html">rs_types</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_context.html#rs2_device_hub_is_device_connected">rs2_device_hub_is_device_connected</a></td>
 <td class="itemunit"><a class="bold" href="rs_context.html">rs_context</a></td>
 <td class="itemdesc"><p>Checks if device is still connected \param[in] hub The device hub object \param[in] device The device \param[out] error If non-null, receives any error that occurs during this call, otherwise, errors are ignored. \return 1 if the device is connected, 0 otherwise</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_context.html#rs2_device_hub_wait_for_device">rs2_device_hub_wait_for_device</a></td>
 <td class="itemunit"><a class="bold" href="rs_context.html">rs_context</a></td>
 <td class="itemdesc"><p>If any device is connected return it, otherwise wait until next RealSense device connects. Calling this method multiple times will cycle through connected devices \param[in] ctx The context to creat the device \param[in] hub The device hub object \param[out] error If non-null, receives any error that occurs during this call, otherwise, errors are ignored. \return device object</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_device.html#rs2_device_list_contains">rs2_device_list_contains</a></td>
 <td class="itemunit"><a class="bold" href="rs_device.html">rs_device</a></td>
 <td class="itemdesc"><p>Checks if a specific device is contained inside a device list. param[in] info_list The list of devices to check in param[in] device RealSense device to check for param[out] error If non-null, receives any error that occurs during this call, otherwise, errors are ignored return True if the device is in the list and false otherwise</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_option.html#rs2_digital_gain">rs2_digital_gain</a></td>
 <td class="itemunit"><a class="bold" href="rs_option.html">rs_option</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_device.html#rs2_disconnect_tm2_controller">rs2_disconnect_tm2_controller</a></td>
 <td class="itemunit"><a class="bold" href="rs_device.html">rs_device</a></td>
 <td class="itemdesc"><p>Disconnects a given tm2 controller param[in] device Device to disconnect the controller from param[in] id The ID of the desired controller param[out] error If non-null, receives any error that occurs during this call, otherwise, errors are ignored</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_types.html#rs2_distortion_to_string">rs2_distortion_to_string</a></td>
 <td class="itemunit"><a class="bold" href="rs_types.html">rs_types</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_frame.html#rs2_embedded_frames_count">rs2_embedded_frames_count</a></td>
 <td class="itemunit"><a class="bold" href="rs_frame.html">rs_frame</a></td>
 <td class="itemdesc"><p>Get number of frames embedded within a composite frame param[in] composite Composite input frame param[out] error If non-null, receives any error that occurs during this call, otherwise, errors are ignored return Number of embedded frames</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="rs.html#rs2_enable_rolling_log_file">rs2_enable_rolling_log_file</a></td>
+<td class="itemunit"><a class="bold" href="rs.html">rs</a></td>
+<td class="itemdesc"><p>Enable rolling log file when used with rs2_log_to_file: Upon reaching (max_size/2) bytes, the log will be renamed with an &quot;.old&quot; suffix and a new log created. Any previous .old file will be erased. Must have permissions to remove/rename files in log file directory. param[in] max_size max file size in megabytes param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored</p></td>
 </tr>
 <tr class="list">
 <td class="itemname"><a class="bold" href="rs_processing.html#rs2_enqueue_frame">rs2_enqueue_frame</a></td>
@@ -1029,161 +1039,171 @@
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
 <tr class="list2">
+<td class="itemname"><a class="bold" href="rs.html#rs2_get_api_version">rs2_get_api_version</a></td>
+<td class="itemunit"><a class="bold" href="rs.html">rs</a></td>
+<td class="itemdesc"><p>Retrieve the API version from the source code. Evaluate that the value is conformant to the established policies param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored return the version API encoded into integer value &quot;1.9.3&quot; -&gt; 10903</p></td>
+</tr>
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_device.html#rs2_get_calibration_table">rs2_get_calibration_table</a></td>
 <td class="itemunit"><a class="bold" href="rs_device.html">rs_device</a></td>
 <td class="itemdesc"><p>Read current calibration table from flash. return Calibration table</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_advanced_mode.html#rs2_get_census">rs2_get_census</a></td>
 <td class="itemunit"><a class="bold" href="rs_advanced_mode.html">rs_advanced_mode</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_advanced_mode.html#rs2_get_color_control">rs2_get_color_control</a></td>
 <td class="itemunit"><a class="bold" href="rs_advanced_mode.html">rs_advanced_mode</a></td>
 <td class="itemdesc"><p>Gets new values for STColorControl, returns 0 if success</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_advanced_mode.html#rs2_get_color_correction">rs2_get_color_correction</a></td>
 <td class="itemunit"><a class="bold" href="rs_advanced_mode.html">rs_advanced_mode</a></td>
 <td class="itemdesc"><p>Gets new values for STColorCorrection, returns 0 if success</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_sensor.html#rs2_get_debug_stream_profiles">rs2_get_debug_stream_profiles</a></td>
 <td class="itemunit"><a class="bold" href="rs_sensor.html">rs_sensor</a></td>
 <td class="itemdesc"><p>retrieve list of debug stream profiles that given subdevice can provide param[in] sensor input RealSense subdevice param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored return list of debug stream profiles that given subdevice can provide, should be released by rs2_delete_profiles_list</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_advanced_mode.html#rs2_get_depth_control">rs2_get_depth_control</a></td>
 <td class="itemunit"><a class="bold" href="rs_advanced_mode.html">rs_advanced_mode</a></td>
 <td class="itemdesc"><p>Gets new values for Depth Control Group, returns 0 if success */</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_sensor.html#rs2_get_depth_scale">rs2_get_depth_scale</a></td>
 <td class="itemunit"><a class="bold" href="rs_sensor.html">rs_sensor</a></td>
 <td class="itemdesc"><p>When called on a depth sensor, this method will return the number of meters represented by a single depth unit param[in] sensor depth sensor param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored return the number of meters represented by a single depth unit</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_advanced_mode.html#rs2_get_depth_table">rs2_get_depth_table</a></td>
 <td class="itemunit"><a class="bold" href="rs_advanced_mode.html">rs_advanced_mode</a></td>
 <td class="itemdesc"><p>/* Gets new values for STDepthTableControl, returns 0 if success */ void rs2_get_depth_table(rs2_device* dev, STDepthTableControl* group, int mode, rs2_error** error);</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_device.html#rs2_get_device_count">rs2_get_device_count</a></td>
 <td class="itemunit"><a class="bold" href="rs_device.html">rs_device</a></td>
 <td class="itemdesc"><p>Determines number of devices in a list. param[in] info_list The list of connected devices captured using rs2_query_devices param[out] error If non-null, receives any error that occurs during this call, otherwise, errors are ignored return Device count</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_device.html#rs2_get_device_info">rs2_get_device_info</a></td>
 <td class="itemunit"><a class="bold" href="rs_device.html">rs_device</a></td>
 <td class="itemdesc"><p>Retrieve camera specific information, like versions of various internal components. param[in] device The RealSense device param[in] info Camera info type to retrieve param[out] error If non-null, receives any error that occurs during this call, otherwise, errors are ignored return The requested camera info string, in a format specific to the device model</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_sensor.html#rs2_get_dsm_params">rs2_get_dsm_params</a></td>
 <td class="itemunit"><a class="bold" href="rs_sensor.html">rs_sensor</a></td>
 <td class="itemdesc"><p>Get the DSM parameters for a sensor param[in] sensor Sensor that supports the CALIBRATED_SENSOR extension param[out] p_params_out Pointer to the structure that will get the DSM parameters param[out] error If non-null, receives any error that occurs during this call, otherwise, errors are ignored</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_types.html#rs2_get_error_message">rs2_get_error_message</a></td>
 <td class="itemunit"><a class="bold" href="rs_types.html">rs_types</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_sensor.html#rs2_get_extrinsics">rs2_get_extrinsics</a></td>
 <td class="itemunit"><a class="bold" href="rs_sensor.html">rs_sensor</a></td>
 <td class="itemdesc"><p>param[in] from origin stream profile param[in] to target stream profile param[out] extrin extrinsics from origin to target param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_types.html#rs2_get_failed_args">rs2_get_failed_args</a></td>
 <td class="itemunit"><a class="bold" href="rs_types.html">rs_types</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_types.html#rs2_get_failed_function">rs2_get_failed_function</a></td>
 <td class="itemunit"><a class="bold" href="rs_types.html">rs_types</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_internal.html#rs2_get_flash_log">rs2_get_flash_log</a></td>
 <td class="itemunit"><a class="bold" href="rs_internal.html">rs_internal</a></td>
 <td class="itemdesc"><p>Gets RealSense flash log - this is a fw log that has been written in the device during the previous shutdown of the device param[in] dev Device from which the FW log should be taken param[in] fw_log_msg Firmware log message object to be filled param[out] error If non-null, receives any error that occurs during this call, otherwise, errors are ignored. return true for success, false for failure - failure happens if no firmware log was sent by the hardware monitor</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_frame.html#rs2_get_frame_bits_per_pixel">rs2_get_frame_bits_per_pixel</a></td>
 <td class="itemunit"><a class="bold" href="rs_frame.html">rs_frame</a></td>
 <td class="itemdesc"><p>retrieve bits per pixels in the frame image (note that bits per pixel is not necessarily divided by 8, as in 12bpp) param[in] frame handle returned from a callback param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored return bits per pixel</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_frame.html#rs2_get_frame_data">rs2_get_frame_data</a></td>
 <td class="itemunit"><a class="bold" href="rs_frame.html">rs_frame</a></td>
 <td class="itemdesc"><p>retrieve data from frame handle param[in] frame handle returned from a callback param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored return the pointer to the start of the frame data</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_frame.html#rs2_get_frame_data_size">rs2_get_frame_data_size</a></td>
 <td class="itemunit"><a class="bold" href="rs_frame.html">rs_frame</a></td>
 <td class="itemdesc"><p>retrieve data size from frame handle param[in] frame handle returned from a callback param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored return the size of the frame data</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_frame.html#rs2_get_frame_height">rs2_get_frame_height</a></td>
 <td class="itemunit"><a class="bold" href="rs_frame.html">rs_frame</a></td>
 <td class="itemdesc"><p>retrieve frame height in pixels param[in] frame handle returned from a callback param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored return frame height in pixels</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_frame.html#rs2_get_frame_metadata">rs2_get_frame_metadata</a></td>
 <td class="itemunit"><a class="bold" href="rs_frame.html">rs_frame</a></td>
 <td class="itemdesc"><p>retrieve metadata from frame handle param[in] frame handle returned from a callback param[in] frame_metadata the rs2_frame_metadata whose latest frame we are interested in param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored return the metadata value
 
 <p>rs2_metadata_type rs2_get_frame_metadata(const rs2_frame* frame, rs2_frame_metadata_value frame_metadata, rs2_error** error);</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_frame.html#rs2_get_frame_number">rs2_get_frame_number</a></td>
 <td class="itemunit"><a class="bold" href="rs_frame.html">rs_frame</a></td>
 <td class="itemdesc"><p>retrieve frame number from frame handle param[in] frame handle returned from a callback param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored return the frame nubmer of the frame, in milliseconds since the device was started</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_frame.html#rs2_get_frame_points_count">rs2_get_frame_points_count</a></td>
 <td class="itemunit"><a class="bold" href="rs_frame.html">rs_frame</a></td>
 <td class="itemdesc"><p>When called on Points frame type, this method returns the number of vertices in the frame param[in] frame Points frame param[out] error If non-null, receives any error that occurs during this call, otherwise, errors are ignored return Number of vertices</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_frame.html#rs2_get_frame_sensor">rs2_get_frame_sensor</a></td>
 <td class="itemunit"><a class="bold" href="rs_frame.html">rs_frame</a></td>
 <td class="itemdesc"><p>retrieve frame parent sensor from frame handle param[in] frame handle returned from a callback param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored return the parent sensor of the frame</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_frame.html#rs2_get_frame_stream_profile">rs2_get_frame_stream_profile</a></td>
 <td class="itemunit"><a class="bold" href="rs_frame.html">rs_frame</a></td>
 <td class="itemdesc"><p>Returns the stream profile that was used to start the stream of this frame param[in] frame frame reference, owned by the user param[out] error If non-null, receives any error that occurs during this call, otherwise, errors are ignored return Pointer to the stream profile object, lifetime is managed elsewhere</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_frame.html#rs2_get_frame_stride_in_bytes">rs2_get_frame_stride_in_bytes</a></td>
 <td class="itemunit"><a class="bold" href="rs_frame.html">rs_frame</a></td>
 <td class="itemdesc"><p>retrieve frame stride in bytes (number of bytes from start of line N to start of line N+1) param[in] frame handle returned from a callback param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored return stride in bytes</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_frame.html#rs2_get_frame_texture_coordinates">rs2_get_frame_texture_coordinates</a></td>
 <td class="itemunit"><a class="bold" href="rs_frame.html">rs_frame</a></td>
 <td class="itemdesc"><p>When called on Points frame type, this method returns a pointer to an array of texture coordinates per vertex Each coordinate represent a (u,v) pair within [0,1] range, to be mapped to texture image param[in] frame Points frame param[out] error If non-null, receives any error that occurs during this call, otherwise, errors are ignored return Pointer to an array of texture coordinates, lifetime is managed by the frame</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_frame.html#rs2_get_frame_timestamp">rs2_get_frame_timestamp</a></td>
 <td class="itemunit"><a class="bold" href="rs_frame.html">rs_frame</a></td>
 <td class="itemdesc"><p>retrieve timestamp from frame handle in milliseconds param[in] frame handle returned from a callback param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored return the timestamp of the frame in milliseconds</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_frame.html#rs2_get_frame_timestamp_domain">rs2_get_frame_timestamp_domain</a></td>
 <td class="itemunit"><a class="bold" href="rs_frame.html">rs_frame</a></td>
 <td class="itemdesc"><p>retrieve timestamp domain from frame handle. timestamps can only be comparable if they are in common domain (for example, depth timestamp might come from system time while color timestamp might come from the device) this method is used to check if two timestamp values are comparable (generated from the same clock) param[in] frameset handle returned from a callback param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored return the timestamp domain of the frame (camera / microcontroller / system time)</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_frame.html#rs2_get_frame_vertices">rs2_get_frame_vertices</a></td>
 <td class="itemunit"><a class="bold" href="rs_frame.html">rs_frame</a></td>
 <td class="itemdesc"><p>When called on Points frame type, this method returns a pointer to an array of 3D vertices of the model The coordinate system is: X right, Y up, Z away from the camera. Units: Meters param[in] frame Points frame param[out] error If non-null, receives any error that occurs during this call, otherwise, errors are ignored return Pointer to an array of vertices, lifetime is managed by the frame</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_frame.html#rs2_get_frame_width">rs2_get_frame_width</a></td>
 <td class="itemunit"><a class="bold" href="rs_frame.html">rs_frame</a></td>
 <td class="itemdesc"><p>retrieve frame width in pixels param[in] frame handle returned from a callback param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored return frame width in pixels</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="rs.html#rs2_get_full_log_message">rs2_get_full_log_message</a></td>
+<td class="itemunit"><a class="bold" href="rs.html">rs</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
 <tr class="list">
 <td class="itemname"><a class="bold" href="rs_internal.html#rs2_get_fw_log">rs2_get_fw_log</a></td>
@@ -1229,6 +1249,16 @@
 <td class="itemname"><a class="bold" href="rs_advanced_mode.html#rs2_get_hdad">rs2_get_hdad</a></td>
 <td class="itemunit"><a class="bold" href="rs_advanced_mode.html">rs_advanced_mode</a></td>
 <td class="itemdesc"><p>/* Gets new values for STHdad, returns 0 if success */</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="rs.html#rs2_get_log_message_filename">rs2_get_log_message_filename</a></td>
+<td class="itemunit"><a class="bold" href="rs.html">rs</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="rs.html#rs2_get_log_message_line_number">rs2_get_log_message_line_number</a></td>
+<td class="itemunit"><a class="bold" href="rs.html">rs</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
 <tr class="list2">
 <td class="itemname"><a class="bold" href="rs_sensor.html#rs2_get_max_usable_depth_range">rs2_get_max_usable_depth_range</a></td>
@@ -1336,74 +1366,84 @@
 <td class="itemdesc"><p>get the size of rs2_raw_data_buffer param[in] buffer pointer to rs2_raw_data_buffer returned by rs2_send_and_receive_raw_data param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored return size of rs2_raw_data_buffer</p></td>
 </tr>
 <tr class="list">
+<td class="itemname"><a class="bold" href="rs.html#rs2_get_raw_log_message">rs2_get_raw_log_message</a></td>
+<td class="itemunit"><a class="bold" href="rs.html">rs</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_sensor.html#rs2_get_recommended_processing_blocks">rs2_get_recommended_processing_blocks</a></td>
 <td class="itemunit"><a class="bold" href="rs_sensor.html">rs_sensor</a></td>
 <td class="itemdesc"><p>Returns the list of recommended processing blocks for a specific sensor. Order and configuration of the blocks are decided by the sensor param[in] sensor input sensor param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored return list of supported sensor recommended processing blocks</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_sensor.html#rs2_get_recommended_processing_blocks_count">rs2_get_recommended_processing_blocks_count</a></td>
 <td class="itemunit"><a class="bold" href="rs_sensor.html">rs_sensor</a></td>
 <td class="itemdesc"><p>Returns the processing blocks list size param[in] list the processing blocks list param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored return the processing block list size</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_sensor.html#rs2_get_region_of_interest">rs2_get_region_of_interest</a></td>
 <td class="itemunit"><a class="bold" href="rs_sensor.html">rs_sensor</a></td>
 <td class="itemdesc"><p>brief gets the active region of interest to be used by auto-exposure algorithm param[in] sensor the RealSense sensor param[out] min_x lower horizontal bound in pixels param[out] min_y lower vertical bound in pixels param[out] max_x upper horizontal bound in pixels param[out] max_y upper vertical bound in pixels param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_advanced_mode.html#rs2_get_rsm">rs2_get_rsm</a></td>
 <td class="itemunit"><a class="bold" href="rs_advanced_mode.html">rs_advanced_mode</a></td>
 <td class="itemdesc"><p>Gets new values for RSM Group, returns 0 if success</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_sensor.html#rs2_get_sensors_count">rs2_get_sensors_count</a></td>
 <td class="itemunit"><a class="bold" href="rs_sensor.html">rs_sensor</a></td>
 <td class="itemdesc"><p>Determines number of sensors in a list param[in] info_list The list of connected sensors captured using rs2_query_sensors param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored return Sensors count</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_sensor.html#rs2_get_sensor_info">rs2_get_sensor_info</a></td>
 <td class="itemunit"><a class="bold" href="rs_sensor.html">rs_sensor</a></td>
 <td class="itemdesc"><p>retrieve sensor specific information, like versions of various internal components param[in] sensor the RealSense sensor param[in] info camera info type to retrieve param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored return the requested camera info string, in a format specific to the device model</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_advanced_mode.html#rs2_get_slo_color_thresholds_control">rs2_get_slo_color_thresholds_control</a></td>
 <td class="itemunit"><a class="bold" href="rs_advanced_mode.html">rs_advanced_mode</a></td>
 <td class="itemdesc"><p>Gets new values for STRauColorThresholdsControl, returns 0 if success</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_advanced_mode.html#rs2_get_slo_penalty_control">rs2_get_slo_penalty_control</a></td>
 <td class="itemunit"><a class="bold" href="rs_advanced_mode.html">rs_advanced_mode</a></td>
 <td class="itemdesc"><p>Gets new values for STSloPenaltyControl, returns 0 if success</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_sensor.html#rs2_get_static_node">rs2_get_static_node</a></td>
 <td class="itemunit"><a class="bold" href="rs_sensor.html">rs_sensor</a></td>
 <td class="itemdesc"><p>Retrieve a named location tag param[in] sensor T2xx position-tracking sensor param[in] guid Null-terminated string of up to 127 characters param[out] pos Position in meters of the tagged (stored) location param[out] orient Quaternion orientation of the tagged (stored) location param[out] error If non-null, receives any error that occurs during this call, otherwise, errors are ignored return Non-zero if succeeded, otherwise 0</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_sensor.html#rs2_get_stereo_baseline">rs2_get_stereo_baseline</a></td>
 <td class="itemunit"><a class="bold" href="rs_sensor.html">rs_sensor</a></td>
 <td class="itemdesc"><p>Retrieve the stereoscopic baseline value from sensor. Applicable to stereo-based depth modules param[out] float Stereoscopic baseline in millimeters param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_sensor.html#rs2_get_stream_profile">rs2_get_stream_profile</a></td>
 <td class="itemunit"><a class="bold" href="rs_sensor.html">rs_sensor</a></td>
 <td class="itemdesc"><p>Get pointer to specific stream profile param[in] list the list of supported profiles returned by rs2_get_supported_profiles param[in] index the zero based index of the streaming mode param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_sensor.html#rs2_get_stream_profiles">rs2_get_stream_profiles</a></td>
 <td class="itemunit"><a class="bold" href="rs_sensor.html">rs_sensor</a></td>
 <td class="itemdesc"><p>check if physical subdevice is supported param[in] sensor input RealSense subdevice param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored return list of stream profiles that given subdevice can provide, should be released by rs2_delete_profiles_list</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_sensor.html#rs2_get_stream_profiles_count">rs2_get_stream_profiles_count</a></td>
 <td class="itemunit"><a class="bold" href="rs_sensor.html">rs_sensor</a></td>
 <td class="itemdesc"><p>get the number of supported stream profiles param[in] list the list of supported profiles returned by rs2_get_supported_profiles param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored return number of supported subdevice profiles</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_sensor.html#rs2_get_stream_profile_data">rs2_get_stream_profile_data</a></td>
 <td class="itemunit"><a class="bold" href="rs_sensor.html">rs_sensor</a></td>
 <td class="itemdesc"><p>Extract common parameters of a stream profiles param[in] mode input stream profile param[out] stream stream type of the input profile param[out] format binary data format of the input profile param[out] index stream index the input profile in case there are multiple streams of the same type param[out] unique_id identifier for the stream profile, unique within the application param[out] framerate expected rate for data frames to arrive, meaning expected number of frames per second param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="rs.html#rs2_get_time">rs2_get_time</a></td>
+<td class="itemunit"><a class="bold" href="rs.html">rs</a></td>
+<td class="itemdesc"><p>return the time at specific time point param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored return the time at specific time point, in live and record mode it will return the system time and in playback mode it will return the recorded time</p></td>
 </tr>
 <tr class="list">
 <td class="itemname"><a class="bold" href="rs_sensor.html#rs2_get_video_stream_intrinsics">rs2_get_video_stream_intrinsics</a></td>
@@ -1491,14 +1531,34 @@
 <td class="itemdesc"><p>/** Load Wheel odometer settings from host to device * \param[in] odometry_config_buf odometer configuration/calibration blob serialized from jsom file * \return true on success */ int rs2_load_wheel_odometry_config(const rs2_sensor* sensor, const unsigned char* odometry_config_buf, unsigned int blob_size, rs2_error** error);</p></td>
 </tr>
 <tr class="list2">
+<td class="itemname"><a class="bold" href="rs.html#rs2_log">rs2_log</a></td>
+<td class="itemunit"><a class="bold" href="rs.html">rs</a></td>
+<td class="itemdesc"><p>Add custom message into librealsense log param[in] severity The log level for the message to be written under param[in] message Message to be logged param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored</p></td>
+</tr>
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_types.html#rs2_log_callback_ptr">rs2_log_callback_ptr</a></td>
 <td class="itemunit"><a class="bold" href="rs_types.html">rs_types</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_types.html#rs2_log_severity_to_string">rs2_log_severity_to_string</a></td>
 <td class="itemunit"><a class="bold" href="rs_types.html">rs_types</a></td>
 <td class="itemdesc"><p>**&lt; Include any/all log messages</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="rs.html#rs2_log_to_callback">rs2_log_to_callback</a></td>
+<td class="itemunit"><a class="bold" href="rs.html">rs</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="rs.html#rs2_log_to_console">rs2_log_to_console</a></td>
+<td class="itemunit"><a class="bold" href="rs.html">rs</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="rs.html#rs2_log_to_file">rs2_log_to_file</a></td>
+<td class="itemunit"><a class="bold" href="rs.html">rs</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
 <tr class="list2">
 <td class="itemname"><a class="bold" href="rs_device.html#rs2_loopback_disable">rs2_loopback_disable</a></td>
@@ -1839,26 +1899,31 @@
 <td class="itemdesc"><p>Remove a named location tag param[in] sensor T2xx position-tracking sensor param[in] guid Null-terminated string of up to 127 characters param[out] error If non-null, receives any error that occurs during this call, otherwise, errors are ignored return Non-zero if succeeded, otherwise 0</p></td>
 </tr>
 <tr class="list2">
+<td class="itemname"><a class="bold" href="rs.html#rs2_reset_logger">rs2_reset_logger</a></td>
+<td class="itemunit"><a class="bold" href="rs.html">rs</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_sensor.html#rs2_reset_sensor_calibration">rs2_reset_sensor_calibration</a></td>
 <td class="itemunit"><a class="bold" href="rs_sensor.html">rs_sensor</a></td>
 <td class="itemdesc"><p>Reset the sensor DSM parameters This should ideally be done when the stream is NOT running. May not take effect immediately. param[in] sensor Sensor that supports the CALIBRATED_SENSOR extension param[out] error If non-null, receives any error that occurs during this call, otherwise, errors are ignored</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_device.html#rs2_reset_to_factory_calibration">rs2_reset_to_factory_calibration</a></td>
 <td class="itemunit"><a class="bold" href="rs_device.html">rs_device</a></td>
 <td class="itemdesc"><p>Reset device to factory calibration param[in] device The RealSense device param[out] error If non-null, receives any error that occurs during this call, otherwise, errors are ignored</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_option.html#rs2_rs400_visual_preset_to_string">rs2_rs400_visual_preset_to_string</a></td>
 <td class="itemunit"><a class="bold" href="rs_option.html">rs_option</a></td>
 <td class="itemdesc"><p>*&lt; Number of enumeration values. Not a valid input: intended to be used in for-loops. */</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_device.html#rs2_run_focal_length_calibration">rs2_run_focal_length_calibration</a></td>
 <td class="itemunit"><a class="bold" href="rs_device.html">rs_device</a></td>
 <td class="itemdesc"><p>Run target-based focal length calibration param[in] device: device to calibrate param[in] left_queue: container for left IR frames with resoluton of 1280x720 and the target in the center of 320x240 pixels ROI. param[in] right_queue: container for right IR frames with resoluton of 1280x720 and the target in the center of 320x240 pixels ROI param[in] target_width: the rectangle width in mm on the target param[in] target_height: the rectangle height in mm on the target param[in] adjust_both_sides: 1 for adjusting both left and right camera calibration tables, and 0 for adjusting right camera calibraion table only param[out] ratio: the corrected ratio from the calibration param[out] angle: the target's tilt angle param[in] callback: Optional callback for update progress notifications, the progress value is normailzed to 1 param[in] client_data: Optional client data for the callback return New calibration table</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_device.html#rs2_run_on_chip_calibration">rs2_run_on_chip_calibration</a></td>
 <td class="itemunit"><a class="bold" href="rs_device.html">rs_device</a></td>
 <td class="itemdesc"><p>This will improve the depth noise. param[in] json_content Json string to configure regular speed on chip calibration parameters: (
@@ -1867,708 +1932,708 @@
 
 <p>) calib_type - calibraton type: 0 = regular, 1 = focal length, 2 = both regular and focal length in order speed - for regular calibration, value can be one of: Very fast = 0, Fast = 1, Medium = 2, Slow = 3, White wall = 4, default is Slow for type 0 and Fast for type 2 scan_parameter - for regular calibration. value can be one of: Py scan (default) = 0, Rx scan = 1 adjust_both_sides - for focal length calibration. value can be one of: 0 = adjust right only, 1 = adjust both sides white_wall_mode - white wall mode: 0 for normal mode and 1 for white wall mode if json is nullptr it will be ignored and calibration will use the default parameters param[out] health The absolute value of regular calibration Health-Check captures how far camera calibration is from the optimal one [0, 0.25) - Good [0.25, 0.75) - Can be Improved [0.75, ) - Requires Calibration The absolute value of focal length calibration Health-Check captures how far camera calibration is from the optimal one [0, 0.15) - Good [0.15, 0.75) - Can be Improved [0.75, ) - Requires Calibration The two health numbers are encoded in one integer as follows for calib_type 2: Regular health number times 1000 are bits 0 to 11 Regular health number is negative if bit 24 is 1 Focal length health number times 1000 are bits 12 to 23 Focal length health number is negative if bit 25 is 1 param[in] callback Optional callback for update progress notifications, the progress value is normailzed to 1 param[in] client_data Optional client data for the callback param[in] timeout_ms Timeout in ms (use 5000 msec unless instructed otherwise) return New calibration table</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_device.html#rs2_run_tare_calibration">rs2_run_tare_calibration</a></td>
 <td class="itemunit"><a class="bold" href="rs_device.html">rs_device</a></td>
 <td class="itemdesc"><p>This will adjust camera absolute distance to flat target. User needs to enter the known ground truth. param[in] ground_truth_mm Ground truth in mm must be between 60 and 10000 param[in] json_content Json string to configure tare calibration parameters: ( &quot;average_step_count&quot;: 20, &quot;step count&quot;: 20, &quot;accuracy&quot;: 2, &quot;scan parameter&quot;: 0, &quot;data sampling&quot;: 0 ) average step count - number of frames to average, must be between 1 - 30, default = 20 step count - max iteration steps, must be between 5 - 30, default = 10 accuracy - Subpixel accuracy level, value can be one of: Very high = 0 (0.025%), High = 1 (0.05%), Medium = 2 (0.1%), Low = 3 (0.2%), Default = Very high (0.025%), default is Medium scan_parameter - value can be one of: Py scan (default) = 0, Rx scan = 1 data_sampling - value can be one of:polling data sampling = 0, interrupt data sampling = 1 if json is nullptr it will be ignored and calibration will use the default parameters param[in] content_size Json string size if its 0 the json will be ignored and calibration will use the default parameters param[in] callback Optional callback for update progress notifications, the progress value is normailzed to 1 param[in] client_data Optional client data for the callback param[in] timeout_ms Timeout in ms (use 5000 msec unless instructed otherwise) return New calibration table</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_device.html#rs2_run_uv_map_calibration">rs2_run_uv_map_calibration</a></td>
 <td class="itemunit"><a class="bold" href="rs_device.html">rs_device</a></td>
 <td class="itemdesc"><p>Depth-RGB UV-Map calibration. Applicable for D400 cameras param[in] device: device to calibrate param[in] left_queue: the frame queue for left IR frames with resoluton of 1280x720 and the target captured in the center of 320x240 pixels ROI. param[in] color_queue: the frame queue for RGB frames with resoluton of 1280x720 and the target in the center of 320x240 pixels ROI param[in] depth_queue: the frame queue for Depth frames with resoluton of 1280x720 param[in] py_px_only: 1 for calibrating color camera py and px only, 1 for calibrating color camera py, px, fy, and fx. param[out] health: The four health check numbers in order of px, py, fx, fy for the calibration param[in] health_size: number of health check numbers, which is 4 by default param[in] callback: Optional callback for update progress notifications, the progress value is normailzed to 1 param[in] client_data: Optional client data for the callback return New calibration table</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_device.html#rs2_send_and_receive_raw_data">rs2_send_and_receive_raw_data</a></td>
 <td class="itemunit"><a class="bold" href="rs_device.html">rs_device</a></td>
 <td class="itemdesc"><p>Send raw data to device param[in] device RealSense device to send data to param[in] raw_data_to_send Raw data to be sent to device param[in] size_of_raw_data_to_send Size of raw_data_to_send in bytes param[out] error If non-null, receives any error that occurs during this call, otherwise, errors are ignored return Device's response in a rs2_raw_data_buffer, which should be released by rs2_delete_raw_data
 
 <p>Note: This the original declaration. const rs2_raw_data_buffer* rs2_send_and_receive_raw_data(rs2_device* device, void* raw_data_to_send, unsigned size_of_raw_data_to_send, rs2_error** error); You can see that use unsigned. I'm not sure which is the equivalent in Pascal, so I used NavtiveUint;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_sensor.html#rs2_send_wheel_odometry">rs2_send_wheel_odometry</a></td>
 <td class="itemunit"><a class="bold" href="rs_sensor.html">rs_sensor</a></td>
 <td class="itemdesc"><p>param[in] wo_sensor_id - Zero-based index of (wheel) sensor with the same type within device param[in] frame_num - Monotonocally increasing frame number, managed per sensor. param[in] translational_velocity - Translational velocity of the wheel sensor [meter/sec] return true on success</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_option.html#rs2_sensor_mode_to_string">rs2_sensor_mode_to_string</a></td>
 <td class="itemunit"><a class="bold" href="rs_option.html">rs_option</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_device.html#rs2_serialize_json">rs2_serialize_json</a></td>
 <td class="itemunit"><a class="bold" href="rs_device.html">rs_device</a></td>
 <td class="itemdesc"><p>Serialize JSON content, returns ASCII-serialized JSON string on success. otherwise nullptr */ rs2_raw_data_buffer* rs2_serialize_json(rs2_device* dev, rs2_error** error);</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_advanced_mode.html#rs2_set_ae_control">rs2_set_ae_control</a></td>
 <td class="itemunit"><a class="bold" href="rs_advanced_mode.html">rs_advanced_mode</a></td>
 <td class="itemdesc"><p>void rs2_set_ae_control(rs2_device* dev, const STAEControl* group, rs2_error** error);</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_advanced_mode.html#rs2_set_amp_factor">rs2_set_amp_factor</a></td>
 <td class="itemunit"><a class="bold" href="rs_advanced_mode.html">rs_advanced_mode</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_device.html#rs2_set_calibration_table">rs2_set_calibration_table</a></td>
 <td class="itemunit"><a class="bold" href="rs_device.html">rs_device</a></td>
 <td class="itemdesc"><p>Set current table to dynamic area. param[in] Calibration table</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_advanced_mode.html#rs2_set_census">rs2_set_census</a></td>
 <td class="itemunit"><a class="bold" href="rs_advanced_mode.html">rs_advanced_mode</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_advanced_mode.html#rs2_set_color_control">rs2_set_color_control</a></td>
 <td class="itemunit"><a class="bold" href="rs_advanced_mode.html">rs_advanced_mode</a></td>
 <td class="itemdesc"><p>Sets new values for STColorControl, returns 0 if success */</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_advanced_mode.html#rs2_set_color_correction">rs2_set_color_correction</a></td>
 <td class="itemunit"><a class="bold" href="rs_advanced_mode.html">rs_advanced_mode</a></td>
 <td class="itemdesc"><p>Sets new values for STColorCorrection, returns 0 if success</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_advanced_mode.html#rs2_set_depth_control">rs2_set_depth_control</a></td>
 <td class="itemunit"><a class="bold" href="rs_advanced_mode.html">rs_advanced_mode</a></td>
 <td class="itemdesc"><p>Sets new values for Depth Control Group, returns 0 if success</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_advanced_mode.html#rs2_set_depth_table">rs2_set_depth_table</a></td>
 <td class="itemunit"><a class="bold" href="rs_advanced_mode.html">rs_advanced_mode</a></td>
 <td class="itemdesc"><p>/* Sets new values for STDepthTableControl, returns 0 if success */ void rs2_set_depth_table(rs2_device* dev, const STDepthTableControl* group, rs2_error** error);</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_context.html#rs2_set_devices_changed_callback">rs2_set_devices_changed_callback</a></td>
 <td class="itemunit"><a class="bold" href="rs_context.html">rs_context</a></td>
 <td class="itemdesc"><p>/** * set callback to get devices changed events * these events will be raised by the context whenever new RealSense device is connected or existing device gets disconnected * \param context Object representing librealsense session * \param[in] callback function pointer to register as per-notifications callback * \param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored */</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_advanced_mode.html#rs2_set_hdad">rs2_set_hdad</a></td>
 <td class="itemunit"><a class="bold" href="rs_advanced_mode.html">rs_advanced_mode</a></td>
 <td class="itemdesc"><p>Sets new values for STHdad, returns 0 if success</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_sensor.html#rs2_set_intrinsics">rs2_set_intrinsics</a></td>
 <td class="itemunit"><a class="bold" href="rs_sensor.html">rs_sensor</a></td>
 <td class="itemdesc"><p>Set intrinsics of a given sensor param[in] sensor The RealSense device param[in] profile Target stream profile param[in] intrinsics Intrinsics value to be written to the device param[out] error If non-null, receives any error that occurs during this call, otherwise, errors are ignored</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_sensor.html#rs2_set_motion_device_intrinsics">rs2_set_motion_device_intrinsics</a></td>
 <td class="itemunit"><a class="bold" href="rs_sensor.html">rs_sensor</a></td>
 <td class="itemdesc"><p>Set motion device intrinsics param[in] sensor Motion sensor param[in] profile Motion stream profile param[out] intrinsics Pointer to the struct to store the data in param[out] error If non-null, receives any error that occurs during this call, otherwise, errors are ignored</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_sensor.html#rs2_set_notifications_callback">rs2_set_notifications_callback</a></td>
 <td class="itemunit"><a class="bold" href="rs_sensor.html">rs_sensor</a></td>
 <td class="itemdesc"><p>set callback to get notifications from specified sensor param[in] sensor RealSense device param[in] on_notification function pointer to register as per-notifications callback param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_option.html#rs2_set_option">rs2_set_option</a></td>
 <td class="itemunit"><a class="bold" href="rs_option.html">rs_option</a></td>
 <td class="itemdesc"><p>write new value to sensor option param[in] options the options container param[in] option option id to be queried param[in] value new value for the option param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_advanced_mode.html#rs2_set_rau_support_vector_control">rs2_set_rau_support_vector_control</a></td>
 <td class="itemunit"><a class="bold" href="rs_advanced_mode.html">rs_advanced_mode</a></td>
 <td class="itemdesc"><p>/* Sets new values for STRauSupportVectorControl, returns 0 if success */ void rs2_set_rau_support_vector_control(rs2_device* dev, const STRauSupportVectorControl* group, rs2_error** error);</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_advanced_mode.html#rs2_set_rau_thresholds_control">rs2_set_rau_thresholds_control</a></td>
 <td class="itemunit"><a class="bold" href="rs_advanced_mode.html">rs_advanced_mode</a></td>
 <td class="itemdesc"><p>Sets new values for STRauColorThresholdsControl, returns 0 if success</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_sensor.html#rs2_set_region_of_interest">rs2_set_region_of_interest</a></td>
 <td class="itemunit"><a class="bold" href="rs_sensor.html">rs_sensor</a></td>
 <td class="itemdesc"><p>sets the active region of interest to be used by auto-exposure algorithm param[in] sensor the RealSense sensor param[in] min_x lower horizontal bound in pixels param[in] min_y lower vertical bound in pixels param[in] max_x upper horizontal bound in pixels param[in] max_y upper vertical bound in pixels param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_advanced_mode.html#rs2_set_rsm">rs2_set_rsm</a></td>
 <td class="itemunit"><a class="bold" href="rs_advanced_mode.html">rs_advanced_mode</a></td>
 <td class="itemdesc"><p>Sets new values for RSM Group, returns 0 if success</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_advanced_mode.html#rs2_set_slo_color_thresholds_control">rs2_set_slo_color_thresholds_control</a></td>
 <td class="itemunit"><a class="bold" href="rs_advanced_mode.html">rs_advanced_mode</a></td>
 <td class="itemdesc"><p>Sets new values for STSloColorThresholdsControl, returns 0 if success</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_advanced_mode.html#rs2_set_slo_penalty_control">rs2_set_slo_penalty_control</a></td>
 <td class="itemunit"><a class="bold" href="rs_advanced_mode.html">rs_advanced_mode</a></td>
 <td class="itemdesc"><p>Sets new values for STSloPenaltyControl, returns 0 if success</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_sensor.html#rs2_set_static_node">rs2_set_static_node</a></td>
 <td class="itemunit"><a class="bold" href="rs_sensor.html">rs_sensor</a></td>
 <td class="itemdesc"><p>Create a named location tag param[in] sensor T2xx position-tracking sensor param[in] guid Null-terminated string of up to 127 characters param[in] pos Position in meters, relative to the current tracking session param[in] orient Quaternion orientation, expressed the the coordinate system of the current tracking session param[out] error If non-null, receives any error that occurs during this call, otherwise, errors are ignored return Non-zero if succeeded, otherwise 0</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_internal.html#rs2_software_device_add_sensor">rs2_software_device_add_sensor</a></td>
 <td class="itemunit"><a class="bold" href="rs_internal.html">rs_internal</a></td>
 <td class="itemdesc"><p>Add sensor to the software device param[in] dev the software device param[in] sensor_name the name of the sensor param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored return software sensor object, should be released by rs2_delete_sensor</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_internal.html#rs2_software_device_create_matcher">rs2_software_device_create_matcher</a></td>
 <td class="itemunit"><a class="bold" href="rs_internal.html">rs_internal</a></td>
 <td class="itemdesc"><p>Set the wanted matcher type that will be used by the syncer param[in] dev the software device param[in] matcher matcher type param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_internal.html#rs2_software_device_register_info">rs2_software_device_register_info</a></td>
 <td class="itemunit"><a class="bold" href="rs_internal.html">rs_internal</a></td>
 <td class="itemdesc"><p>Register a camera info value for the software device param[in] dev the software device param[in] info identifier for the camera info to add. param[in] val string value for this new camera info. param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_internal.html#rs2_software_device_set_destruction_callback">rs2_software_device_set_destruction_callback</a></td>
 <td class="itemunit"><a class="bold" href="rs_internal.html">rs_internal</a></td>
 <td class="itemdesc"><p>set callback to be notified when a specific software device is destroyed param[in] dev software device param[in] on_notification function pointer to register as callback param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_internal.html#rs2_software_device_update_info">rs2_software_device_update_info</a></td>
 <td class="itemunit"><a class="bold" href="rs_internal.html">rs_internal</a></td>
 <td class="itemdesc"><p>Update an existing camera info value for the software device param[in] dev the software device param[in] info identifier for the camera info to add. param[in] val string value for this new camera info. param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_internal.html#rs2_software_sensor_add_motion_stream">rs2_software_sensor_add_motion_stream</a></td>
 <td class="itemunit"><a class="bold" href="rs_internal.html">rs_internal</a></td>
 <td class="itemdesc"><p>Add motion stream to sensor param[in] sensor the software sensor param[in] motion_stream all the stream components param[in] is_default whether or not the stream should be a default stream for the device param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_internal.html#rs2_software_sensor_add_motion_stream">rs2_software_sensor_add_motion_stream</a></td>
 <td class="itemunit"><a class="bold" href="rs_internal.html">rs_internal</a></td>
 <td class="itemdesc"><p>Add motion stream to sensor param[in] sensor the software sensor param[in] motion_stream all the stream components param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_internal.html#rs2_software_sensor_add_option">rs2_software_sensor_add_option</a></td>
 <td class="itemunit"><a class="bold" href="rs_internal.html">rs_internal</a></td>
 <td class="itemdesc"><p>Add an option to sensor param[in] sensor the software sensor param[in] option the wanted option param[in] min the minimum value which will be accepted for this option param[in] max the maximum value which will be accepted for this option param[in] step the granularity of options which accept discrete values, or zero if the option accepts continuous values param[in] def the initial value of the option param[in] is_writable should the option be read-only or not param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_internal.html#rs2_software_sensor_add_pose_stream">rs2_software_sensor_add_pose_stream</a></td>
 <td class="itemunit"><a class="bold" href="rs_internal.html">rs_internal</a></td>
 <td class="itemdesc"><p>Add pose stream to sensor param[in] sensor the software sensor param[in] pose_stream all the stream components param[in] is_default whether or not the stream should be a default stream for the device param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_internal.html#rs2_software_sensor_add_pose_stream">rs2_software_sensor_add_pose_stream</a></td>
 <td class="itemunit"><a class="bold" href="rs_internal.html">rs_internal</a></td>
 <td class="itemdesc"><p>Add pose stream to sensor param[in] sensor the software sensor param[in] pose_stream all the stream components param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_internal.html#rs2_software_sensor_add_read_only_option">rs2_software_sensor_add_read_only_option</a></td>
 <td class="itemunit"><a class="bold" href="rs_internal.html">rs_internal</a></td>
 <td class="itemdesc"><p>Add read only option to sensor param[in] sensor the software sensor param[in] option the wanted option param[in] val the initial value param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_internal.html#rs2_software_sensor_add_video_stream">rs2_software_sensor_add_video_stream</a></td>
 <td class="itemunit"><a class="bold" href="rs_internal.html">rs_internal</a></td>
 <td class="itemdesc"><p>Add video stream to sensor param[in] sensor the software sensor param[in] video_stream all the stream components param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_internal.html#rs2_software_sensor_add_video_stream_ex">rs2_software_sensor_add_video_stream_ex</a></td>
 <td class="itemunit"><a class="bold" href="rs_internal.html">rs_internal</a></td>
 <td class="itemdesc"><p>Add video stream to sensor param[in] sensor the software sensor param[in] video_stream all the stream components param[in] is_default whether or not the stream should be a default stream for the device param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_internal.html#rs2_software_sensor_detach">rs2_software_sensor_detach</a></td>
 <td class="itemunit"><a class="bold" href="rs_internal.html">rs_internal</a></td>
 <td class="itemdesc"><p>Sensors hold the parent device in scope via a shared_ptr. This function detaches that so that the software sensor doesn't keep the software device alive. Note that this is dangerous as it opens the door to accessing freed memory if care isn't taken. param[in] sensor the software sensor param[out] error if non-null, recieves any error that occurs during this call, otherwise, errors are ignored</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_internal.html#rs2_software_sensor_on_motion_frame">rs2_software_sensor_on_motion_frame</a></td>
 <td class="itemunit"><a class="bold" href="rs_internal.html">rs_internal</a></td>
 <td class="itemdesc"><p>Inject motion frame to software sonsor param[in] sensor the software sensor param[in] frame all the frame components param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_internal.html#rs2_software_sensor_on_notification">rs2_software_sensor_on_notification</a></td>
 <td class="itemunit"><a class="bold" href="rs_internal.html">rs_internal</a></td>
 <td class="itemdesc"><p>Inject notification to software sonsor param[in] sensor the software sensor param[in] notif all the notification components param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_internal.html#rs2_software_sensor_on_pose_frame">rs2_software_sensor_on_pose_frame</a></td>
 <td class="itemunit"><a class="bold" href="rs_internal.html">rs_internal</a></td>
 <td class="itemdesc"><p>Inject pose frame to software sonsor param[in] sensor the software sensor param[in] frame all the frame components param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_internal.html#rs2_software_sensor_on_video_frame">rs2_software_sensor_on_video_frame</a></td>
 <td class="itemunit"><a class="bold" href="rs_internal.html">rs_internal</a></td>
 <td class="itemdesc"><p>Inject video frame to software sonsor param[in] sensor the software sensor param[in] frame all the frame components param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_internal.html#rs2_software_sensor_set_metadata">rs2_software_sensor_set_metadata</a></td>
 <td class="itemunit"><a class="bold" href="rs_internal.html">rs_internal</a></td>
 <td class="itemdesc"><p>Set frame metadata for the upcoming frames param[in] sensor the software sensor param[in] value metadata key to set param[in] type metadata value param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_internal.html#rs2_software_sensor_update_read_only_option">rs2_software_sensor_update_read_only_option</a></td>
 <td class="itemunit"><a class="bold" href="rs_internal.html">rs_internal</a></td>
 <td class="itemdesc"><p>Update the read only option added to sensor param[in] sensor the software sensor param[in] option the wanted option param[in] val the wanted value param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_option.html#rs2_sr300_visual_preset_to_string">rs2_sr300_visual_preset_to_string</a></td>
 <td class="itemunit"><a class="bold" href="rs_option.html">rs_option</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_sensor.html#rs2_start">rs2_start</a></td>
 <td class="itemunit"><a class="bold" href="rs_sensor.html">rs_sensor</a></td>
 <td class="itemdesc"><p>start streaming from specified configured sensor param[in] sensor RealSense device param[in] on_frame function pointer to register as per-frame callback param[in] user auxiliary data the user wishes to receive together with every frame callback param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_processing.html#rs2_start_processing">rs2_start_processing</a></td>
 <td class="itemunit"><a class="bold" href="rs_processing.html">rs_processing</a></td>
 <td class="itemdesc"><p>This method is used to direct the output from the processing block to some callback or sink object param[in] block Processing block param[in] on_frame Callback to be invoked every time the processing block calls frame_ready param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_processing.html#rs2_start_processing_fptr">rs2_start_processing_fptr</a></td>
 <td class="itemunit"><a class="bold" href="rs_processing.html">rs_processing</a></td>
 <td class="itemdesc"><p>This method is used to direct the output from the processing block to some callback or sink object param[in] block Processing block param[in] on_frame Callback function to be invoked every time the processing block calls frame_ready param[in] user User context for the callback (can be anything or null) param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_processing.html#rs2_start_processing_queue">rs2_start_processing_queue</a></td>
 <td class="itemunit"><a class="bold" href="rs_processing.html">rs_processing</a></td>
 <td class="itemdesc"><p>This method is used to direct the output from the processing block to a dedicated queue object param[in] block Processing block param[in] queue Queue to place the processed frames to param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_sensor.html#rs2_start_queue">rs2_start_queue</a></td>
 <td class="itemunit"><a class="bold" href="rs_sensor.html">rs_sensor</a></td>
 <td class="itemdesc"><p>start streaming from specified configured sensor of specific stream to frame queue param[in] sensor RealSense Sensor param[in] queue frame-queue to store new frames into param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_sensor.html#rs2_stop">rs2_stop</a></td>
 <td class="itemunit"><a class="bold" href="rs_sensor.html">rs_sensor</a></td>
 <td class="itemdesc"><p>stops streaming from specified configured device param[in] sensor RealSense sensor param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_sensor.html#rs2_stream_profile_is">rs2_stream_profile_is</a></td>
 <td class="itemunit"><a class="bold" href="rs_sensor.html">rs_sensor</a></td>
 <td class="itemdesc"><p>Try to extend stream profile to an extension type param[in] mode input stream profile param[in] type extension type, for example RS2_EXTENSION_VIDEO_STREAM_PROFILE param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored return non-zero if profile is extendable to specified extension, zero otherwise</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_sensor.html#rs2_stream_to_string">rs2_stream_to_string</a></td>
 <td class="itemunit"><a class="bold" href="rs_sensor.html">rs_sensor</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_types.html#rs2_stream_to_string">rs2_stream_to_string</a></td>
 <td class="itemunit"><a class="bold" href="rs_types.html">rs_types</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_device.html#rs2_supports_device_info">rs2_supports_device_info</a></td>
 <td class="itemunit"><a class="bold" href="rs_device.html">rs_device</a></td>
 <td class="itemdesc"><p>Check if a camera supports a specific camera info type. param[in] device The RealSense device to check param[in] info The parameter to check for support param[out] error If non-null, receives any error that occurs during this call, otherwise, errors are ignored return True if the parameter both exist and well-defined for the specific device</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_frame.html#rs2_supports_frame_metadata">rs2_supports_frame_metadata</a></td>
 <td class="itemunit"><a class="bold" href="rs_frame.html">rs_frame</a></td>
 <td class="itemdesc"><p>determine device metadata param[in] frame handle returned from a callback param[in] frame_metadata the metadata to check for support param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored return true if device has this metadata</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_option.html#rs2_supports_option">rs2_supports_option</a></td>
 <td class="itemunit"><a class="bold" href="rs_option.html">rs_option</a></td>
 <td class="itemdesc"><p>check if particular option is supported by a subdevice param[in] options the options container param[in] option option id to be checked param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored return true if option is supported</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_processing.html#rs2_supports_processing_block_info">rs2_supports_processing_block_info</a></td>
 <td class="itemunit"><a class="bold" href="rs_processing.html">rs_processing</a></td>
 <td class="itemdesc"><p>Check if a processing block supports a specific info type. param[in] block The processing block to check param[in] info The parameter to check for support param[out] error If non-null, receives any error that occurs during this call, otherwise, errors are ignored return True if the parameter both exist and well-defined for the specific device</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_sensor.html#rs2_supports_sensor_info">rs2_supports_sensor_info</a></td>
 <td class="itemunit"><a class="bold" href="rs_sensor.html">rs_sensor</a></td>
 <td class="itemdesc"><p>check if specific sensor info is supported param[in] info the parameter to check for support param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored return true if the parameter both exist and well-defined for the specific device</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_frame.html#rs2_synthetic_frame_ready">rs2_synthetic_frame_ready</a></td>
 <td class="itemunit"><a class="bold" href="rs_frame.html">rs_frame</a></td>
 <td class="itemdesc"><p>This method will dispatch frame callback on a frame param[in] source Frame pool provided by the processing block param[in] frame Frame to dispatch, frame ownership is passed to this function, so you don't have to call release_frame after it param[out] error If non-null, receives any error that occurs during this call, otherwise, errors are ignored</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_internal.html#rs2_terminal_parse_command">rs2_terminal_parse_command</a></td>
 <td class="itemunit"><a class="bold" href="rs_internal.html">rs_internal</a></td>
 <td class="itemdesc"><p>Parses terminal command via RealSense terminal parser param[in] terminal_parser Terminal parser object param[in] command command to be sent to the hw monitor of the device param[in] size_of_command size of command to be sent to the hw monitor of the device param[out] error If non-null, receives any error that occurs during this call, otherwise, errors are ignored. return command to hw monitor, in hex</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_frame.html#rs2_timestamp_domain_to_string">rs2_timestamp_domain_to_string</a></td>
 <td class="itemunit"><a class="bold" href="rs_frame.html">rs_frame</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_advanced_mode.html#rs2_toggle_advanced_mode">rs2_toggle_advanced_mode</a></td>
 <td class="itemunit"><a class="bold" href="rs_advanced_mode.html">rs_advanced_mode</a></td>
 <td class="itemdesc"><p>Enable/Disable Advanced-Mode</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_device.html#rs2_trigger_device_calibration">rs2_trigger_device_calibration</a></td>
 <td class="itemunit"><a class="bold" href="rs_device.html">rs_device</a></td>
 <td class="itemdesc"><p>Triggers calibration of the given type param[in] dev the device param[in] type the type of calibration requested param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_processing.html#rs2_try_wait_for_frame">rs2_try_wait_for_frame</a></td>
 <td class="itemunit"><a class="bold" href="rs_processing.html">rs_processing</a></td>
 <td class="itemdesc"><p>wait until new frame becomes available in the queue and dequeue it param[in] queue the frame queue data structure param[in] timeout_ms max time in milliseconds to wait until a frame becomes available param[out] output_frame frame handle to be released using rs2_release_frame param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored return true if new frame was stored to output_frame</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_device.html#RS2_UNSIGNED_UPDATE_MODE_FULL">RS2_UNSIGNED_UPDATE_MODE_FULL</a></td>
 <td class="itemunit"><a class="bold" href="rs_device.html">rs_device</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_device.html#RS2_UNSIGNED_UPDATE_MODE_READ_ONLY">RS2_UNSIGNED_UPDATE_MODE_READ_ONLY</a></td>
 <td class="itemunit"><a class="bold" href="rs_device.html">rs_device</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_device.html#RS2_UNSIGNED_UPDATE_MODE_UPDATE">RS2_UNSIGNED_UPDATE_MODE_UPDATE</a></td>
 <td class="itemunit"><a class="bold" href="rs_device.html">rs_device</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_device.html#rs2_update_firmware">rs2_update_firmware</a></td>
 <td class="itemunit"><a class="bold" href="rs_device.html">rs_device</a></td>
 <td class="itemdesc"><p>Update device to the provided firmware, the device must be extendable to RS2_EXTENSION_UPDATABLE. This call is executed on the caller's thread and it supports progress notifications via the optional callback. param[in] device Device to update param[in] fw_image Firmware image buffer param[in] fw_image_size Firmware image buffer size param[in] callback Optional callback for update progress notifications, the progress value is normailzed to 1 param[in] client_data Optional client data for the callback</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_device.html#rs2_update_firmware_unsigned">rs2_update_firmware_unsigned</a></td>
 <td class="itemunit"><a class="bold" href="rs_device.html">rs_device</a></td>
 <td class="itemdesc"><p>Update device to the provided firmware by writing raw data directly to the flash, this command can be executed only on unlocked camera. The device must be extendable to RS2_EXTENSION_UPDATABLE. This call is executed on the caller's thread and it supports progress notifications via the optional callback. param[in] device Device to update param[in] fw_image Firmware image buffer param[in] fw_image_size Firmware image buffer size param[in] callback Optional callback for update progress notifications, the progress value is normailzed to 1 param[in] client_data Optional client data for the callback param[in] update_mode Select one of RS2_UNSIGNED_UPDATE_MODE, WARNING!!! setting to any option other than RS2_UNSIGNED_UPDATE_MODE_UPDATE will make this call unsafe and might damage the camera param[out] error If non-null, receives any error that occurs during this call, otherwise, errors are ignored
 
 <p>void rs2_update_firmware_unsigned(const rs2_device* device, const void* fw_image, int fw_image_size, rs2_update_progress_callback_ptr callback, void* client_data, int update_mode, rs2_error** error);</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_types.html#rs2_update_progress_callback_ptr">rs2_update_progress_callback_ptr</a></td>
 <td class="itemunit"><a class="bold" href="rs_types.html">rs_types</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_processing.html#rs2_wait_for_frame">rs2_wait_for_frame</a></td>
 <td class="itemunit"><a class="bold" href="rs_processing.html">rs_processing</a></td>
 <td class="itemdesc"><p>wait until new frame becomes available in the queue and dequeue it param[in] queue the frame queue data structure param[in] timeout_ms max time in milliseconds to wait until an exception will be thrown param[out] error if non-null, receives any error that occurs during this call, otherwise, errors are ignored return frame handle to be released using rs2_release_frame</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_device.html#rs2_write_calibration">rs2_write_calibration</a></td>
 <td class="itemunit"><a class="bold" href="rs_device.html">rs_device</a></td>
 <td class="itemdesc"><p>Write calibration to device's EEPROM param[in] device The RealSense device param[out] error If non-null, receives any error that occurs during this call, otherwise, errors are ignored</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_internal.html#signed_fw_size">signed_fw_size</a></td>
 <td class="itemunit"><a class="bold" href="rs_internal.html">rs_internal</a></td>
 <td class="itemdesc"><p>Firmware size constants</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_internal.html#signed_sr300_size">signed_sr300_size</a></td>
 <td class="itemunit"><a class="bold" href="rs_internal.html">rs_internal</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_internal.html#TDeleterProc">TDeleterProc</a></td>
 <td class="itemunit"><a class="bold" href="rs_internal.html">rs_internal</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_internal.Tpose_frame_info.html">Tpose_frame_info</a></td>
 <td class="itemunit"><a class="bold" href="rs_internal.html">rs_internal</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_option.html#Trs2_ambient_light">Trs2_ambient_light</a></td>
 <td class="itemunit"><a class="bold" href="rs_option.html">rs_option</a></td>
 <td class="itemdesc"><p>DEPRECATED! - Use RS2_OPTION_DIGITAL_GAIN instead. */</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_frame.html#Trs2_calib_target_type">Trs2_calib_target_type</a></td>
 <td class="itemunit"><a class="bold" href="rs_frame.html">rs_frame</a></td>
 <td class="itemdesc"><p>Calibration target type.</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_sensor.html#Trs2_camera_info">Trs2_camera_info</a></td>
 <td class="itemunit"><a class="bold" href="rs_sensor.html">rs_sensor</a></td>
 <td class="itemdesc"><p>brief Read-only strings that can be queried from the device. Not all information attributes are available on all camera types. This information is mainly available for camera debug and troubleshooting and should not be used in applications.</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_option.html#Trs2_digital_gain">Trs2_digital_gain</a></td>
 <td class="itemunit"><a class="bold" href="rs_option.html">rs_option</a></td>
 <td class="itemdesc"><p>digital gain for RS2_OPTION_DIGITAL_GAIN option. */</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_types.html#Trs2_distortion">Trs2_distortion</a></td>
 <td class="itemunit"><a class="bold" href="rs_types.html">rs_types</a></td>
 <td class="itemdesc"><p>Distortion model: defines how pixel coordinates should be mapped to sensor coordinates. */</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_types.Trs2_dsm_params.html">Trs2_dsm_params</a></td>
 <td class="itemunit"><a class="bold" href="rs_types.html">rs_types</a></td>
 <td class="itemdesc"><p>Video DSM (Digital Sync Module) parameters for calibration (same layout as in FW ac_depth_params) This is the block in MC that converts angles to dimensionless integers reported to MA (using &quot;DSM coefficients&quot;)</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_types.html#Trs2_exception_type">Trs2_exception_type</a></td>
 <td class="itemunit"><a class="bold" href="rs_types.html">rs_types</a></td>
 <td class="itemdesc"><p>Exception types are the different categories of errors that RealSense API might return. */</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_types.html#Trs2_extension">Trs2_extension</a></td>
 <td class="itemunit"><a class="bold" href="rs_types.html">rs_types</a></td>
 <td class="itemdesc"><p>Specifies advanced interfaces (capabilities) objects may implement.</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_sensor.Trs2_extrinsics.html">Trs2_extrinsics</a></td>
 <td class="itemunit"><a class="bold" href="rs_sensor.html">rs_sensor</a></td>
 <td class="itemdesc"><p>Cross-stream extrinsics: encodes the topology describing how the different devices are oriented. */</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_sensor.html#Trs2_format">Trs2_format</a></td>
 <td class="itemunit"><a class="bold" href="rs_sensor.html">rs_sensor</a></td>
 <td class="itemdesc"><p>A stream's format identifies how binary data is encoded within a frame. */</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_types.html#Trs2_format">Trs2_format</a></td>
 <td class="itemunit"><a class="bold" href="rs_types.html">rs_types</a></td>
 <td class="itemdesc"><p>A stream's format identifies how binary data is encoded within a frame. */</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_types.html#Trs2_frame_callback_ptr">Trs2_frame_callback_ptr</a></td>
 <td class="itemunit"><a class="bold" href="rs_types.html">rs_types</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_frame.html#Trs2_frame_metadata_value">Trs2_frame_metadata_value</a></td>
 <td class="itemunit"><a class="bold" href="rs_frame.html">rs_frame</a></td>
 <td class="itemdesc"><p>Per-Frame-Metadata is the set of read-only properties that might be exposed for each individual frame. */</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_option.html#Trs2_host_perf_mode">Trs2_host_perf_mode</a></td>
 <td class="itemunit"><a class="bold" href="rs_option.html">rs_option</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_types.Trs2_intrinsics.html">Trs2_intrinsics</a></td>
 <td class="itemunit"><a class="bold" href="rs_types.html">rs_types</a></td>
 <td class="itemdesc"><p>Video stream intrinsics.</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_option.html#Trs2_l500_visual_preset">Trs2_l500_visual_preset</a></td>
 <td class="itemunit"><a class="bold" href="rs_option.html">rs_option</a></td>
 <td class="itemdesc"><p>For L500 devices: provides optimized settings (presets) for specific types of usage.</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_types.html#Trs2_log_severity">Trs2_log_severity</a></td>
 <td class="itemunit"><a class="bold" href="rs_types.html">rs_types</a></td>
 <td class="itemdesc"><p>brief Severity of the librealsense logger.</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_types.html#Trs2_matchers">Trs2_matchers</a></td>
 <td class="itemunit"><a class="bold" href="rs_types.html">rs_types</a></td>
 <td class="itemdesc"><p>Specifies types of different matchers</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_types.html#Trs2_metadata_type">Trs2_metadata_type</a></td>
 <td class="itemunit"><a class="bold" href="rs_types.html">rs_types</a></td>
 <td class="itemdesc"><p>Metadata attribute type is defined as 64 bit signed integer</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_types.Trs2_motion_device_intrinsic.html">Trs2_motion_device_intrinsic</a></td>
 <td class="itemunit"><a class="bold" href="rs_types.html">rs_types</a></td>
 <td class="itemdesc"><p>Motion device intrinsics: scale, bias, and variances. */</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_internal.Trs2_motion_stream.html">Trs2_motion_stream</a></td>
 <td class="itemunit"><a class="bold" href="rs_internal.html">rs_internal</a></td>
 <td class="itemdesc"><p>All the parameters required to define a motion stream.</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_types.html#Trs2_notification_category">Trs2_notification_category</a></td>
 <td class="itemunit"><a class="bold" href="rs_types.html">rs_types</a></td>
 <td class="itemdesc"><p>Category of the librealsense notification.</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_option.html#Trs2_option">Trs2_option</a></td>
 <td class="itemunit"><a class="bold" href="rs_option.html">rs_option</a></td>
 <td class="itemdesc"><p>Defines general configuration controls. These can generally be mapped to camera UVC controls, and can be set / queried at any time unless stated otherwise.</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_types.Trs2_pixel.html">Trs2_pixel</a></td>
 <td class="itemunit"><a class="bold" href="rs_types.html">rs_types</a></td>
 <td class="itemdesc"><p>Pixel location within 2D image. (0,0) is the topmost, left corner. Positive X is right, positive Y is down *</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_record_playback.html#Trs2_playback_status">Trs2_playback_status</a></td>
 <td class="itemunit"><a class="bold" href="rs_record_playback.html">rs_record_playback</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_types.Trs2_pose.html">Trs2_pose</a></td>
 <td class="itemunit"><a class="bold" href="rs_types.html">rs_types</a></td>
 <td class="itemdesc"><p>translation; //&lt; X, Y, Z values of translation, in meters (relative to initial position) */ velocity; //&lt; X, Y, Z values of velocity, in meters/sec */ acceleration; //&lt; X, Y, Z values of acceleration, in meters/sec&circ;2 */ rotation; //&lt; Qi, Qj, Qk, Qr components of rotation as represented in quaternion rotation (relative to initial position) */ angular_velocity; //&lt; X, Y, Z values of angular velocity, in radians/sec */ angular_acceleration; //&lt; X, Y, Z values of angular acceleration, in radians/sec&circ;2 */ tracker_confidence; //&lt; Pose confidence 0x0 - Failed, 0x1 - Low, 0x2 - Medium, 0x3 - High */ mapper_confidence; //&lt; Pose map confidence 0x0 - Failed, 0x1 - Low, 0x2 - Medium, 0x3 - High */</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_internal.Trs2_pose_stream.html">Trs2_pose_stream</a></td>
 <td class="itemunit"><a class="bold" href="rs_internal.html">rs_internal</a></td>
 <td class="itemdesc"><p>All the parameters required to define a pose stream.</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_types.Trs2_pose_stream.html">Trs2_pose_stream</a></td>
 <td class="itemunit"><a class="bold" href="rs_types.html">rs_types</a></td>
 <td class="itemdesc"><p>All the parameters required to define a pose stream.</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_types.Trs2_quaternion.html">Trs2_quaternion</a></td>
 <td class="itemunit"><a class="bold" href="rs_types.html">rs_types</a></td>
 <td class="itemdesc"><p>Quaternion used to represent rotation</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_internal.html#Trs2_recording_mode">Trs2_recording_mode</a></td>
 <td class="itemunit"><a class="bold" href="rs_internal.html">rs_internal</a></td>
 <td class="itemdesc"><p>librealsense Recorder is intended for effective unit-testing Currently supports three modes of operation:</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_option.html#Trs2_rs400_visual_preset">Trs2_rs400_visual_preset</a></td>
 <td class="itemunit"><a class="bold" href="rs_option.html">rs_option</a></td>
 <td class="itemdesc"><p>For RS400 devices: provides optimized settings (presets) for specific types of usage. */</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_option.html#Trs2_sensor_mode">Trs2_sensor_mode</a></td>
 <td class="itemunit"><a class="bold" href="rs_option.html">rs_option</a></td>
 <td class="itemdesc"><p>For setting the camera_mode option</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_internal.Trs2_software_device_destruction_callback.html">Trs2_software_device_destruction_callback</a></td>
 <td class="itemunit"><a class="bold" href="rs_internal.html">rs_internal</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_internal.Trs2_software_motion_frame.html">Trs2_software_motion_frame</a></td>
 <td class="itemunit"><a class="bold" href="rs_internal.html">rs_internal</a></td>
 <td class="itemdesc"><p>brief All the parameters required to define a motion frame.</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_internal.Trs2_software_notification.html">Trs2_software_notification</a></td>
 <td class="itemunit"><a class="bold" href="rs_internal.html">rs_internal</a></td>
 <td class="itemdesc"><p>All the parameters required to define a sensor notification. */</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_internal.Trs2_software_pose_frame.html">Trs2_software_pose_frame</a></td>
 <td class="itemunit"><a class="bold" href="rs_internal.html">rs_internal</a></td>
 <td class="itemdesc"><p>All the parameters required to define a pose frame.</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_internal.Trs2_software_video_frame.html">Trs2_software_video_frame</a></td>
 <td class="itemunit"><a class="bold" href="rs_internal.html">rs_internal</a></td>
 <td class="itemdesc"><p>All the parameters required to define a video frame.</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_option.html#Trs2_sr300_visual_preset">Trs2_sr300_visual_preset</a></td>
 <td class="itemunit"><a class="bold" href="rs_option.html">rs_option</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_sensor.html#Trs2_stream">Trs2_stream</a></td>
 <td class="itemunit"><a class="bold" href="rs_sensor.html">rs_sensor</a></td>
 <td class="itemdesc"><p>brief Streams are different types of data provided by RealSense devices./</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_types.html#Trs2_stream">Trs2_stream</a></td>
 <td class="itemunit"><a class="bold" href="rs_types.html">rs_types</a></td>
 <td class="itemdesc"><p>Streams are different types of data provided by RealSense devices.</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_frame.html#Trs2_timestamp_domain">Trs2_timestamp_domain</a></td>
 <td class="itemunit"><a class="bold" href="rs_frame.html">rs_frame</a></td>
 <td class="itemdesc"><p>Specifies the clock in relation to which the frame timestamp was measured. */
 
 <p>RS2_TIMESTAMP_DOMAIN_HARDWARE_CLOCK, /**&lt; Frame timestamp was measured in relation to the camera clock */ RS2_TIMESTAMP_DOMAIN_SYSTEM_TIME, /**&lt; Frame timestamp was measured in relation to the OS system clock */ RS2_TIMESTAMP_DOMAIN_GLOBAL_TIME, /**&lt; Frame timestamp was measured in relation to the camera clock and converted to OS system clock by constantly measure the difference*/ RS2_TIMESTAMP_DOMAIN_COUNT /**&lt; Number of enumeration values. Not a valid input: intended to be used in for-loops. */</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_types.html#Trs2_time_t">Trs2_time_t</a></td>
 <td class="itemunit"><a class="bold" href="rs_types.html">rs_types</a></td>
 <td class="itemdesc"><p>Timestamp format. units are milliseconds</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_types.Trs2_vector.html">Trs2_vector</a></td>
 <td class="itemunit"><a class="bold" href="rs_types.html">rs_types</a></td>
 <td class="itemdesc"><p>3D vector in Euclidean coordinate space</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_types.Trs2_vertex.html">Trs2_vertex</a></td>
 <td class="itemunit"><a class="bold" href="rs_types.html">rs_types</a></td>
 <td class="itemdesc"><p>3D coordinates with origin at topmost left corner of the lense, with positive Z pointing away from the camera, positive X pointing camera right and positive Y pointing camera down</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_internal.Trs2_video_stream.html">Trs2_video_stream</a></td>
 <td class="itemunit"><a class="bold" href="rs_internal.html">rs_internal</a></td>
 <td class="itemdesc"><p>All the parameters required to define a video stream.</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_advanced_mode_command.TSTAEControl.html">TSTAEControl</a></td>
 <td class="itemunit"><a class="bold" href="rs_advanced_mode_command.html">rs_advanced_mode_command</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_advanced_mode_command.TSTAFactor.html">TSTAFactor</a></td>
 <td class="itemunit"><a class="bold" href="rs_advanced_mode_command.html">rs_advanced_mode_command</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_advanced_mode_command.TSTCensusRadius.html">TSTCensusRadius</a></td>
 <td class="itemunit"><a class="bold" href="rs_advanced_mode_command.html">rs_advanced_mode_command</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_advanced_mode_command.TSTColorControl.html">TSTColorControl</a></td>
 <td class="itemunit"><a class="bold" href="rs_advanced_mode_command.html">rs_advanced_mode_command</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_advanced_mode_command.TSTColorCorrection.html">TSTColorCorrection</a></td>
 <td class="itemunit"><a class="bold" href="rs_advanced_mode_command.html">rs_advanced_mode_command</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_advanced_mode_command.TSTDepthControlGroup.html">TSTDepthControlGroup</a></td>
 <td class="itemunit"><a class="bold" href="rs_advanced_mode_command.html">rs_advanced_mode_command</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_advanced_mode_command.TSTDepthTableControl.html">TSTDepthTableControl</a></td>
 <td class="itemunit"><a class="bold" href="rs_advanced_mode_command.html">rs_advanced_mode_command</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_advanced_mode_command.TSTHdad.html">TSTHdad</a></td>
 <td class="itemunit"><a class="bold" href="rs_advanced_mode_command.html">rs_advanced_mode_command</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_advanced_mode_command.TSTRauColorThresholdsControl.html">TSTRauColorThresholdsControl</a></td>
 <td class="itemunit"><a class="bold" href="rs_advanced_mode_command.html">rs_advanced_mode_command</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_advanced_mode_command.TSTRauSupportVectorControl.html">TSTRauSupportVectorControl</a></td>
 <td class="itemunit"><a class="bold" href="rs_advanced_mode_command.html">rs_advanced_mode_command</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_advanced_mode_command.TSTRsm.html">TSTRsm</a></td>
 <td class="itemunit"><a class="bold" href="rs_advanced_mode_command.html">rs_advanced_mode_command</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_advanced_mode_command.TSTSloColorThresholdsControl.html">TSTSloColorThresholdsControl</a></td>
 <td class="itemunit"><a class="bold" href="rs_advanced_mode_command.html">rs_advanced_mode_command</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_advanced_mode_command.TSTSloPenaltyControl.html">TSTSloPenaltyControl</a></td>
 <td class="itemunit"><a class="bold" href="rs_advanced_mode_command.html">rs_advanced_mode_command</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="rs_internal.html#unsigned_fw_size">unsigned_fw_size</a></td>
 <td class="itemunit"><a class="bold" href="rs_internal.html">rs_internal</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="rs_internal.html#unsigned_sr300_size">unsigned_sr300_size</a></td>
 <td class="itemunit"><a class="bold" href="rs_internal.html">rs_internal</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
