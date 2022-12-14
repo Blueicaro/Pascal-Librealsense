@@ -1,24 +1,21 @@
 # Pascal-LibreSense
 
-Es proyecto es warpping para Free Pascal de la libreria LibreSense de intel. https://github.com/IntelRealSense/librealsense
-
 This proyect is a warpping  for free pascal of https://github.com/IntelRealSense/librealsense
 
-Cualquier problema o duda, abre un issue.
 
-If you find any problem, or you have any dude, please open a issue.
+## Using
 
-Saludos/B.R.
+The IntelRealsense is a 64 bits library. So you must create a 64 bits aplication. 
+Download Lazarus for 64 bits from here: https://www.lazarus-ide.org/index.php?page=downloads
 
-## Actualización 24/11/2020
+Donwload o clone the repository. 
 
-Se añade una carpeta, dónde se va generando la documentación. 
+Create a new proyect. Add the units from src folder.
 
-In doc Folder you can find the documentation.
+For more reference, check Examples folder
 
+Enyoy.
 
-
-Saludos/B.R.
 
 
 
