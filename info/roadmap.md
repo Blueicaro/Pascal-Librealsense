@@ -460,3 +460,4 @@
 |rs2_get_failed_args                |   OK   |
 |rs2_free_error                     |   OK   |
 |rs2_exception_type_to_string       |   NO   |
+|rs2_get_librealsense_exception_type|   NO   |
