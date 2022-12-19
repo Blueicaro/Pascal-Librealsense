@@ -51,7 +51,7 @@ type
 
 type
   Trs2_time_t = double;     //< Timestamp format. units are milliseconds
-  Trs2_metadata_type = Int64;
+  Trs2_metadata_type = int64;
 //< Metadata attribute type is defined as 64 bit signed integer
 
 {
@@ -524,6 +524,8 @@ function rs2_get_failed_args(Error: pRS2_error): PChar; cdecl
 procedure rs2_free_error(error: prs2_error); cdecl;
   external REALSENSE_DLL;
 function rs2_exception_type_to_string(TypeException: prs2_exception_type): PChar;
+  cdecl; external REALSENSE_DLL;
+function rs2_get_librealsense_exception_type(error: pRS2_error): Trs2_exception_type;
   cdecl; external REALSENSE_DLL;
 
 
