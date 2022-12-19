@@ -5,7 +5,8 @@ unit rs2_options;
 interface
 
 uses
-  Classes,
+  Classes, SysUtils,
+  rs_types,
   rs_option;
 
 type
@@ -22,6 +23,8 @@ type
   { TOptions }
 
   TOptions = class
+  private
+    fOptions: pRS2_options;
   public
       {
         check if particular option is supported
@@ -74,15 +77,27 @@ type
     function is_option_read_only(option: Trs2_option): boolean;
     {get_supported_options()}
     function get_supported_options: TStringList;
+    public
+      constructor Create(dev:pRS2_device);
+      destructor Destroy; override;
   end;
 
 implementation
-
+uses rs2_error;
 { TOptions }
-{ #todo : Pendiente de implementar }
-function TOptions.supports(option: trs2_option): boolean;
-begin
 
+function TOptions.supports(option: trs2_option): boolean;
+var
+  e: pRS2_error;
+  valor: integer;
+begin
+  e := nil;
+  valor := rs2_supports_option(fOptions,option, e);
+  if e <> nil then
+  begin
+    TRsError.Create(e);
+  end;
+  Result := valor = 1;
 end;
 
 { #todo : Pendiente de implementar }
@@ -132,6 +147,16 @@ end;
 function TOptions.get_supported_options: TStringList;
 begin
 
+end;
+
+constructor TOptions.Create(dev: pRS2_device);
+begin
+ fOptions:=rs2_options_list(;
+end;
+
+destructor TOptions.Destroy;
+begin
+  inherited Destroy;
 end;
 
 end.
