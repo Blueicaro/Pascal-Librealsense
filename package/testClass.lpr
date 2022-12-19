@@ -1,0 +1,5 @@
+program testClass;
+
+begin
+end.
+
