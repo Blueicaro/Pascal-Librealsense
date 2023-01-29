@@ -2,16 +2,17 @@
 
 ## Table of contens
 
-* Introduccion
-* Requirements
-* Installation
-* Using 
+* [Introduccion](#introduccion)
+* [Requirements](#requirements)
+* [Install](#install)
+
+
 
 ## Introduccion
 
-This proyect is a warpping  for modern pascal Pascal of https://github.com/IntelRealSense/librealsense. 
+This proyect is a warpping  for modern pascal Pascal of [librealsense library from intel](https://github.com/IntelRealSense/librealsense).
 
- Why modern free Pascal?. Here there is a good article: https://castle-engine.io/modern_pascal.
+Why modern free Pascal?. Here there is a good [article](https://castle-engine.io/modern_pascal).
 
 
 ## Requirements
@@ -24,10 +25,10 @@ You need a modern Pascal compiler. You have two options:
 
 
 
-## Installation
+## Install
 
-* Lazarus
-* Delphi
+* [Lazarus](#lazarus)
+
 
 ### Lazarus
 The IntelRealsense is a 64 bits library. So you must create a 64 bits aplication. 
@@ -66,6 +67,8 @@ Search for laz_realsense, and select it.
 ![laz_realsense](./images/lazarusselectreq.png)
 
 Now you are ready start write your code. For more information see the examples in examples folder.
+
+Note. In windows be sure that Realsense.dll can be found in the path or is in the same folder of your executable.
 
 
 
