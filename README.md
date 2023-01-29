@@ -1,20 +1,72 @@
 # Pascal-LibreSense
 
-This proyect is a warpping  for free pascal of https://github.com/IntelRealSense/librealsense
+## Table of contens
+
+* Introduccion
+* Requirements
+* Installation
+* Using 
+
+## Introduccion
+
+This proyect is a warpping  for modern pascal Pascal of https://github.com/IntelRealSense/librealsense. 
+
+ Why modern free Pascal?. Here there is a good article: https://castle-engine.io/modern_pascal.
 
 
-## Using
+## Requirements
 
+You need a modern Pascal compiler. You have two options:
+
+* Lazarus is a Delphi compatible cross-platform IDE for Rapid Application Development. It has variety of components ready for use and a graphical form designer to easily create complex graphical user interfaces.
+
+* Delphi is a general-purpose programming language and a software product that uses the Delphi dialect of the Object Pascal programming language and provides an integrated.
+
+
+
+## Installation
+
+* Lazarus
+* Delphi
+
+### Lazarus
 The IntelRealsense is a 64 bits library. So you must create a 64 bits aplication. 
-Download Lazarus for 64 bits from here: https://www.lazarus-ide.org/index.php?page=downloads
 
-Donwload o clone the repository. 
+If you don't have a copy of lazarus download Lazarus for 64 bits from here: https://www.lazarus-ide.org/index.php?page=downloads
 
-Create a new proyect. Add the units from src folder.
+Be sure that you download the correct version.
+![Lazarus 64 bits](./images/installlazarus64.png)
 
-For more reference, check Examples folder
+Download or clone the repository in a folder where you like.
 
-Enyoy.
+From Lazarus, open a package.
+![Open pacakge](./images/lazarusopenpackage.png)
+
+Navigate to the folder where you downloaded of cloned the repository. Open the folder wrappers,free pascal,Lazarus package. And select the file laz_realsense.
+![package laz_realsense](./images/lazaruselectpackage.png)
+
+Now compile the pacakge.
+![compile package](./images/lazaruscompilepackage.png)
+
+After compile you can close the the window. 
+
+Now we are ready to create create applications. Create a new project.
+![Create a project](./images/lazarusnewproyect.png)
+
+Can be a console program or a application.
+![select project](./images/lazarusprojects.png)
+
+Add the realsense package to your project. In menu project, select project inspector.
+![project options menu](./images/lazarusprojectinspector.png)
+
+Now add a new requeriment. 
+![add requeriment](./images/lazarusaddreq.png)
+
+Search for laz_realsense, and select it.
+![laz_realsense](./images/lazarusselectreq.png)
+
+Now you are ready start write your code. For more information see the examples in examples folder.
+
 
 
 

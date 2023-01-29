@@ -24,6 +24,11 @@
     <RunParams>
       <FormatVersion Value="2"/>
     </RunParams>
+    <RequiredPackages>
+      <Item>
+        <PackageName Value="laz_realsense"/>
+      </Item>
+    </RequiredPackages>
     <Units>
       <Unit>
         <Filename Value="distance.lpr"/>
@@ -63,7 +68,6 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <OtherUnitFiles Value="..\..\..\src"/>
       <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
     </SearchPaths>
     <CodeGeneration>

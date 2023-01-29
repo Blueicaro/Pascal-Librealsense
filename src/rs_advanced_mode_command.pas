@@ -1,9 +1,7 @@
 {
-Advanced Mode Commands header file
+  Advanced Mode Commands header file
 }
 unit rs_advanced_mode_command;
-
-{$mode ObjFPC}{$H+}
 
 interface
 
@@ -20,6 +18,7 @@ type
     deepSeaNeighborThreshold: uint32;
     lrAgreeThreshold: uint32;
   end;
+
   pSTDepthControlGroup = ^TSTDepthControlGroup;
 
 type
@@ -29,6 +28,7 @@ type
     sloRauDiffThresh: single;
     removeThresh: uint32;
   end;
+
   pSTRsm = ^TSTRsm;
 
 type
@@ -40,100 +40,109 @@ type
     minSouth: uint32;
     minNSsum: uint32;
     uShrink: uint32;
-    vShrink: uint32
-  end;
-  pSTRauSupportVectorControl = ^TSTRauSupportVectorControl;
+    vShrink: uint32 end;
+    pSTRauSupportVectorControl = ^TSTRauSupportVectorControl;
 
-type
-  TSTColorControl = record
-    disableSADColor: uint32;
-    disableRAUColor: uint32;
-    disableSLORightColor: uint32;
-    disableSLOLeftColor: uint32;
-    disableSADNormalize: uint32;
-  end;
-  pSTColorControl = ^TSTColorControl;
+  type
+    TSTColorControl = record
+      disableSADColor: uint32;
+      disableRAUColor: uint32;
+      disableSLORightColor: uint32;
+      disableSLOLeftColor: uint32;
+      disableSADNormalize: uint32;
+    end;
 
-type
-  TSTRauColorThresholdsControl = record
-    rauDiffThresholdRed: uint32;
-    rauDiffThresholdGreen: uint32;
-    rauDiffThresholdBlue: uint32;
-  end;
-  pSTRauColorThresholdsControl = ^TSTRauColorThresholdsControl;
+    pSTColorControl = ^TSTColorControl;
 
-type
-  TSTSloColorThresholdsControl = record
-    diffThresholdRed: uint32;
-    diffThresholdGreen: uint32;
-    diffThresholdBlue: uint32;
-  end;
-  pSTSloColorThresholdsControl = ^TSTSloColorThresholdsControl;
+  type
+    TSTRauColorThresholdsControl = record
+      rauDiffThresholdRed: uint32;
+      rauDiffThresholdGreen: uint32;
+      rauDiffThresholdBlue: uint32;
+    end;
 
-type
-  TSTSloPenaltyControl = record
-    sloK1Penalty: uint32;
-    sloK2Penalty: uint32;
-    sloK1PenaltyMod1: uint32;
-    sloK2PenaltyMod1: uint32;
-    sloK1PenaltyMod2: uint32;
-    sloK2PenaltyMod2: uint32;
-  end;
-  pTSTSloPenaltyControl = ^TSTSloPenaltyControl;
+    pSTRauColorThresholdsControl = ^TSTRauColorThresholdsControl;
 
-type
-  TSTHdad = record
-    lambdaCensus: single;
-    lambdaAD: single;
-    ignoreSAD: uint32;
-  end;
-  pSTHdad = ^TSTHdad;
+  type
+    TSTSloColorThresholdsControl = record
+      diffThresholdRed: uint32;
+      diffThresholdGreen: uint32;
+      diffThresholdBlue: uint32;
+    end;
 
-type
-  TSTColorCorrection = record
-    colorCorrection1: single;
-    colorCorrection2: single;
-    colorCorrection3: single;
-    colorCorrection4: single;
-    colorCorrection5: single;
-    colorCorrection6: single;
-    colorCorrection7: single;
-    colorCorrection8: single;
-    colorCorrection9: single;
-    colorCorrection10: single;
-    colorCorrection11: single;
-    colorCorrection12: single;
-  end;
-  pSTColorCorrection = ^TSTColorCorrection;
+    pSTSloColorThresholdsControl = ^TSTSloColorThresholdsControl;
 
-type
-  TSTAEControl = record
-    meanIntensitySetPoint: uint32;
-  end;
-  pSTAEControl = ^TSTAEControl;
+  type
+    TSTSloPenaltyControl = record
+      sloK1Penalty: uint32;
+      sloK2Penalty: uint32;
+      sloK1PenaltyMod1: uint32;
+      sloK2PenaltyMod1: uint32;
+      sloK1PenaltyMod2: uint32;
+      sloK2PenaltyMod2: uint32;
+    end;
 
-type
-  TSTDepthTableControl = record
-    depthUnits: uint32;
-    depthClampMin: uint32;
-    depthClampMax: uint32;
-    disparityMode: uint32;
-    disparityShift: uint32;
-  end;
-  pSTDepthTableControl = ^TSTDepthTableControl;
+    pTSTSloPenaltyControl = ^TSTSloPenaltyControl;
 
-type
-  TSTCensusRadius = record
-    uDiameter: uint32;
-    vDiameter: uint32;
-  end;
-  pSTCensusRadius = ^TSTCensusRadius;
+  type
+    TSTHdad = record
+      lambdaCensus: single;
+      lambdaAD: single;
+      ignoreSAD: uint32;
+    end;
 
-type
-  TSTAFactor = record
-    amplitude: single;
-  end;
-  pSTAFactor = ^TSTAFactor;
+    pSTHdad = ^TSTHdad;
+
+  type
+    TSTColorCorrection = record
+      colorCorrection1: single;
+      colorCorrection2: single;
+      colorCorrection3: single;
+      colorCorrection4: single;
+      colorCorrection5: single;
+      colorCorrection6: single;
+      colorCorrection7: single;
+      colorCorrection8: single;
+      colorCorrection9: single;
+      colorCorrection10: single;
+      colorCorrection11: single;
+      colorCorrection12: single;
+    end;
+
+    pSTColorCorrection = ^TSTColorCorrection;
+
+  type
+    TSTAEControl = record
+      meanIntensitySetPoint: uint32;
+    end;
+
+    pSTAEControl = ^TSTAEControl;
+
+  type
+    TSTDepthTableControl = record
+      depthUnits: uint32;
+      depthClampMin: uint32;
+      depthClampMax: uint32;
+      disparityMode: uint32;
+      disparityShift: uint32;
+    end;
+
+    pSTDepthTableControl = ^TSTDepthTableControl;
+
+  type
+    TSTCensusRadius = record
+      uDiameter: uint32;
+      vDiameter: uint32;
+    end;
+
+    pSTCensusRadius = ^TSTCensusRadius;
+
+  type
+    TSTAFactor = record
+      amplitude: single;
+    end;
+
+    pSTAFactor = ^TSTAFactor;
 
 implementation
 
