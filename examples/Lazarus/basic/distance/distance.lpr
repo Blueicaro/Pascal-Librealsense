@@ -3,14 +3,13 @@ program distance;
 uses
   SysUtils,
   rs,
-  rs_frame,
-  rs_option,
-  rs_pipeline,
   rs_types,
-  rs_context,
+  rs_frame,
   rs_device,
   rs_sensor,
-  rs_config;
+  rs_config,
+  rs_context,
+  rs_pipeline;
 
 const
   STREAM = RS2_STREAM_DEPTH;
@@ -151,7 +150,8 @@ begin
       dist_to_center := rs.rs2_depth_frame_get_distance(frame, awidth div
         2, aheight div 2, e);
       CheckError(e);
-      Writeln(Format('The camera is facing an object %f meters away.', [dist_to_center]));
+      Writeln(Format('The camera is facing an object %f meters away.',
+        [dist_to_center]));
       rs2_release_frame(frame);
     end;
     rs2_release_frame(frames);
