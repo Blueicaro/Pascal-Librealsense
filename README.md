@@ -5,13 +5,14 @@
 * [Introduccion](#introduccion)
 * [Requirements](#requirements)
 * [Install](#install)
-* [Build Examples](#Examples)
+* [Examples](#examples)
+* [License](#license)
 
 
 
 ## Introduccion
 
-This proyect is a warpping  for modern pascal Pascal of [librealsense library from intel](https://github.com/IntelRealSense/librealsense).
+This proyect is a warpping  for modern pascal of [librealsense library from intel](https://github.com/IntelRealSense/librealsense).
 
 Why modern free Pascal?. Here there is a good [article](https://castle-engine.io/modern_pascal).
 
@@ -69,7 +70,7 @@ Now you are ready start writing your code. For more information, see the example
 
 Note. In windows, be sure that Realsense2.dll file can be found in the path or is in the same folder of your executable.
 
-## Build Examples
+## Examples
 
 From the Lazarus environment, use the Project menu, Open Project. Navigate to the folder where you have installed the repository, and select the Examples folder.
 
@@ -88,6 +89,10 @@ If you get the following error, it means that your program cannot find the Reals
 ![laz_fail](./images/lazarusfaildll.png).
 
 Make sure the Realsense2 file is in the same folder where your program is running. Or in a path where your operating system can find it
+
+## License
+
+This project is licensed under the [Apache License, Version 2.0.](https://github.com/IntelRealSense/librealsense/blob/master/LICENSE)
 
 
 
