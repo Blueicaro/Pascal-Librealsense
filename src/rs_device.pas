@@ -39,8 +39,7 @@ procedure rs2_delete_device_list(Info_List: Prs2_device_list); cdecl;
 }
 
 function rs2_device_list_contains(const Info_List: Prs2_device_list;
-  const device: pRS2_device; Error: prs2_error): integer; cdecl;
-  external REALSENSE_DLL;
+  const device: pRS2_device; Error: prs2_error): integer; cdecl; external REALSENSE_DLL;
 
 {
   Creates a device by index. The device object represents a physical camera and provides the means to manipulate it.
@@ -69,7 +68,7 @@ procedure rs2_delete_device(device: pRS2_device); cdecl; external REALSENSE_DLL;
 }
 
 function rs2_get_device_info(device: pRS2_device; Info: Trs2_camera_info;
-  var Error: prs2_error): PChar; cdecl; external REALSENSE_DLL;
+  var Error: prs2_error): pchar; cdecl; external REALSENSE_DLL;
 
 {
 
@@ -83,8 +82,7 @@ function rs2_get_device_info(device: pRS2_device; Info: Trs2_camera_info;
 }
 
 function rs2_supports_device_info(const device: pRS2_device;
-  Info: Trs2_camera_info; Error: prs2_error): integer; cdecl;
-  external REALSENSE_DLL;
+  Info: Trs2_camera_info; Error: prs2_error): integer; cdecl; external REALSENSE_DLL;
 {
   Send hardware reset request to the device. The actual reset is asynchronous.
   Note: Invalidates all handles to this device.
@@ -142,8 +140,7 @@ function rs2_send_and_receive_raw_data(device: pRS2_device;
   return               Non-zero value iff the device can be extended to the given extension
 }
 function rs2_is_device_extendable_to(const device: pRS2_device;
-  extension: Trs2_extension; Error: prs2_error): integer; cdecl;
-  external REALSENSE_DLL;
+  extension: Trs2_extension; Error: prs2_error): integer; cdecl; external REALSENSE_DLL;
 {
 
   Create a static snapshot of all connected sensors within a specific device.
@@ -152,8 +149,8 @@ function rs2_is_device_extendable_to(const device: pRS2_device;
   return               The list of sensors, should be released by rs2_delete_sensor_list
 
 }
-function rs2_query_sensors(const device: pRS2_device; Error: prs2_error)
-  : prs2_sensor_list; cdecl; external REALSENSE_DLL;
+function rs2_query_sensors(const device: pRS2_device;
+  Error: prs2_error): prs2_sensor_list; cdecl; external REALSENSE_DLL;
 {
 
   Enter the given device into loopback operation mode that uses the given file as input for raw data
@@ -162,7 +159,7 @@ function rs2_query_sensors(const device: pRS2_device; Error: prs2_error)
   param[out] error      If non-null, receives any error that occurs during this call, otherwise, errors are ignored
 }
 
-procedure rs2_loopback_enable(const device: pRS2_device; from_file: PChar;
+procedure rs2_loopback_enable(const device: pRS2_device; from_file: pchar;
   Error: prs2_error); cdecl; external REALSENSE_DLL;
 {
   Restores the given device into normal operation mode
@@ -178,8 +175,8 @@ procedure rs2_loopback_disable(const device: pRS2_device; Error: prs2_error);
   param[out] error      If non-null, receives any error that occurs during this call, otherwise, errors are ignored
   return true if the device is in loopback operation mode
 }
-function rs2_loopback_is_enabled(const device: pRS2_device; Error: prs2_error)
-  : integer; cdecl; external REALSENSE_DLL;
+function rs2_loopback_is_enabled(const device: pRS2_device; Error: prs2_error): integer;
+  cdecl; external REALSENSE_DLL;
 {
 
   Connects to a given tm2 controller
@@ -189,7 +186,7 @@ function rs2_loopback_is_enabled(const device: pRS2_device; Error: prs2_error)
 
 }
 procedure rs2_connect_tm2_controller(const device: pRS2_device;
-  const mac_addr: PChar; Error: prs2_error); cdecl; external REALSENSE_DLL;
+  const mac_addr: pchar; Error: prs2_error); cdecl; external REALSENSE_DLL;
 {
 
   Disconnects a given tm2 controller
@@ -198,8 +195,8 @@ procedure rs2_connect_tm2_controller(const device: pRS2_device;
   param[out] error      If non-null, receives any error that occurs during this call, otherwise, errors are ignored
 
 }
-procedure rs2_disconnect_tm2_controller(const device: pRS2_device; id: integer;
-  Error: prs2_error); cdecl; external REALSENSE_DLL;
+procedure rs2_disconnect_tm2_controller(const device: pRS2_device;
+  id: integer; Error: prs2_error); cdecl; external REALSENSE_DLL;
 {
 
   Reset device to factory calibration
@@ -259,9 +256,9 @@ function rs2_create_flash_backup(device: pRS2_device;
   int rs2_check_firmware_compatibility(const rs2_device* device, const void* fw_image, int fw_image_size, rs2_error** error);
 }
 
-function rs2_check_firmware_compatibility(device: pRS2_device; fw_image: pvoid;
-  fw_image_size: integer; Error: prs2_error): integer; cdecl;
-  external REALSENSE_DLL;
+function rs2_check_firmware_compatibility(device: pRS2_device;
+  fw_image: pvoid; fw_image_size: integer; Error: prs2_error): integer;
+  cdecl; external REALSENSE_DLL;
 {
 
   Update device to the provided firmware by writing raw data directly to the flash, this command can be executed only on unlocked camera.
@@ -332,10 +329,9 @@ procedure rs2_enter_update_state(const device: pRS2_device; Error: prs2_error);
 
 }
 function rs2_run_on_chip_calibration(device: pRS2_device; json_content: pvoid;
-  content_size: integer; healt: PSingle;
-  callback: prs2_update_progress_callback_ptr; client_data: pvoid;
-  timeout_ms: integer; Error: prs2_error): prs2_raw_data_buffer; cdecl;
-  external REALSENSE_DLL;
+  content_size: integer; healt: PSingle; callback: prs2_update_progress_callback_ptr;
+  client_data: pvoid; timeout_ms: integer; Error: prs2_error): prs2_raw_data_buffer;
+  cdecl; external REALSENSE_DLL;
 
 {
   Used in device_calibration; enumerates the different calibration types
@@ -346,7 +342,7 @@ type
     RS2_CALIBRATION_MANUAL_DEPTH_TO_RGB, RS2_CALIBRATION_THERMAL,
     RS2_CALIBRATION_TYPE_COUNT);
 
-function rs2_calibration_type_to_string(aType: rs2_calibration_type): PChar;
+function rs2_calibration_type_to_string(aType: rs2_calibration_type): pchar;
   cdecl; external REALSENSE_DLL;
 
 {
@@ -354,39 +350,45 @@ function rs2_calibration_type_to_string(aType: rs2_calibration_type): PChar;
 }
 { Anything >= 0 is not an issue }
 type
-  rs2_calibration_status = (RS2_CALIBRATION_STATUS_FIRST = -5,
+  rs2_calibration_status = (
+    RS2_CALIBRATION_STATUS_FIRST = -5,
     RS2_CALIBRATION_BAD_CONDITIONS = -5,
-    // < Trigger was attempted but conditions (temp/APD) were invalid (still inactive)
+    RS2_CALIBRATION_SUCCESSFUL = 4, // < Finished; have new calibration in-hand
+    RS2_CALIBRATION_STATUS_LAST = 4, RS2_CALIBRATION_STATUS_COUNT = 10,
+    // <RS2_CALIBRATION_STATUS_LAST - RS2_CALIBRATION_STATUS_FIRST + 1);
     RS2_CALIBRATION_BAD_RESULT = -4,
     // < Calibration finished, but results aren't good; will retry
     RS2_CALIBRATION_SCENE_INVALID = -3,
     // < Scene was not good enough for calibration; will retry
+
     RS2_CALIBRATION_FAILED = -2,
     // < Unexpected: exception, device removed, stream stopped, etc.
+
     RS2_CALIBRATION_RETRY = -1,
     // < Initiating retry (asked for a new special frame)
     RS2_CALIBRATION_TRIGGERED = 0,
+    // < Trigger was attempted but conditions (temp/APD) were invalid (still inactive)
     // < AC triggered and is active; conditions are valid
     RS2_CALIBRATION_SPECIAL_FRAME = 1,
     // < Special frame received; expect a frame-drop!
     RS2_CALIBRATION_STARTED = 2,
     // < Have all frames in hand; starting processing
-    RS2_CALIBRATION_NOT_NEEDED = 3,
+    RS2_CALIBRATION_NOT_NEEDED = 3
     // < Finished; existing calibration within tolerances; nothing done!
-    RS2_CALIBRATION_SUCCESSFUL = 4, // < Finished; have new calibration in-hand
-    RS2_CALIBRATION_STATUS_LAST = 4, RS2_CALIBRATION_STATUS_COUNT = 10
-    // <RS2_CALIBRATION_STATUS_LAST - RS2_CALIBRATION_STATUS_FIRST + 1);
+
+
+
 
     );
 
-function rs2_calibration_status_to_string(ars2_calibration_status
-  : rs2_calibration_status): PChar; cdecl; external REALSENSE_DLL;
+function rs2_calibration_status_to_string(ars2_calibration_status:
+  rs2_calibration_status): pchar; cdecl; external REALSENSE_DLL;
 
 type
   prs2_calibration_change_callback = POpaqueData;
   Prs2_calibration_change_callback_ptr = ^rs2_calibration_change_callback_ptr;
-  rs2_calibration_change_callback_ptr = procedure(ars2_calibration_status
-    : rs2_calibration_status; arg: pvoid); cdecl;
+  rs2_calibration_change_callback_ptr =
+    procedure(ars2_calibration_status: rs2_calibration_status; arg: pvoid); cdecl;
 
   {
     Adds a callback for a sensor that gets called when calibration (intrinsics) changes, e.g. due to auto-calibration
@@ -410,8 +412,7 @@ procedure rs2_register_calibration_change_callback(device: pRS2_device;
 }
 
 procedure rs2_trigger_device_calibration(device: pRS2_device;
-  aType: rs2_calibration_type; Error: prs2_error); cdecl;
-  external REALSENSE_DLL;
+  aType: rs2_calibration_type; Error: prs2_error); cdecl; external REALSENSE_DLL;
 {
 
   This will adjust camera absolute distance to flat target. User needs to enter the known ground truth.
@@ -441,16 +442,16 @@ procedure rs2_trigger_device_calibration(device: pRS2_device;
 function rs2_run_tare_calibration(device: pRS2_device; ground_truth_mm: single;
   json_content: pvoid; content_size: integer;
   callback: prs2_update_progress_callback_ptr; client_data: pvoid;
-  timeout_ms: integer; Error: prs2_error): prs2_raw_data_buffer; cdecl;
-  external REALSENSE_DLL;
+  timeout_ms: integer; Error: prs2_error): prs2_raw_data_buffer;
+  cdecl; external REALSENSE_DLL;
 {
 
   Read current calibration table from flash.
   return    Calibration table
 
 }
-function rs2_get_calibration_table(dev: pRS2_device; Error: prs2_error)
-  : prs2_raw_data_buffer; cdecl; external REALSENSE_DLL;
+function rs2_get_calibration_table(dev: pRS2_device;
+  Error: prs2_error): prs2_raw_data_buffer; cdecl; external REALSENSE_DLL;
 {
   Set current table to dynamic area.
   param[in]     Calibration table
@@ -462,8 +463,8 @@ procedure rs2_set_calibration_table(device: pRS2_device; calibration: pvoid;
   Serialize JSON content, returns ASCII-serialized JSON string on success. otherwise nullptr */
   rs2_raw_data_buffer* rs2_serialize_json(rs2_device* dev, rs2_error** error);
 }
-function rs2_serialize_json(dev: pRS2_device; Error: prs2_error)
-  : prs2_raw_data_buffer; cdecl; external REALSENSE_DLL;
+function rs2_serialize_json(dev: pRS2_device; Error: prs2_error): prs2_raw_data_buffer;
+  cdecl; external REALSENSE_DLL;
 {
   /* Load JSON and apply advanced-mode controls */
   void rs2_load_json(rs2_device* dev, const void* json_content, unsigned content_size, rs2_error** error);
@@ -513,8 +514,8 @@ function rs2_run_uv_map_calibration(device: pRS2_device;
   left_queue: prs2_frame_queue; color_queue: prs2_frame_queue;
   depth_queue: prs2_frame_queue; py_py_only: integer; health: PSingle;
   health_size: integer; callback: prs2_update_progress_callback_ptr;
-  cliente_data: pvoid; Error: prs2_error): prs2_raw_data_buffer; cdecl;
-  external REALSENSE_DLL;
+  cliente_data: pvoid; Error: prs2_error): prs2_raw_data_buffer;
+  cdecl; external REALSENSE_DLL;
 {
 
   /**
